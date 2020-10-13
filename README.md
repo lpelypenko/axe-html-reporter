@@ -4,7 +4,7 @@ Creates an HTML report from axe results object with list of violations, passes a
 
 Allows specifying `url`, `projectKey` and `outputDir`.
 
-See sample report output: [sample-output/accessibilityReport.html](sample-output/accessibilityReport.html)
+See [sample report output](https://lpelypenko.github.io/axe-html-reporter/)
 
 ## Install
 
@@ -17,23 +17,22 @@ npm i axe-html-reporter
 ### Example usage in TestCafe
 
 
-If fileName is not passed, html report with name `accessibilityReport.html` will be created in `artifacts` directory.
-
-Install testcafe, axe-core and @testcafe-community/axe to run testcafe tests with axe-core: 
+To run TestCafe tests with axe-core, install testcafe, axe-core and [@testcafe-community/axe](https://www.npmjs.com/package/@testcafe-community/axe): 
 
 ```shell script
 npm i -D axe-html-reporter testcafe axe-core @testcafe-community/axe
 ```
 
-For testcafe example add the following clientScript in your .testcaferc.json config:
+For TestCafe example add the following clientScript in your `.testcaferc.json` config:
 
 ```json
 {
   "clientScripts":[{"module":"axe-core/axe.min.js"}]
 }
 ```
+In the example bellow `fileName` is not passed. In this case html report with default name `accessibilityReport.html` will be created in `artifacts` directory.
 
-TestCafe test example: 
+See full TestCafe test example is bellow: 
 
 ```javascript
 
@@ -59,12 +58,12 @@ test('Automated accessibility testing', async (t) => {
 
 ```
 
-Run testcafe test:
+Run TestCafe test:
 
 ```shell script
 npx testcafe
  Running tests in:
- - Chrome 85.0.4183.121 / macOS 10.14.6
+ - Chrome 85.0.4183.121 / Linux
 
  TestCafe tests with Axe
 HTML report was saved into the following directory /Users/axe-demos/artifacts/accessibilityReport.html
@@ -83,7 +82,7 @@ import { axeHtmlReporter } from 'axe-html-reporter';
 
 (() => {
     const results = { violations: {}, passes: {}, incomplete: {}, inapplicable: {}, url: 'http://example.com' }; 
-    // creates html report with the name `accessibilityReport.html` file
+    // creates html report with the default name `accessibilityReport.html` file
     axeHtmlReporter({
         violations: results.violations,
         passes: results.passes,
