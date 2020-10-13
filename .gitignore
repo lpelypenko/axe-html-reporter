@@ -106,7 +106,6 @@ Temporary Items
 # End of https://www.gitignore.io/api/osx,node,linux
 
 dist/
-docs/
 build/
 .idea
 /artifacts
