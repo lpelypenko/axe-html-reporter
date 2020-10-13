@@ -1,0 +1,58 @@
+{
+    "name": "axe-html-reporter",
+    "version": "0.0.0",
+    "description": "The module that allows you to create HTML Report from raw accessibility aXe result object",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lpelypenko/axe-html-reporter"
+    },
+    "engines": {
+        "node": ">=8.9.0"
+    },
+    "keywords": [
+        "axe",
+        "report",
+        "test",
+        "accessibility"
+    ],
+    "author": "Liliia Pelypenko (liliia.pelypenko@gmail.com)",
+    "license": "MIT",
+    "files": [
+        "dist",
+        "src",
+        "test",
+        "types"
+    ],
+    "bugs": {
+        "url": "https://github.com/lpelypenko/axe-html-reporter/issues"
+    },
+    "homepage": "https://github.com/lpelypenko/axe-html-reporter",
+    "scripts": {
+        "clean": "rm -rf dist build",
+        "prebuild": "npm run clean",
+        "build": "tsc --project tsconfig.build.json",
+        "postbuild": "cp -R src/util/template dist/util/template",
+        "test": "jest test",
+        "test:watch": "jest test --watch"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "peerDependencies": {
+        "axe-core": ">=3"
+    },
+    "devDependencies": {
+        "@types/jest": "^25.2.3",
+        "@types/mustache": "^4.0.1",
+        "@types/node": "^14.11.8",
+        "jest": "^26.5.3",
+        "prettier": "^2.1.2",
+        "ts-jest": "^26.4.1",
+        "typescript": "^4.0.3"
+    },
+    "dependencies": {
+        "mustache": "^4.0.1"
+    }
+}

@@ -1,0 +1,134 @@
+[
+    {
+        "id": "color-contrast",
+        "impact": null,
+        "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+        "message": "\"finalElements\" is read-only",
+        "stack": "Error: \"finalElements\" is read-only\n    at eval (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:133740)\n    at t.default (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:133774)\n    at t.default (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:103596)\n    at t.default (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:102448)\n    at Object.t.default (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:14659)\n    at i.run (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:188255)\n    at eval (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:206424)\n    at c (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:284657)\n    at Object.defer (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:284958)\n    at eval (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:206402)\n    at Array.forEach (<anonymous>)\n    at i.runChecks (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:206303)\n    at eval (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:207339)\n    at c (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:284657)\n    at Object.defer (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:284958)\n    at eval (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:207317)\n    at Array.forEach (<anonymous>)\n    at eval (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:207295)\n    at c (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:284657)\n    at Object.defer (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:284958)\n    at eval (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:207230)\n    at Array.forEach (<anonymous>)\n    at i.run (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:207208)\n    at eval (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:186481)\n    at c (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:284657)\n    at Object.defer (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:284958)\n    at eval (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:183271)\n    at Array.forEach (<anonymous>)\n    at b.value (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:183249)\n    at eval (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:225569)\n    at c (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:284657)\n    at Object.defer (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:284958)\n    at Object.t.default [as _runRules] (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:225547)\n    at Object.t.default [as run] (eval at <anonymous> (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054))), <anonymous>:12:228478)\n    at eval (eval at <anonymous> (eval at rr (http://10.0.1.8:52558/testcafe-driver.js:1:18054)), <anonymous>:8:5)\n    at Nr._executeFn (http://10.0.1.8:52558/testcafe-driver.js:1:22036)\n    at http://10.0.1.8:52558/testcafe-driver.js:1:21521\n    at a (http://10.0.1.8:52558/hammerhead.js:5:11109)\n    at Array.forEach (<anonymous>)\n    at d (http://10.0.1.8:52558/hammerhead.js:5:11687)\n    at Array.p (http://10.0.1.8:52558/hammerhead.js:5:11723)\n    at n (http://10.0.1.8:52558/hammerhead.js:5:10858)",
+        "error": {},
+        "errorNode": {
+            "selector": ["label[for=\"label-radio-adStatus-0\"] > span"],
+            "source": "<span>Active (recommended)</span>",
+            "xpath": [
+                "/div[@id='plugin_container_ReportPage']/div/div/div/div/div/div[2]/form/div[2]/div[2]/fieldset/div/label/span"
+            ],
+            "ancestry": [
+                "html > body > div:nth-child(11) > div > div:nth-child(1) > div > div > div:nth-child(2) > div > div > div > div > div > div:nth-child(2) > form > div:nth-child(2) > div:nth-child(3) > fieldset:nth-child(1) > div:nth-child(2) > label:nth-child(2) > span:nth-child(1)"
+            ]
+        },
+        "tags": ["cat.color", "wcag2aa", "wcag143"],
+        "help": "Elements must have sufficient color contrast",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.0/color-contrast?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "hidden-content",
+        "impact": "minor",
+        "tags": ["cat.structure", "experimental", "review-item", "best-practice"],
+        "description": "Informs users about hidden content.",
+        "help": "Hidden content on the page cannot be analyzed",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.0/hidden-content?application=axeAPI",
+        "nodes": [
+            {
+                "any": [
+                    {
+                        "id": "hidden-content",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "minor",
+                        "message": "There is hidden content on the page that was not analyzed. You will need to trigger the display of this content in order to analyze it."
+                    }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "minor",
+                "html": "<iframe name=\"_hjRemoteVarsFrame\" title=\"_hjRemoteVarsFrame\" id=\"_hjRemoteVarsFrame\" src=\"https://vars.hotjar.com/box-469cf41adb11dc78be68c1ae7f9457a4.html\" style=\"display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;\">",
+                "target": ["#_hjRemoteVarsFrame"],
+                "failureSummary": "Fix any of the following:\n  There is hidden content on the page that was not analyzed. You will need to trigger the display of this content in order to analyze it."
+            },
+            {
+                "any": [
+                    {
+                        "id": "hidden-content",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "minor",
+                        "message": "There is hidden content on the page that was not analyzed. You will need to trigger the display of this content in order to analyze it."
+                    }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "minor",
+                "html": "<input type=\"file\" id=\"fileSelector\" name=\"file\" style=\"display: none;\">",
+                "target": ["#fileSelector"],
+                "failureSummary": "Fix any of the following:\n  There is hidden content on the page that was not analyzed. You will need to trigger the display of this content in order to analyze it."
+            },
+            {
+                "any": [
+                    {
+                        "id": "hidden-content",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "minor",
+                        "message": "There is hidden content on the page that was not analyzed. You will need to trigger the display of this content in order to analyze it."
+                    }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "minor",
+                "html": "<iframe id=\"fileUploadIframe\" name=\"fileUploadIframe\" title=\"FileUploadFrame\" style=\"display: none;\"></iframe>",
+                "target": ["#fileUploadIframe"],
+                "failureSummary": "Fix any of the following:\n  There is hidden content on the page that was not analyzed. You will need to trigger the display of this content in order to analyze it."
+            },
+            {
+                "any": [
+                    {
+                        "id": "hidden-content",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "minor",
+                        "message": "There is hidden content on the page that was not analyzed. You will need to trigger the display of this content in order to analyze it."
+                    }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "minor",
+                "html": "<iframe id=\"esw_storage_iframe\" src=\"https://indeed--UAT.my.salesforce.com/embeddedservice/5.0/esw.html?parent=https://lumos.sandbox.qa.indeed.net/campaign\" style=\"display: none;\"></iframe>",
+                "target": ["#esw_storage_iframe"],
+                "failureSummary": "Fix any of the following:\n  There is hidden content on the page that was not analyzed. You will need to trigger the display of this content in order to analyze it."
+            }
+        ]
+    },
+    {
+        "id": "th-has-data-cells",
+        "impact": "serious",
+        "tags": ["cat.tables", "wcag2a", "wcag131", "section508", "section508.22.g"],
+        "description": "Ensure that each table header in a data table refers to data cells",
+        "help": "All th elements and elements with role=columnheader/rowheader must have data cells they describe",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.0/th-has-data-cells?application=axeAPI",
+        "nodes": [
+            {
+                "any": [],
+                "all": [
+                    {
+                        "id": "th-has-data-cells",
+                        "data": null,
+                        "relatedNodes": [
+                            {
+                                "html": "<th style=\"text-align: left;\">REFE#</th>",
+                                "target": ["th:nth-child(5)"]
+                            }
+                        ],
+                        "impact": "serious",
+                        "message": "Table data cells are missing or empty"
+                    }
+                ],
+                "none": [],
+                "impact": "serious",
+                "html": "<table>",
+                "target": ["table"],
+                "failureSummary": "Fix all of the following:\n  Table data cells are missing or empty"
+            }
+        ]
+    }
+]
