@@ -112,7 +112,7 @@ import { axeHtmlReporter } from 'axe-html-reporter';
 ### CommonJS
 
 ```javascript
-const { axeHtmlReporter } = require('@indeed/axe-html-reporter');
+const { axeHtmlReporter } = require('axe-html-reporter');
 
 (() => {
     // creates html report with the name `accessibilityReport.html` file
