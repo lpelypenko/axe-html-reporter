@@ -38,7 +38,7 @@
         "test:watch": "jest test --watch"
     },
     "publishConfig": {
-        "registry": "https://npm.pkg.github.com/@lpelypenko"
+        "access": "public"
     },
     "peerDependencies": {
         "axe-core": ">=3"
