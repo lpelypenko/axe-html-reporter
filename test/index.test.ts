@@ -70,7 +70,7 @@ describe('createHtmlReport() test', () => {
             passes: axeRawPassed,
             incomplete: axeRawIncomplete,
             reportFileName: 'tcWithTheKey.html',
-            projectKey: 'EAXR',
+            projectKey: 'DEQUE',
             url: 'https://dequeuniversity.com/demo/mars/',
         });
         const pathToTheReport = path.resolve(process.cwd(), 'artifacts', 'tcWithTheKey.html');
@@ -87,7 +87,7 @@ describe('createHtmlReport() test', () => {
             passes: axeRawPassed,
             incomplete: axeRawIncomplete,
             reportFileName: 'tcAllPassed.html',
-            projectKey: 'EAXR',
+            projectKey: 'DEQUE',
             url: 'https://dequeuniversity.com/demo/mars/',
         });
         const pathToTheReport = path.resolve(process.cwd(), 'artifacts', 'tcAllPassed.html');
@@ -125,6 +125,62 @@ describe('createHtmlReport() test', () => {
             url: 'https://dequeuniversity.com/demo/mars/',
         });
         const pathToTheReport = path.resolve(process.cwd(), 'artifacts', 'tcOnlyPasses.html');
+        const htmlFileContent = fs.readFileSync(pathToTheReport, {
+            encoding: 'utf8',
+        });
+        // do not clean up to verify results manually
+        // validate
+        expect(htmlFileContent).toMatchSnapshot();
+    });
+    it('Verify report is created with violations and custom summary', async () => {
+        const customSummary = `Test Case: Full page analysis
+        <br>Steps:</br>
+        <ol style="margin: 0">
+        <li>Open https://dequeuniversity.com/demo/mars/</li>
+        <li>Analyze full page with all rules enabled</li>
+        </ol>`;
+        createHtmlReport({
+            violations: axeRawViolations,
+            url: 'https://dequeuniversity.com/demo/mars/',
+            customSummary,
+            reportFileName: 'tcIncludingCustomSummary.html'
+        });
+        const pathToTheReport = path.resolve(
+            process.cwd(),
+            'artifacts',
+            'tcIncludingCustomSummary.html'
+        );
+        const htmlFileContent = fs.readFileSync(pathToTheReport, {
+            encoding: 'utf8',
+        });
+        // do not clean up to verify results manually
+        // validate
+        expect(htmlFileContent).toMatchSnapshot();
+    });
+
+    it('All optional parameters present', async () => {
+        const customSummary = `Test Case: Full page analysis
+        <br>Steps:</br>
+        <ol style="margin: 0">
+        <li>Open https://dequeuniversity.com/demo/mars/</li>
+        <li>Analyze full page with all rules enabled</li>
+        </ol>`;
+        createHtmlReport({
+            violations: axeRawViolations,
+            passes: axeRawPassed,
+            incomplete: [],
+            inapplicable: axeRawInapplicable,
+            projectKey: 'DEQUE',
+            url: 'https://dequeuniversity.com/demo/mars/',
+            customSummary,
+            outputDir: 'docs',
+            reportFileName: 'index.html'
+        });
+        const pathToTheReport = path.resolve(
+            process.cwd(),
+            'artifacts',
+            'tcIncludingCustomSummary.html'
+        );
         const htmlFileContent = fs.readFileSync(pathToTheReport, {
             encoding: 'utf8',
         });

@@ -108,6 +108,24 @@ import { axeHtmlReporter } from 'axe-html-reporter';
         url: results.url,
         fileName: 'exampleReport.html',
     });
+    // creates html report with all optional parameters, saving the report into 'docs' directory with report file name 'index.html'
+    const customSummary = `Test Case: Full page analysis
+    <br>Steps:</br>
+    <ol style="margin: 0">
+    <li>Open https://dequeuniversity.com/demo/mars/</li>
+    <li>Analyze full page with all rules enabled</li>
+    </ol>`;
+    createHtmlReport({
+        violations: axeRawViolations,
+        passes: axeRawPassed,
+        incomplete: [],
+        inapplicable: axeRawInapplicable,
+        projectKey: 'DEQUE',
+        url: 'https://dequeuniversity.com/demo/mars/',
+        customSummary,
+        outputDir: 'docs',
+        reportFileName: 'index.html'
+    });
 })();
 ```
 

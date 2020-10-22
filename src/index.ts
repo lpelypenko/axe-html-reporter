@@ -13,6 +13,7 @@ export interface CreateReport {
     reportFileName?: string;
     outputDir?: string;
     projectKey?: string;
+    customSummary?: string;
 }
 
 export interface PreparedResults {
@@ -31,6 +32,7 @@ export function createHtmlReport({
     reportFileName,
     outputDir,
     projectKey,
+    customSummary,
 }: CreateReport): void {
     if (!violations || !url) {
         throw new Error(
@@ -53,6 +55,7 @@ export function createHtmlReport({
             hasInapplicable: inapplicable !== undefined,
             incompleteTotal: reportData.checksIncomplete ? reportData.checksIncomplete.length : 0,
             projectKey,
+            customSummary,
         });
         saveHtmlReport({ htmlContent, reportFileName, outputDir });
     } catch (e) {

@@ -56,15 +56,23 @@
     <body>
         <div style="padding: 2rem">
             <h3>
-                AXE Accessibility Results
+                AXE Accessibility Results for DEQUE project
             </h3>
-            <blockquote class="blockquote">
-                <p class="mb-0">axe-core found 85 violations</p>
-                <footer class="blockquote-footer">
-                    Page URL:
+            <h5>
+                <small class="text-muted"
+                    >Page URL:
                     <a href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;demo&#x2F;mars&#x2F;" target="_blank" class="card-link">https:&#x2F;&#x2F;dequeuniversity.com&#x2F;demo&#x2F;mars&#x2F;</a>
-                </footer>
-            </blockquote>
+                    <br />
+                    Test Case: Full page analysis
+        <br>Steps:</br>
+        <ol style="margin: 0">
+        <li>Open https://dequeuniversity.com/demo/mars/</li>
+        <li>Analyze full page with all rules enabled</li>
+        </ol> 
+                </small>
+            </h5>
+
+            <h5>axe-core found <span class="badge badge-warning">85</span> violations</h5>
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
@@ -1533,7 +1541,7 @@
                                 aria-expanded="false"
                                 aria-controls="incomplete"
                             >
-                                axe returned 4 incomplete checks. Expand
+                                axe returned 0 incomplete checks. Expand
                                 details on click
                             </button>
                         </h5>
@@ -1558,50 +1566,6 @@
                                 >
                                 to learn more.
                             </p>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th width="5%">#</th>
-                                        <th width="50%">Description</th>
-                                        <th width="20%">Axe rule ID</th>
-                                        <th width="15%">WCAG</th>
-                                        <th width="10%">Nodes with incomplete check</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Elements must have sufficient color contrast</td>
-                                        <td>color-contrast</td>
-                                        <td>WCAG 2.0 Level AA</td>
-                                        <td>132</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Hidden content on the page cannot be analyzed</td>
-                                        <td>hidden-content</td>
-                                        <td>Best practice</td>
-                                        <td>60</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Links must be distinguished from surrounding text in a way that does not rely on color</td>
-                                        <td>link-in-text-block</td>
-                                        <td>WCAG 2.0 Level A</td>
-                                        <td>22</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">4</th>
-                                        <td>&lt;video&gt; elements must have captions</td>
-                                        <td>video-caption</td>
-                                        <td>WCAG 2.0 Level A</td>
-                                        <td>1</td>
-                                    </tr>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                 </div>

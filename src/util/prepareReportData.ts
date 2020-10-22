@@ -34,18 +34,17 @@ export function prepareReportData({
         acc += nodes.length;
         return acc;
     }, 0);
-    const violationsSummary = `axe-core found ${violationsTotal} violation${
-        violationsTotal === 1 ? '' : 's'
-    }`;
     if (violations.length === 0) {
         return {
-            violationsSummary:
-                'No violations were found by axe-core with enabled rules and axe check options',
+            violationsSummary: 'axe-core found <span class="badge badge-success">0</span> violations',
             checksPassed: passedChecks,
             checksIncomplete: incompleteChecks,
-            checksInapplicable: inapplicableChecks
+            checksInapplicable: inapplicableChecks,
         };
     }
+    const violationsSummary = `axe-core found <span class="badge badge-warning">${violationsTotal}</span> violation${
+        violationsTotal === 1 ? '' : 's'
+    }`;
     // Prepare data to show summary
     const violationsSummaryTable = simplifyAxeResultForSummary(violations);
     // Prepare data to show detailed list of violations
