@@ -81,12 +81,14 @@ HTML report was saved into the following directory /Users/axe-demos/artifacts/ac
 import { axeHtmlReporter } from 'axe-html-reporter';
 
 (() => {
-    const results = { violations: {}, passes: {}, incomplete: {}, inapplicable: {}, url: 'http://example.com' }; 
+    const results = { violations: [], passes: [], incomplete: [], inapplicable: [], url: 'http://example.com' }; 
     // creates html report with the default name `accessibilityReport.html` file
     axeHtmlReporter({
         violations: results.violations,
         passes: results.passes,
         incomplete: results.incomplete,
+        inapplicable: results.inapplicable,
+        url: results.url
     });
     // creates html report with the default name `accessibilityReport.html` file and adds url and projectKey
     axeHtmlReporter({
