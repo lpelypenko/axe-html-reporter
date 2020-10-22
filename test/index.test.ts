@@ -4,6 +4,7 @@ import path from 'path';
 const axeRawViolations = require('./rawViolations.json');
 const axeRawPassed = require('./rawPasses.json');
 const axeRawIncomplete = require('./rawIncomplete.json');
+const axeRawInapplicable = require('./rawInapplicable.json');
 
 describe('createHtmlReport() test', () => {
     it('Verify throwing an error if required parameters are not passed', async () => {
@@ -17,7 +18,7 @@ describe('createHtmlReport() test', () => {
     it('Verify report is created only with violations because passes and incomplete are not passed', async () => {
         createHtmlReport({
             violations: axeRawViolations,
-            url: 'https://lumos.sandbox.stage.indeed.net/analytics/reporting/ads',
+            url: 'https://dequeuniversity.com/demo/mars/',
         });
         const pathToTheReport = path.resolve(
             process.cwd(),
@@ -27,12 +28,7 @@ describe('createHtmlReport() test', () => {
         const htmlFileContent = fs.readFileSync(pathToTheReport, {
             encoding: 'utf8',
         });
-        // clean up
-        try {
-            fs.unlinkSync(pathToTheReport);
-        } catch (e) {
-            // do nothing if file can't be deleted
-        }
+        // do not clean up to verify results manually
         // validate
         expect(htmlFileContent).toMatchSnapshot();
     });
@@ -40,19 +36,14 @@ describe('createHtmlReport() test', () => {
         createHtmlReport({
             violations: axeRawViolations,
             passes: axeRawPassed,
-            reportFileName: 'tc2.html',
-            url: 'https://lumos.sandbox.stage.indeed.net/analytics/reporting/ads',
+            reportFileName: 'tcPassesAndViolations.html',
+            url: 'https://dequeuniversity.com/demo/mars/',
         });
-        const pathToTheReport = path.resolve(process.cwd(), 'artifacts', 'tc2.html');
+        const pathToTheReport = path.resolve(process.cwd(), 'artifacts', 'tcPassesAndViolations.html');
         const htmlFileContent = fs.readFileSync(pathToTheReport, {
             encoding: 'utf8',
         });
-        // clean up
-        try {
-            fs.unlinkSync(pathToTheReport);
-        } catch (e) {
-            // do nothing if file can't be deleted
-        }
+        // do not clean up to verify results manually
         // validate
         expect(htmlFileContent).toMatchSnapshot();
     });
@@ -61,20 +52,15 @@ describe('createHtmlReport() test', () => {
             violations: axeRawViolations,
             passes: axeRawPassed,
             incomplete: axeRawIncomplete,
-            reportFileName: 'tc3.html',
+            reportFileName: 'tcPassesViolationsIncomplete.html',
             outputDir: 'temp',
-            url: 'https://lumos.sandbox.stage.indeed.net/analytics/reporting/ads',
+            url: 'https://dequeuniversity.com/demo/mars/',
         });
-        const pathToTheReport = path.resolve(process.cwd(), 'temp', 'tc3.html');
+        const pathToTheReport = path.resolve(process.cwd(), 'temp', 'tcPassesViolationsIncomplete.html');
         const htmlFileContent = fs.readFileSync(pathToTheReport, {
             encoding: 'utf8',
         });
-        // clean up
-        try {
-            fs.unlinkSync(pathToTheReport);
-        } catch (e) {
-            // do nothing if file can't be deleted
-        }
+        // do not clean up to verify results manually
         // validate
         expect(htmlFileContent).toMatchSnapshot();
     });
@@ -85,7 +71,7 @@ describe('createHtmlReport() test', () => {
             incomplete: axeRawIncomplete,
             reportFileName: 'tcWithTheKey.html',
             projectKey: 'EAXR',
-            url: 'https://lumos.sandbox.stage.indeed.net/analytics/reporting/ads',
+            url: 'https://dequeuniversity.com/demo/mars/',
         });
         const pathToTheReport = path.resolve(process.cwd(), 'artifacts', 'tcWithTheKey.html');
         const htmlFileContent = fs.readFileSync(pathToTheReport, {
@@ -95,16 +81,50 @@ describe('createHtmlReport() test', () => {
         // validate
         expect(htmlFileContent).toMatchSnapshot();
     });
-    it('Verify report wiht no violations, passes and incomplete with optional reportFileName, url and project key params', async () => {
+    it('Verify report with no violations, passes and incomplete with optional reportFileName, url and project key params', async () => {
         createHtmlReport({
             violations: [],
             passes: axeRawPassed,
             incomplete: axeRawIncomplete,
             reportFileName: 'tcAllPassed.html',
             projectKey: 'EAXR',
-            url: 'https://lumos.sandbox.stage.indeed.net/analytics/reporting/ads',
+            url: 'https://dequeuniversity.com/demo/mars/',
         });
         const pathToTheReport = path.resolve(process.cwd(), 'artifacts', 'tcAllPassed.html');
+        const htmlFileContent = fs.readFileSync(pathToTheReport, {
+            encoding: 'utf8',
+        });
+        // do not clean up to verify results manually
+        // validate
+        expect(htmlFileContent).toMatchSnapshot();
+    });
+    it('Verify report with no violations, passes and incomplete with optional reportFileName, url and project key params', async () => {
+        createHtmlReport({
+            violations: axeRawViolations,
+            passes: axeRawPassed,
+            incomplete: axeRawIncomplete,
+            inapplicable: axeRawInapplicable,
+            reportFileName: 'tcInapplicablePresent.html',
+            url: 'https://dequeuniversity.com/demo/mars/',
+        });
+        const pathToTheReport = path.resolve(process.cwd(), 'artifacts', 'tcAllPassed.html');
+        const htmlFileContent = fs.readFileSync(pathToTheReport, {
+            encoding: 'utf8',
+        });
+        // do not clean up to verify results manually
+        // validate
+        expect(htmlFileContent).toMatchSnapshot();
+    });
+    it('Verify report with no violations, no passes, no incomplete, no inapplicable', async () => {
+        createHtmlReport({
+            violations: [],
+            passes: [],
+            incomplete: [],
+            inapplicable: [],
+            reportFileName: 'tcOnlyPasses.html',
+            url: 'https://dequeuniversity.com/demo/mars/',
+        });
+        const pathToTheReport = path.resolve(process.cwd(), 'artifacts', 'tcOnlyPasses.html');
         const htmlFileContent = fs.readFileSync(pathToTheReport, {
             encoding: 'utf8',
         });

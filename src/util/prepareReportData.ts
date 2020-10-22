@@ -1,6 +1,6 @@
 import { AxeReport } from './AxeReport';
 import { getWcagReference } from './getWcagReference';
-import { CreateReport } from '../index';
+import { PreparedResults } from '../index';
 import { Result } from 'axe-core';
 import { Summary } from './AxeReport';
 
@@ -20,29 +20,34 @@ function simplifyAxeResultForSummary(results: Result[]): Summary[] {
  * - total accessibility violations (counting nodes)
  * - summary of violations that could be printed as table
  * - detailed list of violations that could be printed as formatted text
- * @param violations
- * @param passes
- * @param incomplete
  */
-export function prepareReportData({ violations, passes, incomplete }: CreateReport): AxeReport {
+export function prepareReportData({
+    violations,
+    passes,
+    incomplete,
+    inapplicable,
+}: PreparedResults): AxeReport {
     const passedChecks = passes ? simplifyAxeResultForSummary(passes) : undefined;
     const incompleteChecks = incomplete ? simplifyAxeResultForSummary(incomplete) : undefined;
-
-    if (violations.length === 0) {
-        return {
-            violationsTotal: 0,
-            checksPassed: passedChecks,
-            checksIncomplete: incompleteChecks,
-        };
-    }
+    const inapplicableChecks = inapplicable ? simplifyAxeResultForSummary(inapplicable) : undefined;
     const violationsTotal = violations.reduce((acc, { nodes }) => {
         acc += nodes.length;
         return acc;
     }, 0);
-
+    const violationsSummary = `axe-core found ${violationsTotal} violation${
+        violationsTotal === 1 ? '' : 's'
+    }`;
+    if (violations.length === 0) {
+        return {
+            violationsSummary:
+                'No violations were found by axe-core with enabled rules and axe check options',
+            checksPassed: passedChecks,
+            checksIncomplete: incompleteChecks,
+            checksInapplicable: inapplicableChecks
+        };
+    }
     // Prepare data to show summary
     const violationsSummaryTable = simplifyAxeResultForSummary(violations);
-
     // Prepare data to show detailed list of violations
     const violationsDetails = violations.map(
         ({ nodes, impact, description, help, id, tags, helpUrl }, issueIndex) => {
@@ -63,10 +68,11 @@ export function prepareReportData({ violations, passes, incomplete }: CreateRepo
     );
 
     return {
-        violationsTotal,
+        violationsSummary,
         violationsSummaryTable,
         violationsDetails,
         checksPassed: passedChecks,
         checksIncomplete: incompleteChecks,
+        checksInapplicable: inapplicableChecks,
     };
 }

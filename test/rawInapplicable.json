@@ -1,0 +1,339 @@
+[
+    {
+        "id": "accesskeys",
+        "impact": null,
+        "tags": ["best-practice", "cat.keyboard"],
+        "description": "Ensures every accesskey attribute value is unique",
+        "help": "accesskey attribute value must be unique",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/accesskeys?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "area-alt",
+        "impact": null,
+        "tags": [
+            "cat.text-alternatives",
+            "wcag2a",
+            "wcag111",
+            "wcag244",
+            "wcag412",
+            "section508",
+            "section508.22.a"
+        ],
+        "description": "Ensures <area> elements of image maps have alternate text",
+        "help": "Active <area> elements must have alternate text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/area-alt?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "aria-input-field-name",
+        "impact": null,
+        "tags": ["wcag2a", "wcag412"],
+        "description": "Ensures every ARIA input field has an accessible name",
+        "help": "ARIA input fields must have an accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/aria-input-field-name?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "aria-roledescription",
+        "impact": null,
+        "tags": ["cat.aria", "wcag2a", "wcag412"],
+        "description": "Ensure aria-roledescription is only used on elements with an implicit or explicit role",
+        "help": "Use aria-roledescription on elements with a semantic role",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/aria-roledescription?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "aria-toggle-field-name",
+        "impact": null,
+        "tags": ["wcag2a", "wcag412"],
+        "description": "Ensures every ARIA toggle field has an accessible name",
+        "help": "ARIA toggle fields have an accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/aria-toggle-field-name?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "audio-caption",
+        "impact": null,
+        "tags": ["cat.time-and-media", "wcag2a", "wcag121", "section508", "section508.22.a"],
+        "description": "Ensures <audio> elements have captions",
+        "help": "<audio> elements must have a captions track",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/audio-caption?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "blink",
+        "impact": null,
+        "tags": ["cat.time-and-media", "wcag2a", "wcag222", "section508", "section508.22.j"],
+        "description": "Ensures <blink> elements are not used",
+        "help": "<blink> elements are deprecated and must not be used",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/blink?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "definition-list",
+        "impact": null,
+        "tags": ["cat.structure", "wcag2a", "wcag131"],
+        "description": "Ensures <dl> elements are structured correctly",
+        "help": "<dl> elements must only directly contain properly-ordered <dt> and <dd> groups, <script>, <template> or <div> elements",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/definition-list?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "dlitem",
+        "impact": null,
+        "tags": ["cat.structure", "wcag2a", "wcag131"],
+        "description": "Ensures <dt> and <dd> elements are contained by a <dl>",
+        "help": "<dt> and <dd> elements must be contained by a <dl>",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/dlitem?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "focus-order-semantics",
+        "impact": null,
+        "tags": ["cat.keyboard", "best-practice", "experimental"],
+        "description": "Ensures elements in the focus order have an appropriate role",
+        "help": "Elements in the focus order need a role appropriate for interactive content",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/focus-order-semantics?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "html-xml-lang-mismatch",
+        "impact": null,
+        "tags": ["cat.language", "wcag2a", "wcag311"],
+        "description": "Ensure that HTML elements with both valid lang and xml:lang attributes agree on the base language of the page",
+        "help": "HTML elements with lang and xml:lang must have the same base language",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/html-xml-lang-mismatch?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "input-image-alt",
+        "impact": null,
+        "tags": ["cat.text-alternatives", "wcag2a", "wcag111", "section508", "section508.22.a"],
+        "description": "Ensures <input type=\"image\"> elements have alternate text",
+        "help": "Image buttons must have alternate text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/input-image-alt?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "label-content-name-mismatch",
+        "impact": null,
+        "tags": ["wcag21a", "wcag253", "experimental"],
+        "description": "Ensures that elements labelled through their content must have their visible text as part of their accessible name",
+        "help": "Elements must have their visible text as part of their accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/label-content-name-mismatch?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "landmark-banner-is-top-level",
+        "impact": null,
+        "tags": ["cat.semantics", "best-practice"],
+        "description": "Ensures the banner landmark is at top level",
+        "help": "Banner landmark must not be contained in another landmark",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/landmark-banner-is-top-level?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "landmark-complementary-is-top-level",
+        "impact": null,
+        "tags": ["cat.semantics", "best-practice"],
+        "description": "Ensures the complementary landmark or aside is at top level",
+        "help": "Aside must not be contained in another landmark",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/landmark-complementary-is-top-level?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "landmark-contentinfo-is-top-level",
+        "impact": null,
+        "tags": ["cat.semantics", "best-practice"],
+        "description": "Ensures the contentinfo landmark is at top level",
+        "help": "Contentinfo landmark must not be contained in another landmark",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/landmark-contentinfo-is-top-level?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "landmark-main-is-top-level",
+        "impact": null,
+        "tags": ["cat.semantics", "best-practice"],
+        "description": "Ensures the main landmark is at top level",
+        "help": "Main landmark must not be contained in another landmark",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/landmark-main-is-top-level?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "landmark-no-duplicate-banner",
+        "impact": null,
+        "tags": ["cat.semantics", "best-practice"],
+        "description": "Ensures the document has at most one banner landmark",
+        "help": "Document must not have more than one banner landmark",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/landmark-no-duplicate-banner?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "landmark-no-duplicate-contentinfo",
+        "impact": null,
+        "tags": ["cat.semantics", "best-practice"],
+        "description": "Ensures the document has at most one contentinfo landmark",
+        "help": "Document must not have more than one contentinfo landmark",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/landmark-no-duplicate-contentinfo?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "landmark-no-duplicate-main",
+        "impact": null,
+        "tags": ["cat.semantics", "best-practice"],
+        "description": "Ensures the document has at most one main landmark",
+        "help": "Document must not have more than one main landmark",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/landmark-no-duplicate-main?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "marquee",
+        "impact": null,
+        "tags": ["cat.parsing", "wcag2a", "wcag222"],
+        "description": "Ensures <marquee> elements are not used",
+        "help": "<marquee> elements are deprecated and must not be used",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/marquee?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "meta-refresh",
+        "impact": null,
+        "tags": ["cat.time-and-media", "wcag2a", "wcag2aaa", "wcag221", "wcag224", "wcag325"],
+        "description": "Ensures <meta http-equiv=\"refresh\"> is not used",
+        "help": "Timed refresh must not exist",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/meta-refresh?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "object-alt",
+        "impact": null,
+        "tags": ["cat.text-alternatives", "wcag2a", "wcag111", "section508", "section508.22.a"],
+        "description": "Ensures <object> elements have alternate text",
+        "help": "<object> elements must have alternate text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/object-alt?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "p-as-heading",
+        "impact": null,
+        "tags": ["cat.semantics", "wcag2a", "wcag131", "experimental"],
+        "description": "Ensure p elements are not used to style headings",
+        "help": "Bold, italic text and font-size are not used to style p elements as a heading",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/p-as-heading?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "role-img-alt",
+        "impact": null,
+        "tags": ["cat.text-alternatives", "wcag2a", "wcag111", "section508", "section508.22.a"],
+        "description": "Ensures [role='img'] elements have alternate text",
+        "help": "[role='img'] elements have an alternative text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/role-img-alt?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "scope-attr-valid",
+        "impact": null,
+        "tags": ["cat.tables", "best-practice"],
+        "description": "Ensures the scope attribute is used correctly on tables",
+        "help": "scope attribute should be used correctly",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/scope-attr-valid?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "scrollable-region-focusable",
+        "impact": null,
+        "tags": ["wcag2a", "wcag211"],
+        "description": "Elements that have scrollable content should be accessible by keyboard",
+        "help": "Ensure that scrollable region has keyboard access",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/scrollable-region-focusable?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "server-side-image-map",
+        "impact": null,
+        "tags": ["cat.text-alternatives", "wcag2a", "wcag211", "section508", "section508.22.f"],
+        "description": "Ensures that server-side image maps are not used",
+        "help": "Server-side image maps must not be used",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/server-side-image-map?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "skip-link",
+        "impact": null,
+        "tags": ["cat.keyboard", "best-practice"],
+        "description": "Ensure all skip links have a focusable target",
+        "help": "The skip-link target should exist and be focusable",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/skip-link?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "svg-img-alt",
+        "impact": null,
+        "tags": ["cat.text-alternatives", "wcag2a", "wcag111", "section508", "section508.22.a"],
+        "description": "Ensures svg elements with an img, graphics-document or graphics-symbol role have an accessible text",
+        "help": "svg elements with an img role have an alternative text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/svg-img-alt?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "table-fake-caption",
+        "impact": null,
+        "tags": [
+            "cat.tables",
+            "experimental",
+            "wcag2a",
+            "wcag131",
+            "section508",
+            "section508.22.g"
+        ],
+        "description": "Ensure that tables with a caption use the <caption> element.",
+        "help": "Data or header cells should not be used to give caption to a data table.",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/table-fake-caption?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "td-has-header",
+        "impact": null,
+        "tags": [
+            "cat.tables",
+            "experimental",
+            "wcag2a",
+            "wcag131",
+            "section508",
+            "section508.22.g"
+        ],
+        "description": "Ensure that each non-empty data cell in a large table has one or more table headers",
+        "help": "All non-empty td element in table larger than 3 by 3 must have an associated table header",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/td-has-header?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "th-has-data-cells",
+        "impact": null,
+        "tags": ["cat.tables", "wcag2a", "wcag131", "section508", "section508.22.g"],
+        "description": "Ensure that each table header in a data table refers to data cells",
+        "help": "All th elements and elements with role=columnheader/rowheader must have data cells they describe",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/th-has-data-cells?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "valid-lang",
+        "impact": null,
+        "tags": ["cat.language", "wcag2aa", "wcag312"],
+        "description": "Ensures lang attributes have valid values",
+        "help": "lang attribute must have a valid value",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/valid-lang?application=axeAPI",
+        "nodes": []
+    },
+    {
+        "id": "no-autoplay-audio",
+        "impact": null,
+        "tags": ["wcag2a", "wcag142", "experimental"],
+        "description": "Ensures <video> or <audio> elements do not autoplay audio for more than 3 seconds without a control mechanism to stop or mute the audio",
+        "help": "<video> or <audio> elements do not autoplay audio",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/no-autoplay-audio?application=axeAPI",
+        "nodes": []
+    }
+]

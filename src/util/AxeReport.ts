@@ -24,9 +24,10 @@ interface Details {
 }
 
 export interface AxeReport {
-    violationsTotal: number;
+    violationsSummary: string;
     violationsSummaryTable?: Summary[];
     violationsDetails?: Details[];
     checksPassed?: Summary[];
     checksIncomplete?: Summary[];
+    checksInapplicable?: Summary[];
 }

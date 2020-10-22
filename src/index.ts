@@ -9,9 +9,17 @@ export interface CreateReport {
     url: string;
     passes?: Result[];
     incomplete?: Result[];
+    inapplicable?: Result[];
     reportFileName?: string;
     outputDir?: string;
     projectKey?: string;
+}
+
+export interface PreparedResults {
+    violations: Result[];
+    passes?: Result[];
+    incomplete?: Result[];
+    inapplicable?: Result[];
 }
 
 export function createHtmlReport({
@@ -19,6 +27,7 @@ export function createHtmlReport({
     url,
     passes,
     incomplete,
+    inapplicable,
     reportFileName,
     outputDir,
     projectKey,
@@ -30,20 +39,18 @@ export function createHtmlReport({
     }
     try {
         const template = loadTemplate();
-        const reportData = prepareReportData({ violations, passes, incomplete, url });
+        const reportData = prepareReportData({ violations, passes, incomplete, inapplicable });
         const htmlContent = mustache.render(template, {
             url,
-            totalWrapped: `Axe core library found ${reportData.violationsTotal} violation${
-                reportData.violationsTotal === 1 ? '' : 's'
-            }`,
-            isViolationPresent: reportData.violationsTotal !== 0,
+            violationsSummary: reportData.violationsSummary,
             violations: reportData.violationsSummaryTable,
             violationDetails: reportData.violationsDetails,
-            isPassedPresent: !!passes,
             checksPassed: reportData.checksPassed,
-            passedTotal: reportData.checksPassed ? reportData.checksPassed.length : 0,
-            isIncompletePresent: !!incomplete,
             checksIncomplete: reportData.checksIncomplete,
+            checksInapplicable: reportData.checksInapplicable,
+            hasPassed: passes !== undefined,
+            hasIncomplete: incomplete !== undefined,
+            hasInapplicable: inapplicable !== undefined,
             incompleteTotal: reportData.checksIncomplete ? reportData.checksIncomplete.length : 0,
             projectKey,
         });
