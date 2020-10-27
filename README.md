@@ -4,7 +4,7 @@ Creates an HTML report from axe results object with list of violations, passes a
 
 Allows specifying `url`, `projectKey` and `outputDir`.
 
-See [sample report output](https://lpelypenko.github.io/axe-html-reporter/)
+Please check [sample report output.](https://lpelypenko.github.io/axe-html-reporter/)
 
 ## Install
 
