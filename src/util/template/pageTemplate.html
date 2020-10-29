@@ -58,17 +58,15 @@
             <h3>
                 AXE Accessibility Results{{#projectKey}} for {{projectKey}} project{{/projectKey}}
             </h3>
-            {{#url}}
             <h5>
-                <small class="text-muted"
-                    >Page URL:
+                <small class="text-muted">
+                    {{#url}}Page URL:
                     <a href="{{url}}" target="_blank" class="card-link">{{url}}</a>
+                    <br />{{/url}}
                     {{#customSummary}}
-                    <br />
                     {{{customSummary}}} {{/customSummary}}
                 </small>
             </h5>
-            {{/url}}
             <h5>{{{violationsSummary}}}</h5>
             {{#violationDetails.length}}
             <table class="table table-striped table-bordered">
@@ -324,47 +322,45 @@
                     </div>
                 </div>
             </div>
-            {{/hasInapplicable}}
-            {{#hasAxeRawResults}}
+            {{/hasInapplicable}} {{#hasAxeRawResults}}
             <div id="rulesSection">
                 <div class="card">
                     <div class="card-header" id="ruleSection">
                         <h5 class="mb-0">
                             <button
-                                    class="btn btn-link"
-                                    data-toggle="collapse"
-                                    data-target="#rules"
-                                    aria-expanded="false"
-                                    aria-controls="inapplicable"
+                                class="btn btn-link"
+                                data-toggle="collapse"
+                                data-target="#rules"
+                                aria-expanded="false"
+                                aria-controls="inapplicable"
                             >
-                                axe was running with {{rules.length}} rules.
-                                Expand details on click
+                                axe was running with {{rules.length}} rules. Expand details on click
                             </button>
                         </h5>
                     </div>
                     <div
-                            id="rules"
-                            class="collapse"
-                            aria-labelledby="ruleSection"
-                            data-parent="#rules"
+                        id="rules"
+                        class="collapse"
+                        aria-labelledby="ruleSection"
+                        data-parent="#rules"
                     >
                         <div class="card-body">
                             {{#rules.length}}
                             <table class="table table-bordered">
                                 <thead>
-                                <tr>
-                                    <th width="5%">#</th>
-                                    <th width="50%">Rule ID</th>
-                                    <th width="45%">Enabled</th>
-                                </tr>
+                                    <tr>
+                                        <th width="5%">#</th>
+                                        <th width="50%">Rule ID</th>
+                                        <th width="45%">Enabled</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
-                                {{#rules}}
-                                <tr>
-                                    <th scope="row">{{index}}</th>
-                                    <td>{{rule}}</td>
-                                    <td>{{enabled}}</td>
-                                </tr>
+                                    {{#rules}}
+                                    <tr>
+                                        <th scope="row">{{index}}</th>
+                                        <td>{{rule}}</td>
+                                        <td>{{enabled}}</td>
+                                    </tr>
                                 </tbody>
                                 {{/rules}}
                             </table>

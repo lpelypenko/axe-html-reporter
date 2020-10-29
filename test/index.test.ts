@@ -39,6 +39,25 @@ describe('createHtmlReport() test', () => {
         });
         expect(fs.readFileSync(getPathToCreatedReport(), { encoding: 'utf8' })).toMatchSnapshot();
     });
+    const customSummary = `Test Case: Full page analysis
+        <br>Steps:</br>
+        <ol style="margin: 0">
+        <li>Open https://dequeuniversity.com/demo/mars/</li>
+        <li>Analyze full page with all rules enabled</li>
+        </ol>`;
+    it('Verify report is created even if no violations passed', async () => {
+        const reportFileName = 'tcAllPassedOnlyViolations.html';
+        createHtmlReport({
+            results: {
+                violations: [],
+            },
+            options: { customSummary, reportFileName },
+        });
+        expect(
+            fs.readFileSync(getPathToCreatedReport(reportFileName), { encoding: 'utf8' })
+        ).toMatchSnapshot();
+    });
+
     it('URL is not passed', async () => {
         const reportFileName = 'urlIsNotPassed.html';
         createHtmlReport({
@@ -170,12 +189,6 @@ describe('createHtmlReport() test', () => {
             fs.readFileSync(getPathToCreatedReport(reportFileName), { encoding: 'utf8' })
         ).toMatchSnapshot();
     });
-    const customSummary = `Test Case: Full page analysis
-        <br>Steps:</br>
-        <ol style="margin: 0">
-        <li>Open https://dequeuniversity.com/demo/mars/</li>
-        <li>Analyze full page with all rules enabled</li>
-        </ol>`;
     it('All optional parameters present', async () => {
         const reportFileName = 'tsAllOptionalParametersPresent.html';
         createHtmlReport({
