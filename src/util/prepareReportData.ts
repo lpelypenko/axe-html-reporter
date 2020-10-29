@@ -12,7 +12,7 @@ function simplifyAxeResultForSummary(results: Result[]): Summary[] {
         help,
         wcag: getWcagReference(tags),
         impact: impact || 'n/a',
-        nodes: nodes.length,
+        nodes: nodes.length
     }));
 }
 /**
