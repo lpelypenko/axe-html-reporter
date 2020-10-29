@@ -170,16 +170,14 @@ describe('createHtmlReport() test', () => {
             fs.readFileSync(getPathToCreatedReport(reportFileName), { encoding: 'utf8' })
         ).toMatchSnapshot();
     });
-
-    it('All optional parameters present', async () => {
-        const reportFileName = 'index.html';
-        const outputDir = 'docs';
-        const customSummary = `Test Case: Full page analysis
+    const customSummary = `Test Case: Full page analysis
         <br>Steps:</br>
         <ol style="margin: 0">
         <li>Open https://dequeuniversity.com/demo/mars/</li>
         <li>Analyze full page with all rules enabled</li>
         </ol>`;
+    it('All optional parameters present', async () => {
+        const reportFileName = 'tsAllOptionalParametersPresent.html';
         createHtmlReport({
             results: {
                 violations: axeRawViolations,
@@ -188,22 +186,23 @@ describe('createHtmlReport() test', () => {
                 inapplicable: axeRawInapplicable,
                 url: 'https://dequeuniversity.com/demo/mars/',
             },
-            options: { projectKey: 'DEQUE', customSummary, outputDir, reportFileName },
+            options: { projectKey: 'DEQUE', customSummary, reportFileName },
         });
         expect(
-            fs.readFileSync(getPathToCreatedReport(reportFileName, outputDir), {
+            fs.readFileSync(getPathToCreatedReport(reportFileName), {
                 encoding: 'utf8',
             })
         ).toMatchSnapshot();
     });
     it('AxeResults passed', async () => {
-        const reportFileName = 'tcAxeResults.html';
+        const reportFileName = 'index.html';
+        const outputDir = 'docs';
         createHtmlReport({
             results: rawAxeResults,
-            options: { projectKey: 'DEQUE', reportFileName },
+            options: { projectKey: 'DEQUE', customSummary, outputDir, reportFileName },
         });
         expect(
-            fs.readFileSync(getPathToCreatedReport(reportFileName), {
+            fs.readFileSync(getPathToCreatedReport(reportFileName, outputDir), {
                 encoding: 'utf8',
             })
         ).toMatchSnapshot();

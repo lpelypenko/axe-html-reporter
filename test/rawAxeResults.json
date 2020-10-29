@@ -180,6 +180,67 @@
                     "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
                 }
             ]
+        },
+        {
+            "id": "tabindex",
+            "impact": "serious",
+            "tags": ["cat.keyboard", "best-practice"],
+            "description": "Ensures tabindex attribute values are not greater than 0",
+            "help": "Elements should not have tabindex greater than zero",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/tabindex?application=axeAPI",
+            "nodes": [
+                {
+                    "any": [
+                        {
+                            "id": "tabindex",
+                            "data": null,
+                            "relatedNodes": [],
+                            "impact": "serious",
+                            "message": "Element has a tabindex greater than 0"
+                        }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<input type=\"text\" value=\"\" class=\"city-input ac_input ui-autocomplete-input\" autocomplete=\"off\" id=\"from0\" name=\"from0\" tabindex=\"1\" role=\"textbox\" aria-autocomplete=\"list\" aria-haspopup=\"true\">",
+                    "target": ["#from0"],
+                    "failureSummary": "Fix any of the following:\n  Element has a tabindex greater than 0"
+                },
+                {
+                    "any": [
+                        {
+                            "id": "tabindex",
+                            "data": null,
+                            "relatedNodes": [],
+                            "impact": "serious",
+                            "message": "Element has a tabindex greater than 0"
+                        }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<input type=\"text\" value=\"\" class=\"city-input ac_input ui-autocomplete-input\" autocomplete=\"off\" id=\"to0\" name=\"to0\" tabindex=\"1\" role=\"textbox\" aria-autocomplete=\"list\" aria-haspopup=\"true\">",
+                    "target": ["#to0"],
+                    "failureSummary": "Fix any of the following:\n  Element has a tabindex greater than 0"
+                },
+                {
+                    "any": [
+                        {
+                            "id": "tabindex",
+                            "data": null,
+                            "relatedNodes": [],
+                            "impact": "serious",
+                            "message": "Element has a tabindex greater than 0"
+                        }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<input size=\"10\" id=\"deptDate0\" name=\"deptDate0\" placeholder=\"mm/dd/yyyy\" value=\"\" tabindex=\"3\" class=\"hasDatepicker input-dept\">",
+                    "target": ["#deptDate0"],
+                    "failureSummary": "Fix any of the following:\n  Element has a tabindex greater than 0"
+                }
+            ]
         }
     ],
     "passes": [
