@@ -2817,6 +2817,547 @@ exports[`createHtmlReport() test AxeResults passed 1`] = `
                     </div>
                 </div>
             </div>
+            <div id=\\"rulesSection\\">
+                <div class=\\"card\\">
+                    <div class=\\"card-header\\" id=\\"ruleSection\\">
+                        <h5 class=\\"mb-0\\">
+                            <button
+                                    class=\\"btn btn-link\\"
+                                    data-toggle=\\"collapse\\"
+                                    data-target=\\"#rules\\"
+                                    aria-expanded=\\"false\\"
+                                    aria-controls=\\"inapplicable\\"
+                            >
+                                axe was running with 84 rules.
+                                Expand details on click
+                            </button>
+                        </h5>
+                    </div>
+                    <div
+                            id=\\"rules\\"
+                            class=\\"collapse\\"
+                            aria-labelledby=\\"ruleSection\\"
+                            data-parent=\\"#rules\\"
+                    >
+                        <div class=\\"card-body\\">
+                            <table class=\\"table table-bordered\\">
+                                <thead>
+                                <tr>
+                                    <th width=\\"5%\\">#</th>
+                                    <th width=\\"50%\\">Rule ID</th>
+                                    <th width=\\"45%\\">Enabled</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope=\\"row\\">1</th>
+                                    <td>object-alt</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">2</th>
+                                    <td>role-img-alt</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">3</th>
+                                    <td>input-image-alt</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">4</th>
+                                    <td>image-alt</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">5</th>
+                                    <td>svg-img-alt</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">6</th>
+                                    <td>area-alt</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">7</th>
+                                    <td>audio-caption</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">8</th>
+                                    <td>video-caption</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">9</th>
+                                    <td>definition-list</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">10</th>
+                                    <td>dlitem</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">11</th>
+                                    <td>listitem</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">12</th>
+                                    <td>list</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">13</th>
+                                    <td>th-has-data-cells</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">14</th>
+                                    <td>td-headers-attr</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">15</th>
+                                    <td>td-has-header</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">16</th>
+                                    <td>p-as-heading</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">17</th>
+                                    <td>aria-required-parent</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">18</th>
+                                    <td>aria-required-children</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">19</th>
+                                    <td>table-fake-caption</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">20</th>
+                                    <td>css-orientation-lock</td>
+                                    <td>false</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">21</th>
+                                    <td>autocomplete-valid</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">22</th>
+                                    <td>link-in-text-block</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">23</th>
+                                    <td>no-autoplay-audio</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">24</th>
+                                    <td>color-contrast</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">25</th>
+                                    <td>meta-viewport</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">26</th>
+                                    <td>avoid-inline-spacing</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">27</th>
+                                    <td>server-side-image-map</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">28</th>
+                                    <td>meta-refresh</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">29</th>
+                                    <td>blink</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">30</th>
+                                    <td>marquee</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">31</th>
+                                    <td>bypass</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">32</th>
+                                    <td>frame-title</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">33</th>
+                                    <td>document-title</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">34</th>
+                                    <td>scrollable-region-focusable</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">35</th>
+                                    <td>identical-links-same-purpose</td>
+                                    <td>false</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">36</th>
+                                    <td>label-content-name-mismatch</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">37</th>
+                                    <td>html-has-lang</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">38</th>
+                                    <td>html-lang-valid</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">39</th>
+                                    <td>html-xml-lang-mismatch</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">40</th>
+                                    <td>valid-lang</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">41</th>
+                                    <td>form-field-multiple-labels</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">42</th>
+                                    <td>duplicate-id-active</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">43</th>
+                                    <td>duplicate-id</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">44</th>
+                                    <td>duplicate-id-aria</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">45</th>
+                                    <td>aria-valid-attr</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">46</th>
+                                    <td>aria-valid-attr-value</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">47</th>
+                                    <td>aria-input-field-name</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">48</th>
+                                    <td>aria-roles</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">49</th>
+                                    <td>aria-toggle-field-name</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">50</th>
+                                    <td>aria-hidden-focus</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">51</th>
+                                    <td>aria-hidden-body</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">52</th>
+                                    <td>button-name</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">53</th>
+                                    <td>aria-allowed-attr</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">54</th>
+                                    <td>input-button-name</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">55</th>
+                                    <td>aria-required-attr</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">56</th>
+                                    <td>aria-roledescription</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">57</th>
+                                    <td>link-name</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">58</th>
+                                    <td>label</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">59</th>
+                                    <td>accesskeys</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">60</th>
+                                    <td>region</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">61</th>
+                                    <td>aria-allowed-role</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">62</th>
+                                    <td>landmark-banner-is-top-level</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">63</th>
+                                    <td>landmark-complementary-is-top-level</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">64</th>
+                                    <td>landmark-contentinfo-is-top-level</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">65</th>
+                                    <td>focus-order-semantics</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">66</th>
+                                    <td>tabindex</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">67</th>
+                                    <td>landmark-no-duplicate-main</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">68</th>
+                                    <td>label-title-only</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">69</th>
+                                    <td>frame-tested</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">70</th>
+                                    <td>frame-title-unique</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">71</th>
+                                    <td>heading-order</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">72</th>
+                                    <td>empty-heading</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">73</th>
+                                    <td>hidden-content</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">74</th>
+                                    <td>landmark-unique</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">75</th>
+                                    <td>landmark-main-is-top-level</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">76</th>
+                                    <td>page-has-heading-one</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">77</th>
+                                    <td>landmark-one-main</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">78</th>
+                                    <td>landmark-no-duplicate-banner</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">79</th>
+                                    <td>landmark-no-duplicate-contentinfo</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">80</th>
+                                    <td>scope-attr-valid</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">81</th>
+                                    <td>image-redundant-alt</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">82</th>
+                                    <td>table-duplicate-name</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">83</th>
+                                    <td>skip-link</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                                <tr>
+                                    <th scope=\\"row\\">84</th>
+                                    <td>meta-viewport-large</td>
+                                    <td>true</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

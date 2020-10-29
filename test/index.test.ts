@@ -1,4 +1,4 @@
-import { createHtmlReport, missingRequiredParamsError } from '../src';
+import { createHtmlReport } from '../src';
 import { defaultReportFileName } from '../src/util/saveHtmlReport';
 import fs from 'fs';
 import path from 'path';
@@ -25,7 +25,9 @@ describe('createHtmlReport() test', () => {
                     passes: [],
                 },
             });
-        }).toThrow(missingRequiredParamsError);
+        }).toThrow(
+            "'violations' is required for HTML accessibility report. Example: createHtmlReport({ results : { violations: Result[] } })"
+        );
     });
 
     it('Verify report is created only with violations because passes and incomplete are not passed', async () => {

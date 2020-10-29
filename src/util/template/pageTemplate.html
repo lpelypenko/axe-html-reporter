@@ -325,6 +325,55 @@
                 </div>
             </div>
             {{/hasInapplicable}}
+            {{#hasAxeRawResults}}
+            <div id="rulesSection">
+                <div class="card">
+                    <div class="card-header" id="ruleSection">
+                        <h5 class="mb-0">
+                            <button
+                                    class="btn btn-link"
+                                    data-toggle="collapse"
+                                    data-target="#rules"
+                                    aria-expanded="false"
+                                    aria-controls="inapplicable"
+                            >
+                                axe was running with {{rules.length}} rules.
+                                Expand details on click
+                            </button>
+                        </h5>
+                    </div>
+                    <div
+                            id="rules"
+                            class="collapse"
+                            aria-labelledby="ruleSection"
+                            data-parent="#rules"
+                    >
+                        <div class="card-body">
+                            {{#rules.length}}
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th width="5%">#</th>
+                                    <th width="50%">Rule ID</th>
+                                    <th width="45%">Enabled</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {{#rules}}
+                                <tr>
+                                    <th scope="row">{{index}}</th>
+                                    <td>{{rule}}</td>
+                                    <td>{{enabled}}</td>
+                                </tr>
+                                </tbody>
+                                {{/rules}}
+                            </table>
+                            {{/rules.length}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/hasAxeRawResults}}
         </div>
     </body>
 </html>
