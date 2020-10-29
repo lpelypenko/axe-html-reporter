@@ -12,12 +12,16 @@ export interface ResultsMinimal {
     inapplicable?: Result[];
 }
 
-export interface CreateReport {
-    results: AxeResults | ResultsMinimal; // user can decide to pass only 'violations' or full AxeResults object
+export interface Options {
     reportFileName?: string;
     outputDir?: string;
     projectKey?: string;
     customSummary?: string;
+}
+
+export interface CreateReport {
+    results: AxeResults | ResultsMinimal; // user can decide to pass only 'violations' or full AxeResults object
+    options?: Options;
 }
 
 export interface PreparedResults {
@@ -30,13 +34,7 @@ export interface PreparedResults {
 export const missingRequiredParamsError =
     "'violations' is required for HTML accessibility report. Example: createHtmlReport({ results : { violations: Result[] } })";
 
-export function createHtmlReport({
-    results,
-    reportFileName,
-    outputDir,
-    projectKey,
-    customSummary,
-}: CreateReport): void {
+export function createHtmlReport({ results, options }: CreateReport): void {
     if (!results.violations) {
         throw new Error(missingRequiredParamsError);
     }
@@ -49,7 +47,7 @@ export function createHtmlReport({
             inapplicable: results.inapplicable,
         });
         const htmlContent = mustache.render(template, {
-            url: results.url,
+            url: results.url || undefined,
             violationsSummary: preparedReportData.violationsSummary,
             violations: preparedReportData.violationsSummaryTable,
             violationDetails: preparedReportData.violationsDetails,
@@ -62,10 +60,14 @@ export function createHtmlReport({
             incompleteTotal: preparedReportData.checksIncomplete
                 ? preparedReportData.checksIncomplete.length
                 : 0,
-            projectKey,
-            customSummary,
+            projectKey: options?.projectKey,
+            customSummary: options?.customSummary,
         });
-        saveHtmlReport({ htmlContent, reportFileName, outputDir });
+        saveHtmlReport({
+            htmlContent,
+            reportFileName: options?.reportFileName,
+            outputDir: options?.outputDir,
+        });
     } catch (e) {
         console.warn(`HTML report was not created due to the error ${e.message}`);
     }
