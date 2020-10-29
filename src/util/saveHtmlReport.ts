@@ -1,5 +1,7 @@
 import fs from 'fs';
 
+export const defaultReportFileName = 'accessibilityReport.html';
+
 interface SaveReportOptions {
     htmlContent: string;
     reportFileName?: string;
@@ -22,7 +24,7 @@ export function saveHtmlReport({
                 recursive: true,
             });
         }
-        const reportFilePath = `${reportDirectory}/${reportFileName || 'accessibilityReport.html'}`;
+        const reportFilePath = `${reportDirectory}/${reportFileName || defaultReportFileName}`;
         fs.writeFileSync(reportFilePath, htmlContent);
         console.info(`HTML report was saved into the following directory ${reportFilePath}`);
     } catch (err) {

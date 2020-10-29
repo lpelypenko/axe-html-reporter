@@ -1,15 +1,19 @@
 import mustache from 'mustache';
-import { Result } from 'axe-core';
+import { AxeResults, Result } from 'axe-core';
 import { loadTemplate } from './util/loadTemplate';
 import { prepareReportData } from './util/prepareReportData';
 import { saveHtmlReport } from './util/saveHtmlReport';
 
-export interface CreateReport {
+export interface ResultsMinimal {
     violations: Result[];
-    url: string;
+    url?: string;
     passes?: Result[];
     incomplete?: Result[];
     inapplicable?: Result[];
+}
+
+export interface CreateReport {
+    results: AxeResults | ResultsMinimal; // user can decide to pass only 'violations' or full AxeResults object
     reportFileName?: string;
     outputDir?: string;
     projectKey?: string;
@@ -23,37 +27,41 @@ export interface PreparedResults {
     inapplicable?: Result[];
 }
 
+export const missingRequiredParamsError =
+    "'violations' is required for HTML accessibility report. Example: createHtmlReport({ results : { violations: Result[] } })";
+
 export function createHtmlReport({
-    violations,
-    url,
-    passes,
-    incomplete,
-    inapplicable,
+    results,
     reportFileName,
     outputDir,
     projectKey,
     customSummary,
 }: CreateReport): void {
-    if (!violations || !url) {
-        throw new Error(
-            "violations and url parameters are required for HTML accessibility report. Example: createHtmlReport({violations: Result[], url: 'www.example.com'})"
-        );
+    if (!results.violations) {
+        throw new Error(missingRequiredParamsError);
     }
     try {
         const template = loadTemplate();
-        const reportData = prepareReportData({ violations, passes, incomplete, inapplicable });
+        const preparedReportData = prepareReportData({
+            violations: results.violations,
+            passes: results.passes,
+            incomplete: results.incomplete,
+            inapplicable: results.inapplicable,
+        });
         const htmlContent = mustache.render(template, {
-            url,
-            violationsSummary: reportData.violationsSummary,
-            violations: reportData.violationsSummaryTable,
-            violationDetails: reportData.violationsDetails,
-            checksPassed: reportData.checksPassed,
-            checksIncomplete: reportData.checksIncomplete,
-            checksInapplicable: reportData.checksInapplicable,
-            hasPassed: passes !== undefined,
-            hasIncomplete: incomplete !== undefined,
-            hasInapplicable: inapplicable !== undefined,
-            incompleteTotal: reportData.checksIncomplete ? reportData.checksIncomplete.length : 0,
+            url: results.url,
+            violationsSummary: preparedReportData.violationsSummary,
+            violations: preparedReportData.violationsSummaryTable,
+            violationDetails: preparedReportData.violationsDetails,
+            checksPassed: preparedReportData.checksPassed,
+            checksIncomplete: preparedReportData.checksIncomplete,
+            checksInapplicable: preparedReportData.checksInapplicable,
+            hasPassed: results.passes !== undefined,
+            hasIncomplete: results.incomplete !== undefined,
+            hasInapplicable: results.inapplicable !== undefined,
+            incompleteTotal: preparedReportData.checksIncomplete
+                ? preparedReportData.checksIncomplete.length
+                : 0,
             projectKey,
             customSummary,
         });

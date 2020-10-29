@@ -1,138 +1,140 @@
-import { createHtmlReport } from '../src';
+import { createHtmlReport, missingRequiredParamsError } from '../src';
+import { defaultReportFileName } from '../src/util/saveHtmlReport';
 import fs from 'fs';
 import path from 'path';
 const axeRawViolations = require('./rawViolations.json');
 const axeRawPassed = require('./rawPasses.json');
 const axeRawIncomplete = require('./rawIncomplete.json');
 const axeRawInapplicable = require('./rawInapplicable.json');
+const rawAxeResults = require('./rawAxeResults.json');
+
+function getPathToCreatedReport(customFileName?: string, customOutputDir?: string) {
+    return path.resolve(
+        process.cwd(),
+        customOutputDir ? customOutputDir : 'artifacts',
+        customFileName ? customFileName : defaultReportFileName
+    );
+}
 
 describe('createHtmlReport() test', () => {
     it('Verify throwing an error if required parameters are not passed', async () => {
         expect(() => {
-            //@ts-ignore
-            createHtmlReport({ passes: [] });
-        }).toThrow(
-            "violations and url parameters are required for HTML accessibility report. Example: createHtmlReport({violations: Result[], url: 'www.example.com'})"
-        );
+            createHtmlReport({
+                // @ts-ignore
+                results: {
+                    passes: [],
+                },
+            });
+        }).toThrow(missingRequiredParamsError);
     });
     it('Verify report is created only with violations because passes and incomplete are not passed', async () => {
         createHtmlReport({
-            violations: axeRawViolations,
-            url: 'https://dequeuniversity.com/demo/mars/',
+            results: {
+                violations: axeRawViolations,
+                url: 'https://dequeuniversity.com/demo/mars/',
+            },
         });
-        const pathToTheReport = path.resolve(
-            process.cwd(),
-            'artifacts',
-            'accessibilityReport.html'
-        );
-        const htmlFileContent = fs.readFileSync(pathToTheReport, {
-            encoding: 'utf8',
-        });
-        // do not clean up to verify results manually
-        // validate
-        expect(htmlFileContent).toMatchSnapshot();
+        expect(fs.readFileSync(getPathToCreatedReport(), { encoding: 'utf8' })).toMatchSnapshot();
     });
     it('Verify report is created with violations and passes', async () => {
+        const file = 'tcPassesAndViolations.html';
         createHtmlReport({
-            violations: axeRawViolations,
-            passes: axeRawPassed,
-            reportFileName: 'tcPassesAndViolations.html',
-            url: 'https://dequeuniversity.com/demo/mars/',
+            results: {
+                violations: axeRawViolations,
+                passes: axeRawPassed,
+                url: 'https://dequeuniversity.com/demo/mars/',
+            },
+            reportFileName: file,
         });
-        const pathToTheReport = path.resolve(process.cwd(), 'artifacts', 'tcPassesAndViolations.html');
-        const htmlFileContent = fs.readFileSync(pathToTheReport, {
-            encoding: 'utf8',
-        });
-        // do not clean up to verify results manually
-        // validate
-        expect(htmlFileContent).toMatchSnapshot();
+        expect(
+            fs.readFileSync(getPathToCreatedReport(file), { encoding: 'utf8' })
+        ).toMatchSnapshot();
     });
     it('Verify report is created with violations, passes and incomplete with optional reportFileName and outputDir params', async () => {
+        const customReportFileName = 'tcPassesViolationsIncomplete.html';
+        const customOutputDir = 'temp';
         createHtmlReport({
-            violations: axeRawViolations,
-            passes: axeRawPassed,
-            incomplete: axeRawIncomplete,
-            reportFileName: 'tcPassesViolationsIncomplete.html',
-            outputDir: 'temp',
-            url: 'https://dequeuniversity.com/demo/mars/',
+            results: {
+                violations: axeRawViolations,
+                passes: axeRawPassed,
+                incomplete: axeRawIncomplete,
+                url: 'https://dequeuniversity.com/demo/mars/',
+            },
+            reportFileName: customReportFileName,
+            outputDir: customOutputDir,
         });
-        const pathToTheReport = path.resolve(process.cwd(), 'temp', 'tcPassesViolationsIncomplete.html');
-        const htmlFileContent = fs.readFileSync(pathToTheReport, {
-            encoding: 'utf8',
-        });
-        // do not clean up to verify results manually
-        // validate
-        expect(htmlFileContent).toMatchSnapshot();
+        expect(
+            fs.readFileSync(getPathToCreatedReport(customReportFileName, customOutputDir), {
+                encoding: 'utf8',
+            })
+        ).toMatchSnapshot();
     });
     it('Verify report is created with violations, passes and incomplete with optional reportFileName, url and project key params', async () => {
+        const customReportFileName = 'tcWithTheKey.html';
         createHtmlReport({
-            violations: axeRawViolations,
-            passes: axeRawPassed,
-            incomplete: axeRawIncomplete,
-            reportFileName: 'tcWithTheKey.html',
+            results: {
+                violations: axeRawViolations,
+                passes: axeRawPassed,
+                incomplete: axeRawIncomplete,
+                url: 'https://dequeuniversity.com/demo/mars/',
+            },
+            reportFileName: customReportFileName,
             projectKey: 'DEQUE',
-            url: 'https://dequeuniversity.com/demo/mars/',
         });
-        const pathToTheReport = path.resolve(process.cwd(), 'artifacts', 'tcWithTheKey.html');
-        const htmlFileContent = fs.readFileSync(pathToTheReport, {
-            encoding: 'utf8',
-        });
-        // do not clean up to verify results manually
-        // validate
-        expect(htmlFileContent).toMatchSnapshot();
+        expect(
+            fs.readFileSync(getPathToCreatedReport(customReportFileName), { encoding: 'utf8' })
+        ).toMatchSnapshot();
     });
     it('Verify report with no violations, passes and incomplete with optional reportFileName, url and project key params', async () => {
+        const customReportFileName = 'tcAllPassed.html';
         createHtmlReport({
-            violations: [],
-            passes: axeRawPassed,
-            incomplete: axeRawIncomplete,
-            reportFileName: 'tcAllPassed.html',
+            results: {
+                violations: [],
+                passes: axeRawPassed,
+                incomplete: axeRawIncomplete,
+                url: 'https://dequeuniversity.com/demo/mars/',
+            },
+            reportFileName: customReportFileName,
             projectKey: 'DEQUE',
-            url: 'https://dequeuniversity.com/demo/mars/',
         });
-        const pathToTheReport = path.resolve(process.cwd(), 'artifacts', 'tcAllPassed.html');
-        const htmlFileContent = fs.readFileSync(pathToTheReport, {
-            encoding: 'utf8',
-        });
-        // do not clean up to verify results manually
-        // validate
-        expect(htmlFileContent).toMatchSnapshot();
+        expect(
+            fs.readFileSync(getPathToCreatedReport(customReportFileName), { encoding: 'utf8' })
+        ).toMatchSnapshot();
     });
     it('Verify report with no violations, passes and incomplete with optional reportFileName, url and project key params', async () => {
+        const customReportFileName = 'tcInapplicablePresent.html';
         createHtmlReport({
-            violations: axeRawViolations,
-            passes: axeRawPassed,
-            incomplete: axeRawIncomplete,
-            inapplicable: axeRawInapplicable,
-            reportFileName: 'tcInapplicablePresent.html',
-            url: 'https://dequeuniversity.com/demo/mars/',
+            results: {
+                violations: axeRawViolations,
+                passes: axeRawPassed,
+                incomplete: axeRawIncomplete,
+                inapplicable: axeRawInapplicable,
+                url: 'https://dequeuniversity.com/demo/mars/',
+            },
+            reportFileName: customReportFileName,
         });
-        const pathToTheReport = path.resolve(process.cwd(), 'artifacts', 'tcAllPassed.html');
-        const htmlFileContent = fs.readFileSync(pathToTheReport, {
-            encoding: 'utf8',
-        });
-        // do not clean up to verify results manually
-        // validate
-        expect(htmlFileContent).toMatchSnapshot();
+        expect(
+            fs.readFileSync(getPathToCreatedReport(customReportFileName), { encoding: 'utf8' })
+        ).toMatchSnapshot();
     });
     it('Verify report with no violations, no passes, no incomplete, no inapplicable', async () => {
+        const customReportFileName = 'tcOnlyPasses.html';
         createHtmlReport({
-            violations: [],
-            passes: [],
-            incomplete: [],
-            inapplicable: [],
-            reportFileName: 'tcOnlyPasses.html',
-            url: 'https://dequeuniversity.com/demo/mars/',
+            results: {
+                violations: [],
+                passes: [],
+                incomplete: [],
+                inapplicable: [],
+                url: 'https://dequeuniversity.com/demo/mars/',
+            },
+            reportFileName: customReportFileName,
         });
-        const pathToTheReport = path.resolve(process.cwd(), 'artifacts', 'tcOnlyPasses.html');
-        const htmlFileContent = fs.readFileSync(pathToTheReport, {
-            encoding: 'utf8',
-        });
-        // do not clean up to verify results manually
-        // validate
-        expect(htmlFileContent).toMatchSnapshot();
+        expect(
+            fs.readFileSync(getPathToCreatedReport(customReportFileName), { encoding: 'utf8' })
+        ).toMatchSnapshot();
     });
     it('Verify report is created with violations and custom summary', async () => {
+        const customReportFileName = 'tcIncludingCustomSummary.html';
         const customSummary = `Test Case: Full page analysis
         <br>Steps:</br>
         <ol style="margin: 0">
@@ -140,25 +142,21 @@ describe('createHtmlReport() test', () => {
         <li>Analyze full page with all rules enabled</li>
         </ol>`;
         createHtmlReport({
-            violations: axeRawViolations,
-            url: 'https://dequeuniversity.com/demo/mars/',
+            results: {
+                violations: axeRawViolations,
+                url: 'https://dequeuniversity.com/demo/mars/',
+            },
+            reportFileName: customReportFileName,
             customSummary,
-            reportFileName: 'tcIncludingCustomSummary.html'
         });
-        const pathToTheReport = path.resolve(
-            process.cwd(),
-            'artifacts',
-            'tcIncludingCustomSummary.html'
-        );
-        const htmlFileContent = fs.readFileSync(pathToTheReport, {
-            encoding: 'utf8',
-        });
-        // do not clean up to verify results manually
-        // validate
-        expect(htmlFileContent).toMatchSnapshot();
+        expect(
+            fs.readFileSync(getPathToCreatedReport(customReportFileName), { encoding: 'utf8' })
+        ).toMatchSnapshot();
     });
 
     it('All optional parameters present', async () => {
+        const customReportFileName = 'index.html';
+        const customOutputDir = 'docs';
         const customSummary = `Test Case: Full page analysis
         <br>Steps:</br>
         <ol style="margin: 0">
@@ -166,26 +164,35 @@ describe('createHtmlReport() test', () => {
         <li>Analyze full page with all rules enabled</li>
         </ol>`;
         createHtmlReport({
-            violations: axeRawViolations,
-            passes: axeRawPassed,
-            incomplete: [],
-            inapplicable: axeRawInapplicable,
+            results: {
+                violations: axeRawViolations,
+                passes: axeRawPassed,
+                incomplete: [],
+                inapplicable: axeRawInapplicable,
+                url: 'https://dequeuniversity.com/demo/mars/',
+            },
             projectKey: 'DEQUE',
-            url: 'https://dequeuniversity.com/demo/mars/',
             customSummary,
-            outputDir: 'docs',
-            reportFileName: 'index.html'
+            outputDir: customOutputDir,
+            reportFileName: customReportFileName,
         });
-        const pathToTheReport = path.resolve(
-            process.cwd(),
-            'artifacts',
-            'tcIncludingCustomSummary.html'
-        );
-        const htmlFileContent = fs.readFileSync(pathToTheReport, {
-            encoding: 'utf8',
+        expect(
+            fs.readFileSync(getPathToCreatedReport(customReportFileName, customOutputDir), {
+                encoding: 'utf8',
+            })
+        ).toMatchSnapshot();
+    });
+    it('AxeResults passed', async () => {
+        const customReportFileName = 'tcAxeResults.html';
+        createHtmlReport({
+            results: rawAxeResults,
+            projectKey: 'DEQUE',
+            reportFileName: customReportFileName,
         });
-        // do not clean up to verify results manually
-        // validate
-        expect(htmlFileContent).toMatchSnapshot();
+        expect(
+            fs.readFileSync(getPathToCreatedReport(customReportFileName), {
+                encoding: 'utf8',
+            })
+        ).toMatchSnapshot();
     });
 });
