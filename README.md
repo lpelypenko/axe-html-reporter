@@ -83,25 +83,25 @@ HTML report was saved into the following directory /Users/axe-demos/artifacts/ac
 ### Example usage in any JS framework
 
 ```javascript
-import { axeHtmlReporter } from 'axe-html-reporter';
+import { createHtmlReport } from 'axe-html-reporter';
 
 (() => {
     // creates html report with the default name `accessibilityReport.html` file
-    axeHtmlReporter({ results: 'AxeResults' }); // full AxeResults object
+    createHtmlReport({ results: 'AxeResults' }); // full AxeResults object
     // creates html report with the default name `accessibilityReport.html` file and all supported AxeResults values
-    axeHtmlReporter({ results: { violations: 'Result[]' } }); // passing only violations from axe.run output
+    createHtmlReport({ results: { violations: 'Result[]' } }); // passing only violations from axe.run output
     // creates html report with the default name `accessibilityReport.html` file and adds url and projectKey
-    axeHtmlReporter({
+    createHtmlReport({
         results: 'AxeResults',
         options: { projectKey: 'JIRA_PROJECT_KEY' },
     });
     // creates html report with the name `exampleReport.html` in 'axe-reports' directory and adds projectKey to the header
-    axeHtmlReporter({
+    createHtmlReport({
         results: 'AxeResults',
         options: {
             projectKey: 'JIRA_PROJECT_KEY',
             outputDir: 'axe-reports',
-            fileName: 'exampleReport.html',
+            reportFileName: 'exampleReport.html',
         },
     });
     // creates html report with all optional parameters, saving the report into 'docs' directory with report file name 'index.html'
@@ -126,10 +126,10 @@ import { axeHtmlReporter } from 'axe-html-reporter';
 ### CommonJS
 
 ```javascript
-const { axeHtmlReporter } = require('axe-html-reporter');
+const { createHtmlReport } = require('axe-html-reporter');
 
 (() => {
     // creates html report with the name `accessibilityReport.html` file
-    axeHtmlReporter({ results: { violations: 'Result[]' } });
+    createHtmlReport({ results: { violations: 'Result[]' } });
 })();
 ```
