@@ -12,16 +12,27 @@
             .violationCardLine {
                 display: flex;
                 justify-content: space-between;
-                align-items: center;
-            }
-            .violationCardTitleItem {
-                white-space: nowrap;
+                align-items: start;
             }
             .learnMore {
                 margin-bottom: 0.75rem;
+                white-space: nowrap;
+                color: #2557a7;
+            }
+            .card-link {
+                color: #2557a7;
             }
             .violationNode {
                 font-size: 0.75rem;
+            }
+            .wrapBreakWord {
+                word-break: break-word;
+            }
+            .summary {
+                font-size: 1rem;
+            }
+            .summarySection {
+                margin: 0.5rem 0;
             }
         </style>
         <!-- Bootstrap CSS -->
@@ -58,29 +69,29 @@
             <h3>
                 AXE Accessibility Results for DEQUE project
             </h3>
-            <h5>
-                <small class="text-muted">
+            <div class="summarySection">
+                <div class="summary">
                     Page URL:
                     <a href="http:&#x2F;&#x2F;example.com&#x2F;" target="_blank" class="card-link">http:&#x2F;&#x2F;example.com&#x2F;</a>
                     <br />
-                    Test Case: Full page analysis
+                </div>
+                <div class="summary">Test Case: Full page analysis
         <br>Steps:</br>
         <ol style="margin: 0">
         <li>Open https://dequeuniversity.com/demo/mars/</li>
         <li>Analyze full page with all rules enabled</li>
-        </ol> 
-                </small>
-            </h5>
+        </ol></div>
+            </div>
             <h5>axe-core found <span class="badge badge-warning">6</span> violations</h5>
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
-                        <th width="5%">#</th>
-                        <th width="45%">Description</th>
-                        <th width="15%">Axe rule ID</th>
-                        <th width="15%">WCAG</th>
-                        <th width="15%">Impact</th>
-                        <th width="5%">Count</th>
+                        <th style="width: 5%">#</th>
+                        <th style="width: 45%">Description</th>
+                        <th style="width: 15%">Axe rule ID</th>
+                        <th style="width: 15%">WCAG</th>
+                        <th style="width: 15%">Impact</th>
+                        <th style="width: 5%">Count</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -146,16 +157,28 @@
                         <table class="table table-sm table-bordered">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th width="50%">Source Code</th>
-                                    <th width="50%">Selector</th>
+                                    <th style="width: 3%">#</th>
+                                    <th style="width: 30%">Element source</th>
+                                    <th style="width: 30%">Element location</th>
+                                    <th style="width: 37%">
+                                        To solve this violation, you need to...
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td><samp>&lt;html&gt;</samp></td>
-                                    <td><samp>&quot;html&quot;</samp></td>
+                                    <td class="wrapBreakWord">1</td>
+                                    <td class="wrapBreakWord"><samp>&lt;html&gt;</samp></td>
+                                    <td class="wrapBreakWord"><samp>&quot;html&quot;</samp></td>
+                                    <td class="wrapBreakWord">
+                                        <samp
+                                            >
+                                            <p><em>Fix any of the following:</em></p>
+                                            <ul>
+                                                <li>  The &lt;html&gt; element does not have a lang attribute</li>
+                                            </ul>
+                                        </samp>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -189,16 +212,28 @@
                         <table class="table table-sm table-bordered">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th width="50%">Source Code</th>
-                                    <th width="50%">Selector</th>
+                                    <th style="width: 3%">#</th>
+                                    <th style="width: 30%">Element source</th>
+                                    <th style="width: 30%">Element location</th>
+                                    <th style="width: 37%">
+                                        To solve this violation, you need to...
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td><samp>&lt;html&gt;</samp></td>
-                                    <td><samp>&quot;html&quot;</samp></td>
+                                    <td class="wrapBreakWord">1</td>
+                                    <td class="wrapBreakWord"><samp>&lt;html&gt;</samp></td>
+                                    <td class="wrapBreakWord"><samp>&quot;html&quot;</samp></td>
+                                    <td class="wrapBreakWord">
+                                        <samp
+                                            >
+                                            <p><em>Fix all of the following:</em></p>
+                                            <ul>
+                                                <li>  Document does not have a main landmark</li>
+                                            </ul>
+                                        </samp>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -232,21 +267,33 @@
                         <table class="table table-sm table-bordered">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th width="50%">Source Code</th>
-                                    <th width="50%">Selector</th>
+                                    <th style="width: 3%">#</th>
+                                    <th style="width: 30%">Element source</th>
+                                    <th style="width: 30%">Element location</th>
+                                    <th style="width: 37%">
+                                        To solve this violation, you need to...
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td><samp>&lt;div&gt;
+                                    <td class="wrapBreakWord">1</td>
+                                    <td class="wrapBreakWord"><samp>&lt;div&gt;
     &lt;h1&gt;Example Domain&lt;&#x2F;h1&gt;
     &lt;p&gt;This domain is for use in illustrative examples in documents. You may use this
     domain in literature without prior coordination or asking for permission.&lt;&#x2F;p&gt;
     &lt;p&gt;&lt;a href&#x3D;&quot;https:&#x2F;&#x2F;www.iana.org&#x2F;domains&#x2F;example&quot;&gt;More information...&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;</samp></td>
-                                    <td><samp>&quot;div&quot;</samp></td>
+                                    <td class="wrapBreakWord"><samp>&quot;div&quot;</samp></td>
+                                    <td class="wrapBreakWord">
+                                        <samp
+                                            >
+                                            <p><em>Fix any of the following:</em></p>
+                                            <ul>
+                                                <li>  Some page content is not contained by landmarks</li>
+                                            </ul>
+                                        </samp>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -280,26 +327,56 @@
                         <table class="table table-sm table-bordered">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th width="50%">Source Code</th>
-                                    <th width="50%">Selector</th>
+                                    <th style="width: 3%">#</th>
+                                    <th style="width: 30%">Element source</th>
+                                    <th style="width: 30%">Element location</th>
+                                    <th style="width: 37%">
+                                        To solve this violation, you need to...
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td><samp>&lt;input type&#x3D;&quot;text&quot; value&#x3D;&quot;&quot; class&#x3D;&quot;city-input ac_input ui-autocomplete-input&quot; autocomplete&#x3D;&quot;off&quot; id&#x3D;&quot;from0&quot; name&#x3D;&quot;from0&quot; tabindex&#x3D;&quot;1&quot; role&#x3D;&quot;textbox&quot; aria-autocomplete&#x3D;&quot;list&quot; aria-haspopup&#x3D;&quot;true&quot;&gt;</samp></td>
-                                    <td><samp>&quot;#from0&quot;</samp></td>
+                                    <td class="wrapBreakWord">1</td>
+                                    <td class="wrapBreakWord"><samp>&lt;input type&#x3D;&quot;text&quot; value&#x3D;&quot;&quot; class&#x3D;&quot;city-input ac_input ui-autocomplete-input&quot; autocomplete&#x3D;&quot;off&quot; id&#x3D;&quot;from0&quot; name&#x3D;&quot;from0&quot; tabindex&#x3D;&quot;1&quot; role&#x3D;&quot;textbox&quot; aria-autocomplete&#x3D;&quot;list&quot; aria-haspopup&#x3D;&quot;true&quot;&gt;</samp></td>
+                                    <td class="wrapBreakWord"><samp>&quot;#from0&quot;</samp></td>
+                                    <td class="wrapBreakWord">
+                                        <samp
+                                            >
+                                            <p><em>Fix any of the following:</em></p>
+                                            <ul>
+                                                <li>  Element has a tabindex greater than 0</li>
+                                            </ul>
+                                        </samp>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>2</td>
-                                    <td><samp>&lt;input type&#x3D;&quot;text&quot; value&#x3D;&quot;&quot; class&#x3D;&quot;city-input ac_input ui-autocomplete-input&quot; autocomplete&#x3D;&quot;off&quot; id&#x3D;&quot;to0&quot; name&#x3D;&quot;to0&quot; tabindex&#x3D;&quot;1&quot; role&#x3D;&quot;textbox&quot; aria-autocomplete&#x3D;&quot;list&quot; aria-haspopup&#x3D;&quot;true&quot;&gt;</samp></td>
-                                    <td><samp>&quot;#to0&quot;</samp></td>
+                                    <td class="wrapBreakWord">2</td>
+                                    <td class="wrapBreakWord"><samp>&lt;input type&#x3D;&quot;text&quot; value&#x3D;&quot;&quot; class&#x3D;&quot;city-input ac_input ui-autocomplete-input&quot; autocomplete&#x3D;&quot;off&quot; id&#x3D;&quot;to0&quot; name&#x3D;&quot;to0&quot; tabindex&#x3D;&quot;1&quot; role&#x3D;&quot;textbox&quot; aria-autocomplete&#x3D;&quot;list&quot; aria-haspopup&#x3D;&quot;true&quot;&gt;</samp></td>
+                                    <td class="wrapBreakWord"><samp>&quot;#to0&quot;</samp></td>
+                                    <td class="wrapBreakWord">
+                                        <samp
+                                            >
+                                            <p><em>Fix any of the following:</em></p>
+                                            <ul>
+                                                <li>  Element has a tabindex greater than 0</li>
+                                            </ul>
+                                        </samp>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>3</td>
-                                    <td><samp>&lt;input size&#x3D;&quot;10&quot; id&#x3D;&quot;deptDate0&quot; name&#x3D;&quot;deptDate0&quot; placeholder&#x3D;&quot;mm&#x2F;dd&#x2F;yyyy&quot; value&#x3D;&quot;&quot; tabindex&#x3D;&quot;3&quot; class&#x3D;&quot;hasDatepicker input-dept&quot;&gt;</samp></td>
-                                    <td><samp>&quot;#deptDate0&quot;</samp></td>
+                                    <td class="wrapBreakWord">3</td>
+                                    <td class="wrapBreakWord"><samp>&lt;input size&#x3D;&quot;10&quot; id&#x3D;&quot;deptDate0&quot; name&#x3D;&quot;deptDate0&quot; placeholder&#x3D;&quot;mm&#x2F;dd&#x2F;yyyy&quot; value&#x3D;&quot;&quot; tabindex&#x3D;&quot;3&quot; class&#x3D;&quot;hasDatepicker input-dept&quot;&gt;</samp></td>
+                                    <td class="wrapBreakWord"><samp>&quot;#deptDate0&quot;</samp></td>
+                                    <td class="wrapBreakWord">
+                                        <samp
+                                            >
+                                            <p><em>Fix any of the following:</em></p>
+                                            <ul>
+                                                <li>  Element has a tabindex greater than 0</li>
+                                            </ul>
+                                        </samp>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -333,11 +410,11 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th width="5%">#</th>
-                                        <th width="50%">Description</th>
-                                        <th width="15%">Axe rule ID</th>
-                                        <th width="15%">WCAG</th>
-                                        <th width="15%">Nodes passed check</th>
+                                        <th style="width: 5%">#</th>
+                                        <th style="width: 50%">Description</th>
+                                        <th style="width: 5%">Axe rule ID</th>
+                                        <th style="width: 5%">WCAG</th>
+                                        <th style="width: 5%">Nodes passed check</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -520,10 +597,10 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th width="5%">#</th>
-                                        <th width="50%">Description</th>
-                                        <th width="20%">Axe rule ID</th>
-                                        <th width="15%">WCAG</th>
+                                        <th style="width: 5%">#</th>
+                                        <th style="width: 50%">Description</th>
+                                        <th style="width: 20%">Axe rule ID</th>
+                                        <th style="width: 15%">WCAG</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -1033,9 +1110,9 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th width="5%">#</th>
-                                        <th width="50%">Rule ID</th>
-                                        <th width="45%">Enabled</th>
+                                        <th style="width: 5%">#</th>
+                                        <th style="width: 50%">Rule ID</th>
+                                        <th style="width: 45%">Enabled</th>
                                     </tr>
                                 </thead>
                                 <tbody>
