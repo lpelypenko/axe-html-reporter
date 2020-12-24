@@ -185,6 +185,12 @@
                                             </ul>
                                         </div>
                                         {{/fixSummaries}}
+                                        {{#relatedNodesAny.length}}
+                                        <p><strong>Related node(s):</strong></p>
+                                        {{/relatedNodesAny.length}}
+                                        {{#relatedNodesAny}}
+                                        <pre><code class="css">{{.}}</code></pre>
+                                        {{/relatedNodesAny}}
                                     </td>
                                 </tr>
                                 {{/nodes}}

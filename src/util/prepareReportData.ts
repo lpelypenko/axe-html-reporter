@@ -73,7 +73,7 @@ export function prepareReportData({
                 description,
                 help,
                 helpUrl,
-                nodes: nodes.map(({ target, html, failureSummary }, nodeIndex) => {
+                nodes: nodes.map(({ target, html, failureSummary, any }, nodeIndex) => {
                     const targetNodes = target.join('\n');
                     const defaultHighlight = {
                         highlight: 'Recommendation with the fix was not provided by axe result',
@@ -81,8 +81,24 @@ export function prepareReportData({
                     const fixSummaries: FixSummary[] = failureSummary
                         ? prepareFixSummary(failureSummary, defaultHighlight)
                         : [defaultHighlight];
+                    const relatedNodesAny: string[] = [];
+                    any.forEach((checkResult) => {
+                        if (checkResult.relatedNodes && checkResult.relatedNodes.length > 0) {
+                            checkResult.relatedNodes.forEach((node) => {
+                                if (node.target.length > 0) {
+                                    relatedNodesAny.push(node.target.join('\n'));
+                                }
+                            });
+                        }
+                    });
 
-                    return { targetNodes, html, fixSummaries, index: nodeIndex + 1 };
+                    return {
+                        targetNodes,
+                        html,
+                        fixSummaries,
+                        relatedNodesAny,
+                        index: nodeIndex + 1,
+                    };
                 }),
             };
         }
