@@ -34,6 +34,19 @@
             .summarySection {
                 margin: 0.5rem 0;
             }
+            .hljs {
+                white-space: pre-wrap;
+                width: 100%;
+            }
+            p {
+                margin-top: 0.3rem;
+            }
+            li {
+                line-height: 1.618;
+            }
+            .fix-summary-list {
+                word-break: break-word;
+            }
         </style>
         <!-- Bootstrap CSS -->
         <link
@@ -57,6 +70,11 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"
         ></script>
+        <link
+            rel="stylesheet"
+            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/a11y-dark.min.css"
+        />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <link
             rel="icon"
             href="https://www.deque.com/wp-content/uploads/2018/03/cropped-DQ_SecondaryLogo_HeroBlue_RGB-1-32x32.png"
@@ -97,7 +115,7 @@
                 <tbody>
                     {{#violations}}
                     <tr>
-                        <th scope="row">{{index}}</th>
+                        <th scope="row"><a href="#{{index}}">{{index}}</a></th>
                         <td>{{help}}</td>
                         <td>{{id}}</td>
                         <td>{{wcag}}</td>
@@ -113,7 +131,9 @@
             <div class="card violationCard">
                 <div class="card-body">
                     <div class="violationCardLine">
-                        <h5 class="card-title violationCardTitleItem">{{help}}</h5>
+                        <h5 class="card-title violationCardTitleItem">
+                            <a id="{{index}}">Violation type #{{index}}</a>: {{help}}
+                        </h5>
                         <a
                             href="{{helpUrl}}"
                             target="_blank"
@@ -138,30 +158,33 @@
                             <thead>
                                 <tr>
                                     <th style="width: 3%">#</th>
-                                    <th style="width: 30%">Element source</th>
-                                    <th style="width: 30%">Element location</th>
-                                    <th style="width: 37%">
-                                        To solve this violation, you need to...
-                                    </th>
+                                    <th style="width: 97%">Issue Description</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {{#nodes}}
                                 <tr>
-                                    <td class="wrapBreakWord">{{index}}</td>
-                                    <td class="wrapBreakWord"><samp>{{html}}</samp></td>
-                                    <td class="wrapBreakWord"><samp>{{targetNodes}}</samp></td>
-                                    <td class="wrapBreakWord">
-                                        <samp
-                                            >{{#fixSummaries}}
-                                            <p><em>{{highlight}}</em></p>
-                                            <ul>
+                                    <td>{{index}}</td>
+                                    <td>
+                                        <p><strong>Element location(s)</strong></p>
+                                        <pre><code class="css">{{targetNodes}}</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html">{{html}}</code></pre>
+                                        <p>
+                                            <strong>
+                                                To solve this violation, you need to...
+                                            </strong>
+                                        </p>
+                                        {{#fixSummaries}}
+                                        <div class="fix-summary-list">
+                                            <p>{{highlight}}</p>
+                                            <ul class="text-muted">
                                                 {{#list}}
                                                 <li>{{.}}</li>
                                                 {{/list}}
                                             </ul>
-                                            {{/fixSummaries}}
-                                        </samp>
+                                        </div>
+                                        {{/fixSummaries}}
                                     </td>
                                 </tr>
                                 {{/nodes}}
@@ -399,5 +422,9 @@
             </div>
             {{/hasAxeRawResults}}
         </div>
+
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
     </body>
 </html>

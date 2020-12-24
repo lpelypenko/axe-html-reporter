@@ -34,6 +34,19 @@
             .summarySection {
                 margin: 0.5rem 0;
             }
+            .hljs {
+                white-space: pre-wrap;
+                width: 100%;
+            }
+            p {
+                margin-top: 0.3rem;
+            }
+            li {
+                line-height: 1.618;
+            }
+            .fix-summary-list {
+                word-break: break-word;
+            }
         </style>
         <!-- Bootstrap CSS -->
         <link
@@ -57,6 +70,11 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"
         ></script>
+        <link
+            rel="stylesheet"
+            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/a11y-dark.min.css"
+        />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <link
             rel="icon"
             href="https://www.deque.com/wp-content/uploads/2018/03/cropped-DQ_SecondaryLogo_HeroBlue_RGB-1-32x32.png"
@@ -96,7 +114,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">1</th>
+                        <th scope="row"><a href="#1">1</a></th>
                         <td>&lt;html&gt; element must have a lang attribute</td>
                         <td>html-has-lang</td>
                         <td>WCAG 2.0 Level A</td>
@@ -104,7 +122,7 @@
                         <td>1</td>
                     </tr>
                     <tr>
-                        <th scope="row">2</th>
+                        <th scope="row"><a href="#2">2</a></th>
                         <td>Document must have one main landmark</td>
                         <td>landmark-one-main</td>
                         <td>Best practice</td>
@@ -112,7 +130,7 @@
                         <td>1</td>
                     </tr>
                     <tr>
-                        <th scope="row">3</th>
+                        <th scope="row"><a href="#3">3</a></th>
                         <td>All page content must be contained by landmarks</td>
                         <td>region</td>
                         <td>Best practice</td>
@@ -120,7 +138,7 @@
                         <td>1</td>
                     </tr>
                     <tr>
-                        <th scope="row">4</th>
+                        <th scope="row"><a href="#4">4</a></th>
                         <td>Elements should not have tabindex greater than zero</td>
                         <td>tabindex</td>
                         <td>Best practice</td>
@@ -133,7 +151,9 @@
             <div class="card violationCard">
                 <div class="card-body">
                     <div class="violationCardLine">
-                        <h5 class="card-title violationCardTitleItem">&lt;html&gt; element must have a lang attribute</h5>
+                        <h5 class="card-title violationCardTitleItem">
+                            <a id="1">Violation type #1</a>: &lt;html&gt; element must have a lang attribute
+                        </h5>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;3.5&#x2F;html-has-lang?application&#x3D;axeAPI"
                             target="_blank"
@@ -158,26 +178,28 @@
                             <thead>
                                 <tr>
                                     <th style="width: 3%">#</th>
-                                    <th style="width: 30%">Element source</th>
-                                    <th style="width: 30%">Element location</th>
-                                    <th style="width: 37%">
-                                        To solve this violation, you need to...
-                                    </th>
+                                    <th style="width: 97%">Issue Description</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="wrapBreakWord">1</td>
-                                    <td class="wrapBreakWord"><samp>&lt;html&gt;</samp></td>
-                                    <td class="wrapBreakWord"><samp>&quot;html&quot;</samp></td>
-                                    <td class="wrapBreakWord">
-                                        <samp
-                                            >
-                                            <p><em>Fix any of the following:</em></p>
-                                            <ul>
+                                    <td>1</td>
+                                    <td>
+                                        <p><strong>Element location(s)</strong></p>
+                                        <pre><code class="css">html</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html">&lt;html&gt;</code></pre>
+                                        <p>
+                                            <strong>
+                                                To solve this violation, you need to...
+                                            </strong>
+                                        </p>
+                                        <div class="fix-summary-list">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
                                                 <li>  The &lt;html&gt; element does not have a lang attribute</li>
                                             </ul>
-                                        </samp>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -188,7 +210,9 @@
             <div class="card violationCard">
                 <div class="card-body">
                     <div class="violationCardLine">
-                        <h5 class="card-title violationCardTitleItem">Document must have one main landmark</h5>
+                        <h5 class="card-title violationCardTitleItem">
+                            <a id="2">Violation type #2</a>: Document must have one main landmark
+                        </h5>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;3.5&#x2F;landmark-one-main?application&#x3D;axeAPI"
                             target="_blank"
@@ -213,26 +237,28 @@
                             <thead>
                                 <tr>
                                     <th style="width: 3%">#</th>
-                                    <th style="width: 30%">Element source</th>
-                                    <th style="width: 30%">Element location</th>
-                                    <th style="width: 37%">
-                                        To solve this violation, you need to...
-                                    </th>
+                                    <th style="width: 97%">Issue Description</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="wrapBreakWord">1</td>
-                                    <td class="wrapBreakWord"><samp>&lt;html&gt;</samp></td>
-                                    <td class="wrapBreakWord"><samp>&quot;html&quot;</samp></td>
-                                    <td class="wrapBreakWord">
-                                        <samp
-                                            >
-                                            <p><em>Fix all of the following:</em></p>
-                                            <ul>
+                                    <td>1</td>
+                                    <td>
+                                        <p><strong>Element location(s)</strong></p>
+                                        <pre><code class="css">html</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html">&lt;html&gt;</code></pre>
+                                        <p>
+                                            <strong>
+                                                To solve this violation, you need to...
+                                            </strong>
+                                        </p>
+                                        <div class="fix-summary-list">
+                                            <p>Fix all of the following:</p>
+                                            <ul class="text-muted">
                                                 <li>  Document does not have a main landmark</li>
                                             </ul>
-                                        </samp>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -243,7 +269,9 @@
             <div class="card violationCard">
                 <div class="card-body">
                     <div class="violationCardLine">
-                        <h5 class="card-title violationCardTitleItem">All page content must be contained by landmarks</h5>
+                        <h5 class="card-title violationCardTitleItem">
+                            <a id="3">Violation type #3</a>: All page content must be contained by landmarks
+                        </h5>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;3.5&#x2F;region?application&#x3D;axeAPI"
                             target="_blank"
@@ -268,31 +296,33 @@
                             <thead>
                                 <tr>
                                     <th style="width: 3%">#</th>
-                                    <th style="width: 30%">Element source</th>
-                                    <th style="width: 30%">Element location</th>
-                                    <th style="width: 37%">
-                                        To solve this violation, you need to...
-                                    </th>
+                                    <th style="width: 97%">Issue Description</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="wrapBreakWord">1</td>
-                                    <td class="wrapBreakWord"><samp>&lt;div&gt;
+                                    <td>1</td>
+                                    <td>
+                                        <p><strong>Element location(s)</strong></p>
+                                        <pre><code class="css">div</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html">&lt;div&gt;
     &lt;h1&gt;Example Domain&lt;&#x2F;h1&gt;
     &lt;p&gt;This domain is for use in illustrative examples in documents. You may use this
     domain in literature without prior coordination or asking for permission.&lt;&#x2F;p&gt;
     &lt;p&gt;&lt;a href&#x3D;&quot;https:&#x2F;&#x2F;www.iana.org&#x2F;domains&#x2F;example&quot;&gt;More information...&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;div&gt;</samp></td>
-                                    <td class="wrapBreakWord"><samp>&quot;div&quot;</samp></td>
-                                    <td class="wrapBreakWord">
-                                        <samp
-                                            >
-                                            <p><em>Fix any of the following:</em></p>
-                                            <ul>
+&lt;&#x2F;div&gt;</code></pre>
+                                        <p>
+                                            <strong>
+                                                To solve this violation, you need to...
+                                            </strong>
+                                        </p>
+                                        <div class="fix-summary-list">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
                                             </ul>
-                                        </samp>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -303,7 +333,9 @@
             <div class="card violationCard">
                 <div class="card-body">
                     <div class="violationCardLine">
-                        <h5 class="card-title violationCardTitleItem">Elements should not have tabindex greater than zero</h5>
+                        <h5 class="card-title violationCardTitleItem">
+                            <a id="4">Violation type #4</a>: Elements should not have tabindex greater than zero
+                        </h5>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;3.5&#x2F;tabindex?application&#x3D;axeAPI"
                             target="_blank"
@@ -328,54 +360,68 @@
                             <thead>
                                 <tr>
                                     <th style="width: 3%">#</th>
-                                    <th style="width: 30%">Element source</th>
-                                    <th style="width: 30%">Element location</th>
-                                    <th style="width: 37%">
-                                        To solve this violation, you need to...
-                                    </th>
+                                    <th style="width: 97%">Issue Description</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="wrapBreakWord">1</td>
-                                    <td class="wrapBreakWord"><samp>&lt;input type&#x3D;&quot;text&quot; value&#x3D;&quot;&quot; class&#x3D;&quot;city-input ac_input ui-autocomplete-input&quot; autocomplete&#x3D;&quot;off&quot; id&#x3D;&quot;from0&quot; name&#x3D;&quot;from0&quot; tabindex&#x3D;&quot;1&quot; role&#x3D;&quot;textbox&quot; aria-autocomplete&#x3D;&quot;list&quot; aria-haspopup&#x3D;&quot;true&quot;&gt;</samp></td>
-                                    <td class="wrapBreakWord"><samp>&quot;#from0&quot;</samp></td>
-                                    <td class="wrapBreakWord">
-                                        <samp
-                                            >
-                                            <p><em>Fix any of the following:</em></p>
-                                            <ul>
+                                    <td>1</td>
+                                    <td>
+                                        <p><strong>Element location(s)</strong></p>
+                                        <pre><code class="css">#from0</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html">&lt;input type&#x3D;&quot;text&quot; value&#x3D;&quot;&quot; class&#x3D;&quot;city-input ac_input ui-autocomplete-input&quot; autocomplete&#x3D;&quot;off&quot; id&#x3D;&quot;from0&quot; name&#x3D;&quot;from0&quot; tabindex&#x3D;&quot;1&quot; role&#x3D;&quot;textbox&quot; aria-autocomplete&#x3D;&quot;list&quot; aria-haspopup&#x3D;&quot;true&quot;&gt;</code></pre>
+                                        <p>
+                                            <strong>
+                                                To solve this violation, you need to...
+                                            </strong>
+                                        </p>
+                                        <div class="fix-summary-list">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
                                                 <li>  Element has a tabindex greater than 0</li>
                                             </ul>
-                                        </samp>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="wrapBreakWord">2</td>
-                                    <td class="wrapBreakWord"><samp>&lt;input type&#x3D;&quot;text&quot; value&#x3D;&quot;&quot; class&#x3D;&quot;city-input ac_input ui-autocomplete-input&quot; autocomplete&#x3D;&quot;off&quot; id&#x3D;&quot;to0&quot; name&#x3D;&quot;to0&quot; tabindex&#x3D;&quot;1&quot; role&#x3D;&quot;textbox&quot; aria-autocomplete&#x3D;&quot;list&quot; aria-haspopup&#x3D;&quot;true&quot;&gt;</samp></td>
-                                    <td class="wrapBreakWord"><samp>&quot;#to0&quot;</samp></td>
-                                    <td class="wrapBreakWord">
-                                        <samp
-                                            >
-                                            <p><em>Fix any of the following:</em></p>
-                                            <ul>
+                                    <td>2</td>
+                                    <td>
+                                        <p><strong>Element location(s)</strong></p>
+                                        <pre><code class="css">#to0</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html">&lt;input type&#x3D;&quot;text&quot; value&#x3D;&quot;&quot; class&#x3D;&quot;city-input ac_input ui-autocomplete-input&quot; autocomplete&#x3D;&quot;off&quot; id&#x3D;&quot;to0&quot; name&#x3D;&quot;to0&quot; tabindex&#x3D;&quot;1&quot; role&#x3D;&quot;textbox&quot; aria-autocomplete&#x3D;&quot;list&quot; aria-haspopup&#x3D;&quot;true&quot;&gt;</code></pre>
+                                        <p>
+                                            <strong>
+                                                To solve this violation, you need to...
+                                            </strong>
+                                        </p>
+                                        <div class="fix-summary-list">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
                                                 <li>  Element has a tabindex greater than 0</li>
                                             </ul>
-                                        </samp>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="wrapBreakWord">3</td>
-                                    <td class="wrapBreakWord"><samp>&lt;input size&#x3D;&quot;10&quot; id&#x3D;&quot;deptDate0&quot; name&#x3D;&quot;deptDate0&quot; placeholder&#x3D;&quot;mm&#x2F;dd&#x2F;yyyy&quot; value&#x3D;&quot;&quot; tabindex&#x3D;&quot;3&quot; class&#x3D;&quot;hasDatepicker input-dept&quot;&gt;</samp></td>
-                                    <td class="wrapBreakWord"><samp>&quot;#deptDate0&quot;</samp></td>
-                                    <td class="wrapBreakWord">
-                                        <samp
-                                            >
-                                            <p><em>Fix any of the following:</em></p>
-                                            <ul>
+                                    <td>3</td>
+                                    <td>
+                                        <p><strong>Element location(s)</strong></p>
+                                        <pre><code class="css">#deptDate0</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html">&lt;input size&#x3D;&quot;10&quot; id&#x3D;&quot;deptDate0&quot; name&#x3D;&quot;deptDate0&quot; placeholder&#x3D;&quot;mm&#x2F;dd&#x2F;yyyy&quot; value&#x3D;&quot;&quot; tabindex&#x3D;&quot;3&quot; class&#x3D;&quot;hasDatepicker input-dept&quot;&gt;</code></pre>
+                                        <p>
+                                            <strong>
+                                                To solve this violation, you need to...
+                                            </strong>
+                                        </p>
+                                        <div class="fix-summary-list">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
                                                 <li>  Element has a tabindex greater than 0</li>
                                             </ul>
-                                        </samp>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -1626,5 +1672,9 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
     </body>
 </html>

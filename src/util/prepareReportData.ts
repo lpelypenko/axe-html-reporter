@@ -74,7 +74,7 @@ export function prepareReportData({
                 help,
                 helpUrl,
                 nodes: nodes.map(({ target, html, failureSummary }, nodeIndex) => {
-                    const targetNodes = target.map((node) => `"${node}"`).join(', ');
+                    const targetNodes = target.join('\n');
                     const defaultHighlight = {
                         highlight: 'Recommendation with the fix was not provided by axe result',
                     };

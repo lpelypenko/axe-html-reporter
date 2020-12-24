@@ -34,6 +34,19 @@
             .summarySection {
                 margin: 0.5rem 0;
             }
+            .hljs {
+                white-space: pre-wrap;
+                width: 100%;
+            }
+            p {
+                margin-top: 0.3rem;
+            }
+            li {
+                line-height: 1.618;
+            }
+            .fix-summary-list {
+                word-break: break-word;
+            }
         </style>
         <!-- Bootstrap CSS -->
         <link
@@ -57,6 +70,11 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"
         ></script>
+        <link
+            rel="stylesheet"
+            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/a11y-dark.min.css"
+        />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <link
             rel="icon"
             href="https://www.deque.com/wp-content/uploads/2018/03/cropped-DQ_SecondaryLogo_HeroBlue_RGB-1-32x32.png"
@@ -509,5 +527,9 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
     </body>
 </html>
