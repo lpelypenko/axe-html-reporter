@@ -1,8 +1,7 @@
-import { AxeReport } from './AxeReport';
+import { AxeReport, FixSummary, Summary } from './AxeReport';
 import { getWcagReference } from './getWcagReference';
 import { PreparedResults } from '../index';
 import { Result } from 'axe-core';
-import { Summary } from './AxeReport';
 
 function simplifyAxeResultForSummary(results: Result[]): Summary[] {
     return results.map(({ nodes, description, help, id, tags, impact }, resultIndex) => ({
@@ -12,8 +11,23 @@ function simplifyAxeResultForSummary(results: Result[]): Summary[] {
         help,
         wcag: getWcagReference(tags),
         impact: impact || 'n/a',
-        nodes: nodes.length
+        nodes: nodes.length,
     }));
+}
+
+function prepareFixSummary(failureSummary: string, defaultHighlight: FixSummary): FixSummary[] {
+    const failureSummariesSplit = failureSummary.split('\n\n');
+    return failureSummariesSplit.map((summary) => {
+        const fixSummarySplit = summary.split('\n');
+        if (fixSummarySplit.length == 0) {
+            return defaultHighlight;
+        } else {
+            return {
+                highlight: fixSummarySplit.shift() || '',
+                list: fixSummarySplit,
+            };
+        }
+    });
 }
 /**
  * Prepare report splitting it into sections:
@@ -36,7 +50,8 @@ export function prepareReportData({
     }, 0);
     if (violations.length === 0) {
         return {
-            violationsSummary: 'axe-core found <span class="badge badge-success">0</span> violations',
+            violationsSummary:
+                'axe-core found <span class="badge badge-success">0</span> violations',
             checksPassed: passedChecks,
             checksIncomplete: incompleteChecks,
             checksInapplicable: inapplicableChecks,
@@ -58,9 +73,32 @@ export function prepareReportData({
                 description,
                 help,
                 helpUrl,
-                nodes: nodes.map(({ target, html }, nodeIndex) => {
-                    const targetNodes = target.map((node) => `"${node}"`).join(', ');
-                    return { targetNodes, html, index: nodeIndex + 1 };
+                nodes: nodes.map(({ target, html, failureSummary, any }, nodeIndex) => {
+                    const targetNodes = target.join('\n');
+                    const defaultHighlight = {
+                        highlight: 'Recommendation with the fix was not provided by axe result',
+                    };
+                    const fixSummaries: FixSummary[] = failureSummary
+                        ? prepareFixSummary(failureSummary, defaultHighlight)
+                        : [defaultHighlight];
+                    const relatedNodesAny: string[] = [];
+                    any.forEach((checkResult) => {
+                        if (checkResult.relatedNodes && checkResult.relatedNodes.length > 0) {
+                            checkResult.relatedNodes.forEach((node) => {
+                                if (node.target.length > 0) {
+                                    relatedNodesAny.push(node.target.join('\n'));
+                                }
+                            });
+                        }
+                    });
+
+                    return {
+                        targetNodes,
+                        html,
+                        fixSummaries,
+                        relatedNodesAny,
+                        index: nodeIndex + 1,
+                    };
                 }),
             };
         }

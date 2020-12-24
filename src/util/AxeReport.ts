@@ -7,10 +7,17 @@ export interface Summary {
     nodes: number;
 }
 
+export interface FixSummary {
+    highlight: string;
+    list?: string[]
+}
+
 interface NodeResult {
     html: string;
     targetNodes: string;
+    fixSummaries: FixSummary[];
     index: number;
+    relatedNodesAny: string[]
 }
 
 interface Details {
