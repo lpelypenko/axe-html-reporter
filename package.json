@@ -38,7 +38,8 @@
         "test:watch": "jest test --watch"
     },
     "publishConfig": {
-        "access": "public"
+        "access": "public",
+        "registry": "http://registry.npmjs.org"
     },
     "peerDependencies": {
         "axe-core": ">=3"
