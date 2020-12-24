@@ -37,15 +37,13 @@
             .hljs {
                 white-space: pre-wrap;
                 width: 100%;
+                background: #f0f0f0;
             }
             p {
                 margin-top: 0.3rem;
             }
             li {
                 line-height: 1.618;
-            }
-            .fix-summary-list {
-                word-break: break-word;
             }
         </style>
         <!-- Bootstrap CSS -->
@@ -72,7 +70,7 @@
         ></script>
         <link
             rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/a11y-dark.min.css"
+            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
         />
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <link
@@ -232,7 +230,7 @@
                 <div class="card-body">
                     <div class="violationCardLine">
                         <h5 class="card-title violationCardTitleItem">
-                            <a id="1">Violation type #1</a>: Buttons must have discernible text
+                            <a id="1">1.</a> Buttons must have discernible text
                         </h5>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;3.5&#x2F;button-name?application&#x3D;axeAPI"
@@ -257,26 +255,26 @@
                         <table class="table table-sm table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="width: 3%">#</th>
-                                    <th style="width: 97%">Issue Description</th>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">.departure-date &gt; .ui-datepicker-trigger:nth-child(4)</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;button class&#x3D;&quot;ui-datepicker-trigger&quot; type&#x3D;&quot;button&quot;&gt;
 &lt;!-- &lt;img title&#x3D;&quot;...&quot; alt&#x3D;&quot;...&quot; src&#x3D;&quot;&#x2F;redesign&#x2F;assets&#x2F;demo-sites&#x2F;mars&#x2F;images&#x2F;calendar.png&quot;&gt; --&gt;
 &lt;&#x2F;button&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element does not have inner text that is visible to screen readers</li>
@@ -298,7 +296,7 @@
                 <div class="card-body">
                     <div class="violationCardLine">
                         <h5 class="card-title violationCardTitleItem">
-                            <a id="2">Violation type #2</a>: Elements must have sufficient color contrast
+                            <a id="2">2.</a> Elements must have sufficient color contrast
                         </h5>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;3.5&#x2F;color-contrast?application&#x3D;axeAPI"
@@ -323,253 +321,223 @@
                         <table class="table table-sm table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="width: 3%">#</th>
-                                    <th style="width: 97%">Issue Description</th>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">:root &gt; h3</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;h3&gt;Be Bold...&lt;&#x2F;h3&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element has insufficient color contrast of 4.31 (foreground color: #ff9999, background color: #344b6e, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">body</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#vap-plan &gt; p:nth-child(3)</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;p&gt;Step out of your comfort zone, and into a rocket with enough fuel to blast a Manhattan-sized crater if it explodes. But it won&#39;t. Probably.&lt;br&gt;
 &amp;nbsp; &lt;&#x2F;p&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element has insufficient color contrast of 4.49 (foreground color: #acbad0, background color: #344b6e, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">body</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">:root &gt; h3</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;h3&gt;Countdown...&lt;&#x2F;h3&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element has insufficient color contrast of 1.87 (foreground color: #067ab4, background color: #344b6e, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">body</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#vap-book &gt; p:nth-child(3)</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;p&gt;If you&#39;re serious about traveling to Mars - really serious - then &lt;a href&#x3D;&quot;mars2.html?a&#x3D;last_will&quot;&gt;prepare your last will and testament&lt;&#x2F;a&gt;, and book a trip! &lt;&#x2F;p&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element has insufficient color contrast of 4.49 (foreground color: #acbad0, background color: #344b6e, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">body</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>5</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">:root &gt; h3</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;h3&gt;Blast Off!&lt;&#x2F;h3&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element has insufficient color contrast of 2.83 (foreground color: #46a546, background color: #344b6e, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">body</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>6</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#vap-travel &gt; p:nth-child(3)</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;p&gt;Expect violent turbulence, bone-crushing g-forces, muscle atrophy, and certain death (hey, everyone&#39;s death is certain at some point, right?).&lt;br&gt;
 &amp;nbsp; &lt;&#x2F;p&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element has insufficient color contrast of 4.49 (foreground color: #acbad0, background color: #344b6e, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">body</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>7</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">:root &gt; a[href&#x3D;&quot;mars2\.html\?a\&#x3D;crater_adventure&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;a class&#x3D;&quot;&quot; href&#x3D;&quot;mars2.html?a&#x3D;crater_adventure&quot;&gt;10% off Crater Adventure&lt;&#x2F;a&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element has insufficient color contrast of 1.87 (foreground color: #067ab4, background color: #344b6e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">body</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>8</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">:root &gt; a[href&#x3D;&quot;mars2\.html\?a\&#x3D;ice_cream&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;a class&#x3D;&quot;&quot; href&#x3D;&quot;mars2.html?a&#x3D;ice_cream&quot;&gt;Free Astronaut Ice Cream&lt;&#x2F;a&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element has insufficient color contrast of 1.87 (foreground color: #067ab4, background color: #344b6e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">body</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>9</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">li:nth-child(2) &gt; .deal-text &gt; p</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;p&gt;Spend an extra 3 months in orbit around Mars in our newly-remodelled MarsPod and get a free package of freeze-wrapped dehydrated astronaut ice cream. &lt;a class&#x3D;&quot;link-arrow&quot; href&#x3D;&quot;mars2.html?a&#x3D;ice_cream&quot;&gt;Get your free dehydrated ice cream!&lt;&#x2F;a&gt;
 &lt;&#x2F;p&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element has insufficient color contrast of 2.37 (foreground color: #000000, background color: #344b6e, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">body</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>10</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">li:nth-child(3) &gt; .deal-text &gt; h3 &gt; .link</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;a class&#x3D;&quot;link&quot; href&#x3D;&quot;mars2.html?a&#x3D;low_price_guarantee&quot;&gt;Lowest Price Guarantee&lt;&#x2F;a&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element has insufficient color contrast of 1.87 (foreground color: #067ab4, background color: #344b6e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">body</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>11</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">:root &gt; a[href&#x3D;&quot;mars2\.html\?a\&#x3D;free_year&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;a href&#x3D;&quot;mars2.html?a&#x3D;free_year&quot;&gt;Book a free year on Mars&lt;&#x2F;a&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element has insufficient color contrast of 1.87 (foreground color: #067ab4, background color: #344b6e, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">body</code></pre>
                                     </td>
                                 </tr>
@@ -582,7 +550,7 @@
                 <div class="card-body">
                     <div class="violationCardLine">
                         <h5 class="card-title violationCardTitleItem">
-                            <a id="3">Violation type #3</a>: IDs of active elements must be unique
+                            <a id="3">3.</a> IDs of active elements must be unique
                         </h5>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;3.5&#x2F;duplicate-id-active?application&#x3D;axeAPI"
@@ -607,30 +575,30 @@
                         <table class="table table-sm table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="width: 3%">#</th>
-                                    <th style="width: 97%">Issue Description</th>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">.active</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;a target&#x3D;&quot;player&quot; data-text&#x3D;&quot;Life was possible on Mars&quot; class&#x3D;&quot;fader first active&quot; href&#x3D;&quot;http:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;OagLGti_hTE?controls&#x3D;1&amp;amp;showinfo&#x3D;1&amp;amp;modestbranding&#x3D;0&amp;amp;wmode&#x3D;opaque&amp;amp;enablejsapi&#x3D;1&quot; id&#x3D;&quot;default&quot;&gt;&lt;&#x2F;a&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Document has active elements with the same id attribute: default</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">a[data-text&#x3D;&quot;Why\ Mars\ died&quot;]</code></pre>
                                         <pre><code class="css">a[data-text&#x3D;&quot;The\ world\ that\ never\ was&quot;]</code></pre>
                                     </td>
@@ -644,7 +612,7 @@
                 <div class="card-body">
                     <div class="violationCardLine">
                         <h5 class="card-title violationCardTitleItem">
-                            <a id="4">Violation type #4</a>: id attribute value must be unique
+                            <a id="4">4.</a> id attribute value must be unique
                         </h5>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;3.5&#x2F;duplicate-id?application&#x3D;axeAPI"
@@ -669,59 +637,56 @@
                         <table class="table table-sm table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="width: 3%">#</th>
-                                    <th style="width: 97%">Issue Description</th>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">.loginnow &gt; .container-fluid-full</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div id&#x3D;&quot;control-panel&quot; class&#x3D;&quot;container-fluid-full&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Document has multiple static elements with the same id attribute</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">.loggedin &gt; .container-fluid-full</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">.loginnow &gt; .container-fluid-full &gt; .container &gt; .span5.pull-left.left-first &gt; .pull-left:nth-child(1)</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;nav id&#x3D;&quot;left-control-nav&quot; class&#x3D;&quot;pull-left&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Document has multiple static elements with the same id attribute</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">.loggedin &gt; .container-fluid-full &gt; .container &gt; .span5.pull-left.left-first &gt; .pull-left:nth-child(1)</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">.loginnow &gt; .container-fluid-full &gt; .container &gt; .span5.pull-left.left-first &gt; .pull-left:nth-child(2)</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div id&#x3D;&quot;search-bar&quot; class&#x3D;&quot;pull-left&quot;&gt;
@@ -731,25 +696,22 @@
 &lt;input type&#x3D;&quot;submit&quot; class&#x3D;&quot;control-search&quot;&gt;
 &lt;&#x2F;form&gt;
 &lt;&#x2F;div&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Document has multiple static elements with the same id attribute</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">.loggedin &gt; .container-fluid-full &gt; .container &gt; .span5.pull-left.left-first &gt; .pull-left:nth-child(2)</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">:root &gt; form[method&#x3D;&quot;get&quot;][action&#x3D;&quot;\&#x2F;demo\&#x2F;mars\&#x2F;mars2&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;form id&#x3D;&quot;search&quot; action&#x3D;&quot;&#x2F;demo&#x2F;mars&#x2F;mars2&quot; method&#x3D;&quot;get&quot;&gt;
@@ -757,152 +719,131 @@
 &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;search&quot; name&#x3D;&quot;query&quot; placeholder&#x3D;&quot;search&quot;&gt;
 &lt;input type&#x3D;&quot;submit&quot; class&#x3D;&quot;control-search&quot;&gt;
 &lt;&#x2F;form&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Document has multiple static elements with the same id attribute</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">:root &gt; form[method&#x3D;&quot;get&quot;][action&#x3D;&quot;\&#x2F;demo\&#x2F;mars\&#x2F;mars2&quot;]</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>5</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">.loginnow &gt; .container-fluid-full &gt; .container &gt; .span7.pull-right &gt; .pull-right</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;nav id&#x3D;&quot;right-control-nav&quot; class&#x3D;&quot;pull-right&quot; style&#x3D;&quot;display: inline;&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Document has multiple static elements with the same id attribute</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">.loggedin &gt; .container-fluid-full &gt; .container &gt; .span7.pull-right &gt; .pull-right</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>6</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#left-column &gt; div:nth-child(1)</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div id&#x3D;&quot;vap-section&quot;&gt;
 &lt;h1 style&#x3D;&quot;color:#eee;&quot;&gt;Destination Mars &lt;&#x2F;h1&gt;
 &lt;h2 style&#x3D;&quot;color:#acbad0;&quot;&gt;A trip to Mars starts in your imagination. Are you bold enough, brave enough, &lt;strong&gt;foolish enough?&lt;&#x2F;strong&gt; We are. You belong on Mars with fools like us. Most of us don&#39;t bite. Much.&lt;&#x2F;h2&gt;&lt;&#x2F;div&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Document has multiple static elements with the same id attribute</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">#left-column &gt; div:nth-child(2)</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>7</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#select-country &gt; input[name&#x3D;&quot;nCountries&quot;][type&#x3D;&quot;hidden&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;input type&#x3D;&quot;hidden&quot; id&#x3D;&quot;nCountries&quot; name&#x3D;&quot;nCountries&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Document has multiple static elements with the same id attribute</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">input[name&#x3D;&quot;nCountries&quot;][value&#x3D;&quot;\31 &quot;][type&#x3D;&quot;hidden&quot;]</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>8</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">.middle.widget-container:nth-child(13)</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div id&#x3D;&quot;passenger-select&quot; class&#x3D;&quot;widget-container middle&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Document has multiple static elements with the same id attribute</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">.middle.widget-container:nth-child(8)</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>9</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">.middle.widget-container:nth-child(13) &gt; .interior-container &gt; div:nth-child(3)</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div id&#x3D;&quot;passengers&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Document has multiple static elements with the same id attribute</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">.middle.widget-container:nth-child(8) &gt; .interior-container &gt; div</code></pre>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>10</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">.ui-datepicker.ui-helper-clearfix.ui-corner-all:nth-child(33)</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div id&#x3D;&quot;ui-datepicker-div&quot; class&#x3D;&quot;ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all&quot;&gt;&lt;&#x2F;div&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Document has multiple static elements with the same id attribute</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">.ui-datepicker.ui-helper-clearfix.ui-corner-all:nth-child(38)</code></pre>
                                     </td>
                                 </tr>
@@ -915,7 +856,7 @@
                 <div class="card-body">
                     <div class="violationCardLine">
                         <h5 class="card-title violationCardTitleItem">
-                            <a id="5">Violation type #5</a>: Frames must have title attribute
+                            <a id="5">5.</a> Frames must have title attribute
                         </h5>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;3.5&#x2F;frame-title?application&#x3D;axeAPI"
@@ -940,24 +881,24 @@
                         <table class="table table-sm table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="width: 3%">#</th>
-                                    <th style="width: 97%">Issue Description</th>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#player</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;iframe width&#x3D;&quot;365&quot; height&#x3D;&quot;205&quot; name&#x3D;&quot;player&quot; id&#x3D;&quot;player&quot; src&#x3D;&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;OagLGti_hTE?controls&#x3D;1&amp;amp;showinfo&#x3D;1&amp;amp;modestbranding&#x3D;0&amp;amp;wmode&#x3D;opaque&amp;amp;enablejsapi&#x3D;1&quot; frameborder&#x3D;&quot;0&quot; allowfullscreen&#x3D;&quot;&quot;&gt;&lt;&#x2F;iframe&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  aria-label attribute does not exist or is empty</li>
@@ -972,16 +913,13 @@
                                 <tr>
                                     <td>2</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#fafbba78</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;iframe id&#x3D;&quot;fafbba78&quot; name&#x3D;&quot;f2bc5e72d&quot; scrolling&#x3D;&quot;no&quot; style&#x3D;&quot;border: none; overflow: hidden; height: 62px; width: 292px;&quot; class&#x3D;&quot;fb_ltr&quot; src&#x3D;&quot;&#x2F;assets&#x2F;demo-sites&#x2F;mars&#x2F;js&#x2F;likebox.html&quot;&gt;&lt;&#x2F;iframe&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  aria-label attribute does not exist or is empty</li>
@@ -1002,7 +940,7 @@
                 <div class="card-body">
                     <div class="violationCardLine">
                         <h5 class="card-title violationCardTitleItem">
-                            <a id="6">Violation type #6</a>: &lt;html&gt; element must have a lang attribute
+                            <a id="6">6.</a> &lt;html&gt; element must have a lang attribute
                         </h5>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;3.5&#x2F;html-has-lang?application&#x3D;axeAPI"
@@ -1027,24 +965,24 @@
                         <table class="table table-sm table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="width: 3%">#</th>
-                                    <th style="width: 97%">Issue Description</th>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">html</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;html class&#x3D;&quot; js no-flexbox flexbox-legacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js no-flexbox flexbox-legacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  The &lt;html&gt; element does not have a lang attribute</li>
@@ -1061,7 +999,7 @@
                 <div class="card-body">
                     <div class="violationCardLine">
                         <h5 class="card-title violationCardTitleItem">
-                            <a id="7">Violation type #7</a>: Images must have alternate text
+                            <a id="7">7.</a> Images must have alternate text
                         </h5>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;3.5&#x2F;image-alt?application&#x3D;axeAPI"
@@ -1086,24 +1024,24 @@
                         <table class="table table-sm table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="width: 3%">#</th>
-                                    <th style="width: 97%">Issue Description</th>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">img[src$&#x3D;&quot;seg&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;img src&#x3D;&quot;&#x2F;assets&#x2F;demo-sites&#x2F;mars&#x2F;js&#x2F;seg&quot; width&#x3D;&quot;1&quot; height&#x3D;&quot;1&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element does not have an alt attribute</li>
@@ -1119,16 +1057,13 @@
                                 <tr>
                                     <td>2</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">:root &gt; img[width&#x3D;&quot;\32 10&quot;][height&#x3D;&quot;\31 20&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;img src&#x3D;&quot;&#x2F;assets&#x2F;demo-sites&#x2F;mars&#x2F;images&#x2F;mars-spaceman.jpg&quot; class&#x3D;&quot;&quot; width&#x3D;&quot;210&quot; height&#x3D;&quot;120&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element does not have an alt attribute</li>
@@ -1144,16 +1079,13 @@
                                 <tr>
                                     <td>3</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">:root &gt; img[width&#x3D;&quot;\32 10&quot;][height&#x3D;&quot;\31 20&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;img src&#x3D;&quot;&#x2F;assets&#x2F;demo-sites&#x2F;mars&#x2F;images&#x2F;mars-spaceman.jpg&quot; class&#x3D;&quot;&quot; width&#x3D;&quot;210&quot; height&#x3D;&quot;120&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element does not have an alt attribute</li>
@@ -1169,16 +1101,13 @@
                                 <tr>
                                     <td>4</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">:root &gt; img[width&#x3D;&quot;\32 10&quot;][height&#x3D;&quot;\31 20&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;img src&#x3D;&quot;&#x2F;assets&#x2F;demo-sites&#x2F;mars&#x2F;images&#x2F;mars-spaceman.jpg&quot; class&#x3D;&quot;&quot; width&#x3D;&quot;210&quot; height&#x3D;&quot;120&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element does not have an alt attribute</li>
@@ -1200,7 +1129,7 @@
                 <div class="card-body">
                     <div class="violationCardLine">
                         <h5 class="card-title violationCardTitleItem">
-                            <a id="8">Violation type #8</a>: Form elements must have labels
+                            <a id="8">8.</a> Form elements must have labels
                         </h5>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;3.5&#x2F;label?application&#x3D;axeAPI"
@@ -1225,24 +1154,24 @@
                         <table class="table table-sm table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="width: 3%">#</th>
-                                    <th style="width: 97%">Issue Description</th>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">:root &gt; .search[name&#x3D;&quot;query&quot;][placeholder&#x3D;&quot;search&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;search&quot; name&#x3D;&quot;query&quot; placeholder&#x3D;&quot;search&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  aria-label attribute does not exist or is empty</li>
@@ -1263,7 +1192,7 @@
                 <div class="card-body">
                     <div class="violationCardLine">
                         <h5 class="card-title violationCardTitleItem">
-                            <a id="9">Violation type #9</a>: Document must have one main landmark
+                            <a id="9">9.</a> Document must have one main landmark
                         </h5>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;3.5&#x2F;landmark-one-main?application&#x3D;axeAPI"
@@ -1288,24 +1217,24 @@
                         <table class="table table-sm table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="width: 3%">#</th>
-                                    <th style="width: 97%">Issue Description</th>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">html</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;html class&#x3D;&quot; js no-flexbox flexbox-legacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js no-flexbox flexbox-legacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix all of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Document does not have a main landmark</li>
@@ -1316,17 +1245,14 @@
                                 <tr>
                                     <td>2</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#player
 html</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;html lang&#x3D;&quot;en&quot; dir&#x3D;&quot;ltr&quot; data-cast-api-enabled&#x3D;&quot;true&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix all of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Document does not have a main landmark</li>
@@ -1337,17 +1263,14 @@ html</code></pre>
                                 <tr>
                                     <td>3</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#fafbba78
 #facebook</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;html lang&#x3D;&quot;en&quot; id&#x3D;&quot;facebook&quot; class&#x3D;&quot;&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix all of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Document does not have a main landmark</li>
@@ -1358,17 +1281,14 @@ html</code></pre>
                                 <tr>
                                     <td>4</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">.twitter-follow-button
 html</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;html lang&#x3D;&quot;en&quot; class&#x3D;&quot; xl en&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix all of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Document does not have a main landmark</li>
@@ -1385,7 +1305,7 @@ html</code></pre>
                 <div class="card-body">
                     <div class="violationCardLine">
                         <h5 class="card-title violationCardTitleItem">
-                            <a id="10">Violation type #10</a>: Ensures landmarks are unique
+                            <a id="10">10.</a> Ensures landmarks are unique
                         </h5>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;3.5&#x2F;landmark-unique?application&#x3D;axeAPI"
@@ -1410,30 +1330,30 @@ html</code></pre>
                         <table class="table table-sm table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="width: 3%">#</th>
-                                    <th style="width: 97%">Issue Description</th>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">.loginnow &gt; .container-fluid-full &gt; .container &gt; .span5.pull-left.left-first &gt; .pull-left:nth-child(1)</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;nav id&#x3D;&quot;left-control-nav&quot; class&#x3D;&quot;pull-left&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable</li>
                                             </ul>
                                         </div>
-                                        <p><strong>Related node(s):</strong></p>
+                                        <p><strong>Related node:</strong></p>
                                         <pre><code class="css">.loginnow &gt; .container-fluid-full &gt; .container &gt; .span7.pull-right &gt; .pull-right</code></pre>
                                         <pre><code class="css">#language-bar &gt; nav</code></pre>
                                         <pre><code class="css">#main-nav</code></pre>
@@ -1455,7 +1375,7 @@ html</code></pre>
                 <div class="card-body">
                     <div class="violationCardLine">
                         <h5 class="card-title violationCardTitleItem">
-                            <a id="11">Violation type #11</a>: Links must be distinguished from surrounding text in a way that does not rely on color
+                            <a id="11">11.</a> Links must be distinguished from surrounding text in a way that does not rely on color
                         </h5>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;3.5&#x2F;link-in-text-block?application&#x3D;axeAPI"
@@ -1480,24 +1400,24 @@ html</code></pre>
                         <table class="table table-sm table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="width: 3%">#</th>
-                                    <th style="width: 97%">Issue Description</th>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">a[href&#x3D;&quot;mars2\.html\?a\&#x3D;last_will&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;a href&#x3D;&quot;mars2.html?a&#x3D;last_will&quot;&gt;prepare your last will and testament&lt;&#x2F;a&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix all of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Links need to be distinguished from surrounding text in some way other than by color</li>
@@ -1514,7 +1434,7 @@ html</code></pre>
                 <div class="card-body">
                     <div class="violationCardLine">
                         <h5 class="card-title violationCardTitleItem">
-                            <a id="12">Violation type #12</a>: Links must have discernible text
+                            <a id="12">12.</a> Links must have discernible text
                         </h5>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;3.5&#x2F;link-name?application&#x3D;axeAPI"
@@ -1539,30 +1459,30 @@ html</code></pre>
                         <table class="table table-sm table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="width: 3%">#</th>
-                                    <th style="width: 97%">Issue Description</th>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">.link[href$&#x3D;&quot;mars\&#x2F;\#&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;a class&#x3D;&quot;link&quot; href&#x3D;&quot;demo&#x2F;mars&#x2F;#&quot;&gt;&lt;i class&#x3D;&quot;icon-menu-home&quot;&gt;&lt;&#x2F;i&gt; &lt;&#x2F;a&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix all of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element is in tab order and does not have accessible text</li>
                                             </ul>
                                         </div>
-                                        <div class="fix-summary-list">
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element does not have text that is visible to screen readers</li>
@@ -1577,23 +1497,20 @@ html</code></pre>
                                 <tr>
                                     <td>2</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">:root &gt; a[href&#x3D;&quot;mars2\.html\?a\&#x3D;crater_adventure&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;a href&#x3D;&quot;mars2.html?a&#x3D;crater_adventure&quot;&gt;
 &lt;img src&#x3D;&quot;&#x2F;assets&#x2F;demo-sites&#x2F;mars&#x2F;images&#x2F;mars-spaceman.jpg&quot; class&#x3D;&quot;&quot; width&#x3D;&quot;210&quot; height&#x3D;&quot;120&quot;&gt;&lt;&#x2F;a&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix all of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element is in tab order and does not have accessible text</li>
                                             </ul>
                                         </div>
-                                        <div class="fix-summary-list">
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element does not have text that is visible to screen readers</li>
@@ -1608,23 +1525,20 @@ html</code></pre>
                                 <tr>
                                     <td>3</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">:root &gt; a[href&#x3D;&quot;mars2\.html\?a\&#x3D;crater_adventure&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;a href&#x3D;&quot;mars2.html?a&#x3D;crater_adventure&quot;&gt;
 &lt;img src&#x3D;&quot;&#x2F;assets&#x2F;demo-sites&#x2F;mars&#x2F;images&#x2F;mars-spaceman.jpg&quot; class&#x3D;&quot;&quot; width&#x3D;&quot;210&quot; height&#x3D;&quot;120&quot;&gt;&lt;&#x2F;a&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix all of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element is in tab order and does not have accessible text</li>
                                             </ul>
                                         </div>
-                                        <div class="fix-summary-list">
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element does not have text that is visible to screen readers</li>
@@ -1639,23 +1553,20 @@ html</code></pre>
                                 <tr>
                                     <td>4</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">:root &gt; a[href&#x3D;&quot;mars2\.html\?a\&#x3D;crater_adventure&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;a href&#x3D;&quot;mars2.html?a&#x3D;crater_adventure&quot;&gt;
 &lt;img src&#x3D;&quot;&#x2F;assets&#x2F;demo-sites&#x2F;mars&#x2F;images&#x2F;mars-spaceman.jpg&quot; class&#x3D;&quot;&quot; width&#x3D;&quot;210&quot; height&#x3D;&quot;120&quot;&gt;&lt;&#x2F;a&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix all of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element is in tab order and does not have accessible text</li>
                                             </ul>
                                         </div>
-                                        <div class="fix-summary-list">
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element does not have text that is visible to screen readers</li>
@@ -1670,22 +1581,19 @@ html</code></pre>
                                 <tr>
                                     <td>5</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">:root &gt; a[href&#x3D;&quot;mars2\.html\?a\&#x3D;&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;a href&#x3D;&quot;mars2.html?a&#x3D;&quot;&gt;&lt;&#x2F;a&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix all of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element is in tab order and does not have accessible text</li>
                                             </ul>
                                         </div>
-                                        <div class="fix-summary-list">
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element does not have text that is visible to screen readers</li>
@@ -1700,22 +1608,19 @@ html</code></pre>
                                 <tr>
                                     <td>6</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">.active</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;a target&#x3D;&quot;player&quot; data-text&#x3D;&quot;Life was possible on Mars&quot; class&#x3D;&quot;fader first active&quot; href&#x3D;&quot;http:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;OagLGti_hTE?controls&#x3D;1&amp;amp;showinfo&#x3D;1&amp;amp;modestbranding&#x3D;0&amp;amp;wmode&#x3D;opaque&amp;amp;enablejsapi&#x3D;1&quot; id&#x3D;&quot;default&quot;&gt;&lt;&#x2F;a&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix all of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element is in tab order and does not have accessible text</li>
                                             </ul>
                                         </div>
-                                        <div class="fix-summary-list">
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element does not have text that is visible to screen readers</li>
@@ -1730,22 +1635,19 @@ html</code></pre>
                                 <tr>
                                     <td>7</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">a[data-text&#x3D;&quot;Why\ Mars\ died&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;a target&#x3D;&quot;player&quot; data-text&#x3D;&quot;Why Mars died&quot; class&#x3D;&quot;fader first&quot; href&#x3D;&quot;http:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;oC31pqk9sak?controls&#x3D;1&amp;amp;showinfo&#x3D;1&amp;amp;modestbranding&#x3D;0&amp;amp;wmode&#x3D;opaque&amp;amp;enablejsapi&#x3D;1&quot; id&#x3D;&quot;default&quot;&gt;&lt;&#x2F;a&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix all of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element is in tab order and does not have accessible text</li>
                                             </ul>
                                         </div>
-                                        <div class="fix-summary-list">
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element does not have text that is visible to screen readers</li>
@@ -1760,22 +1662,19 @@ html</code></pre>
                                 <tr>
                                     <td>8</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">a[data-text&#x3D;&quot;The\ world\ that\ never\ was&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;a target&#x3D;&quot;player&quot; data-text&#x3D;&quot;The world that never was&quot; class&#x3D;&quot;fader first&quot; href&#x3D;&quot;http:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;JgMXPXdqJn8?controls&#x3D;1&amp;amp;showinfo&#x3D;1&amp;amp;modestbranding&#x3D;0&amp;amp;wmode&#x3D;opaque&amp;amp;enablejsapi&#x3D;1&quot; id&#x3D;&quot;default&quot;&gt;&lt;&#x2F;a&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix all of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element is in tab order and does not have accessible text</li>
                                             </ul>
                                         </div>
-                                        <div class="fix-summary-list">
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element does not have text that is visible to screen readers</li>
@@ -1796,7 +1695,7 @@ html</code></pre>
                 <div class="card-body">
                     <div class="violationCardLine">
                         <h5 class="card-title violationCardTitleItem">
-                            <a id="13">Violation type #13</a>: All page content must be contained by landmarks
+                            <a id="13">13.</a> All page content must be contained by landmarks
                         </h5>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;3.5&#x2F;region?application&#x3D;axeAPI"
@@ -1821,24 +1720,24 @@ html</code></pre>
                         <table class="table table-sm table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="width: 3%">#</th>
-                                    <th style="width: 97%">Issue Description</th>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">body &gt; div:nth-child(1)</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div style&#x3D;&quot;width: 1px; height: 1px; display: inline;&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -1849,16 +1748,13 @@ html</code></pre>
                                 <tr>
                                     <td>2</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#purposeDisclaimer</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div id&#x3D;&quot;purposeDisclaimer&quot;&gt;This web page is for demonstration purposes, to show common accessibility errors.&lt;&#x2F;div&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -1869,16 +1765,13 @@ html</code></pre>
                                 <tr>
                                     <td>3</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">:root &gt; .search[name&#x3D;&quot;query&quot;][placeholder&#x3D;&quot;search&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;search&quot; name&#x3D;&quot;query&quot; placeholder&#x3D;&quot;search&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -1889,16 +1782,13 @@ html</code></pre>
                                 <tr>
                                     <td>4</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">:root &gt; .control-search[type&#x3D;&quot;submit&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;input type&#x3D;&quot;submit&quot; class&#x3D;&quot;control-search&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -1909,16 +1799,13 @@ html</code></pre>
                                 <tr>
                                     <td>5</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#left-column</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div class&#x3D;&quot;span7 left-first pull-left&quot; id&#x3D;&quot;left-column&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -1929,16 +1816,13 @@ html</code></pre>
                                 <tr>
                                     <td>6</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#widget-controls</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div id&#x3D;&quot;widget-controls&quot; class&#x3D;&quot;widget-container head&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -1949,16 +1833,13 @@ html</code></pre>
                                 <tr>
                                     <td>7</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#route-select &gt; .interior-container &gt; h3</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;h3&gt;Book your Trip&lt;&#x2F;h3&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -1969,16 +1850,13 @@ html</code></pre>
                                 <tr>
                                     <td>8</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#route-type-radio-group</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div id&#x3D;&quot;route-type-radio-group&quot; class&#x3D;&quot;&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -1989,16 +1867,13 @@ html</code></pre>
                                 <tr>
                                     <td>9</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#route-type</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div id&#x3D;&quot;route-type&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2009,16 +1884,13 @@ html</code></pre>
                                 <tr>
                                     <td>10</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#pass-question-radio-group</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div id&#x3D;&quot;pass-question-radio-group&quot; class&#x3D;&quot;&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2029,16 +1901,13 @@ html</code></pre>
                                 <tr>
                                     <td>11</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">.middle.widget-container:nth-child(13) &gt; .interior-container &gt; h3</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;h3&gt;Who Is Traveling?&lt;&#x2F;h3&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2049,18 +1918,15 @@ html</code></pre>
                                 <tr>
                                     <td>12</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#passenger0 &gt; .wrapper:nth-child(1)</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;span class&#x3D;&quot;wrapper&quot;&gt;
 &lt;span class&#x3D;&quot;traveler-label&quot;&gt;Traveler&lt;&#x2F;span&gt;
 &lt;&#x2F;span&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2071,7 +1937,7 @@ html</code></pre>
                                 <tr>
                                     <td>13</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#passenger0 &gt; .age-range.wrapper</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;span class&#x3D;&quot;wrapper age-range&quot;&gt;
@@ -2082,12 +1948,9 @@ html</code></pre>
 &lt;option value&#x3D;&quot;3&quot;&gt;Senior (60+)&lt;&#x2F;option&gt;
 &lt;&#x2F;select&gt;
 &lt;&#x2F;span&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2098,16 +1961,13 @@ html</code></pre>
                                 <tr>
                                     <td>14</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#add-traveler</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div class&#x3D;&quot;add-buttons&quot; id&#x3D;&quot;add-traveler&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2118,16 +1978,13 @@ html</code></pre>
                                 <tr>
                                     <td>15</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#booking-box-submit</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div id&#x3D;&quot;booking-box-submit&quot; class&#x3D;&quot;widget-container footer&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2138,16 +1995,13 @@ html</code></pre>
                                 <tr>
                                     <td>16</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#video-box &gt; .interior-container</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div class&#x3D;&quot;interior-container&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2158,16 +2012,13 @@ html</code></pre>
                                 <tr>
                                     <td>17</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#social-bar</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div id&#x3D;&quot;social-bar&quot; class&#x3D;&quot;container-fluid-full&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2178,16 +2029,13 @@ html</code></pre>
                                 <tr>
                                     <td>18</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#footer-book &gt; h4</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;h4&gt;Book Your Trip&lt;&#x2F;h4&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2198,16 +2046,13 @@ html</code></pre>
                                 <tr>
                                     <td>19</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#footer-book &gt; ul</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;ul&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2218,16 +2063,13 @@ html</code></pre>
                                 <tr>
                                     <td>20</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#footer-trains &gt; h4</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;h4&gt;Mars Shuttles&lt;&#x2F;h4&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2238,16 +2080,13 @@ html</code></pre>
                                 <tr>
                                     <td>21</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#footer-trains &gt; ul</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;ul&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2258,16 +2097,13 @@ html</code></pre>
                                 <tr>
                                     <td>22</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#footer-passes &gt; h4</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;h4&gt;Mars Tourist Passes&lt;&#x2F;h4&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2278,16 +2114,13 @@ html</code></pre>
                                 <tr>
                                     <td>23</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#footer-passes &gt; ul</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;ul&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2298,16 +2131,13 @@ html</code></pre>
                                 <tr>
                                     <td>24</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#footer-plan &gt; h4</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;h4&gt;Mars Adventures&lt;&#x2F;h4&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2318,16 +2148,13 @@ html</code></pre>
                                 <tr>
                                     <td>25</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#footer-plan &gt; ul</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;ul&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2338,16 +2165,13 @@ html</code></pre>
                                 <tr>
                                     <td>26</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#footer-faq &gt; h4</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;h4&gt;FAQs&lt;&#x2F;h4&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2358,16 +2182,13 @@ html</code></pre>
                                 <tr>
                                     <td>27</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#footer-faq &gt; ul</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;ul&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2378,16 +2199,13 @@ html</code></pre>
                                 <tr>
                                     <td>28</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#footer-connect &gt; h4</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;h4&gt;Connect With Us&lt;&#x2F;h4&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2398,16 +2216,13 @@ html</code></pre>
                                 <tr>
                                     <td>29</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#footer-connect &gt; ul</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;ul&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2418,16 +2233,13 @@ html</code></pre>
                                 <tr>
                                     <td>30</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#copyright</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div id&#x3D;&quot;copyright&quot; class&#x3D;&quot;container&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2438,17 +2250,14 @@ html</code></pre>
                                 <tr>
                                     <td>31</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#player
 #player</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div id&#x3D;&quot;player&quot; style&#x3D;&quot;width: 100%; height: 100%;&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2459,17 +2268,14 @@ html</code></pre>
                                 <tr>
                                     <td>32</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#fafbba78
 ._8m &gt; table &gt; tbody &gt; tr:nth-child(1)</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;tr&gt;&lt;td&gt;&lt;span class&#x3D;&quot;fsl fwb&quot;&gt;&lt;a href&#x3D;&quot;..&#x2F;mars2.html&quot; target&#x3D;&quot;_blank&quot;&gt;Mars Commuter Express&lt;&#x2F;a&gt;&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2480,17 +2286,14 @@ html</code></pre>
                                 <tr>
                                     <td>33</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#fafbba78
 .pluginConnectButtonDisconnected</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div class&#x3D;&quot;pluginButton pluginConnectButtonDisconnected&quot; title&#x3D;&quot;&quot;&gt;&lt;div&gt;&lt;button type&#x3D;&quot;submit&quot;&gt;&lt;i class&#x3D;&quot;pluginButtonIcon img sp_like sx_like_thumb&quot;&gt;&lt;&#x2F;i&gt;Like&lt;&#x2F;button&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2501,17 +2304,14 @@ html</code></pre>
                                 <tr>
                                     <td>34</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#fafbba78
 #u_0_2</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;span id&#x3D;&quot;u_0_2&quot;&gt;378,121&lt;&#x2F;span&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2522,17 +2322,14 @@ html</code></pre>
                                 <tr>
                                     <td>35</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">.twitter-follow-button
 .btn-o</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;div class&#x3D;&quot;btn-o&quot; contextmenu&#x3D;&quot;menu&quot;&gt;&lt;a id&#x3D;&quot;follow-button&quot; target&#x3D;&quot;_blank&quot; class&#x3D;&quot;btn&quot; title&#x3D;&quot;Follow MarsCommuter on Twitter&quot; href&#x3D;&quot;mars2.html&quot;&gt;&lt;i&gt;&lt;&#x2F;i&gt;&lt;span class&#x3D;&quot;label&quot; id&#x3D;&quot;l&quot;&gt;Follow @MarsTrip1&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;&lt;&#x2F;div&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2543,17 +2340,14 @@ html</code></pre>
                                 <tr>
                                     <td>36</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">.twitter-follow-button
 img[src&#x3D;&quot;\.\.\&#x2F;images\&#x2F;f\.gif&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;img src&#x3D;&quot;..&#x2F;images&#x2F;f.gif&quot; alt&#x3D;&quot;&quot; style&#x3D;&quot;position: absolute; height: 1px; width: 1px; top: -9999px; left: -9999px;&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2564,17 +2358,14 @@ img[src&#x3D;&quot;\.\.\&#x2F;images\&#x2F;f\.gif&quot;]</code></pre>
                                 <tr>
                                     <td>37</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">.twitter-follow-button
 img[src$&#x3D;&quot;jot&quot;]</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;img src&#x3D;&quot;jot&quot; alt&#x3D;&quot;&quot; style&#x3D;&quot;position: absolute; height: 1px; width: 1px; top: -9999px; left: -9999px;&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Some page content is not contained by landmarks</li>
@@ -2591,7 +2382,7 @@ img[src$&#x3D;&quot;jot&quot;]</code></pre>
                 <div class="card-body">
                     <div class="violationCardLine">
                         <h5 class="card-title violationCardTitleItem">
-                            <a id="14">Violation type #14</a>: Elements should not have tabindex greater than zero
+                            <a id="14">14.</a> Elements should not have tabindex greater than zero
                         </h5>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;3.5&#x2F;tabindex?application&#x3D;axeAPI"
@@ -2616,24 +2407,24 @@ img[src$&#x3D;&quot;jot&quot;]</code></pre>
                         <table class="table table-sm table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="width: 3%">#</th>
-                                    <th style="width: 97%">Issue Description</th>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#from0</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;input type&#x3D;&quot;text&quot; value&#x3D;&quot;&quot; class&#x3D;&quot;city-input ac_input ui-autocomplete-input&quot; autocomplete&#x3D;&quot;off&quot; id&#x3D;&quot;from0&quot; name&#x3D;&quot;from0&quot; tabindex&#x3D;&quot;1&quot; role&#x3D;&quot;textbox&quot; aria-autocomplete&#x3D;&quot;list&quot; aria-haspopup&#x3D;&quot;true&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element has a tabindex greater than 0</li>
@@ -2644,16 +2435,13 @@ img[src$&#x3D;&quot;jot&quot;]</code></pre>
                                 <tr>
                                     <td>2</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#to0</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;input type&#x3D;&quot;text&quot; value&#x3D;&quot;&quot; class&#x3D;&quot;city-input ac_input ui-autocomplete-input&quot; autocomplete&#x3D;&quot;off&quot; id&#x3D;&quot;to0&quot; name&#x3D;&quot;to0&quot; tabindex&#x3D;&quot;1&quot; role&#x3D;&quot;textbox&quot; aria-autocomplete&#x3D;&quot;list&quot; aria-haspopup&#x3D;&quot;true&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element has a tabindex greater than 0</li>
@@ -2664,16 +2452,13 @@ img[src$&#x3D;&quot;jot&quot;]</code></pre>
                                 <tr>
                                     <td>3</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">#deptDate0</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">&lt;input size&#x3D;&quot;10&quot; id&#x3D;&quot;deptDate0&quot; name&#x3D;&quot;deptDate0&quot; placeholder&#x3D;&quot;mm&#x2F;dd&#x2F;yyyy&quot; value&#x3D;&quot;&quot; tabindex&#x3D;&quot;3&quot; class&#x3D;&quot;hasDatepicker input-dept&quot;&gt;</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
-                                        <div class="fix-summary-list">
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
                                             <p>Fix any of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Element has a tabindex greater than 0</li>

@@ -37,15 +37,13 @@
             .hljs {
                 white-space: pre-wrap;
                 width: 100%;
+                background: #f0f0f0;
             }
             p {
                 margin-top: 0.3rem;
             }
             li {
                 line-height: 1.618;
-            }
-            .fix-summary-list {
-                word-break: break-word;
             }
         </style>
         <!-- Bootstrap CSS -->
@@ -72,7 +70,7 @@
         ></script>
         <link
             rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/a11y-dark.min.css"
+            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
         />
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <link
@@ -132,7 +130,7 @@
                 <div class="card-body">
                     <div class="violationCardLine">
                         <h5 class="card-title violationCardTitleItem">
-                            <a id="{{index}}">Violation type #{{index}}</a>: {{help}}
+                            <a id="{{index}}">{{index}}.</a> {{help}}
                         </h5>
                         <a
                             href="{{helpUrl}}"
@@ -157,8 +155,11 @@
                         <table class="table table-sm table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="width: 3%">#</th>
-                                    <th style="width: 97%">Issue Description</th>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -166,17 +167,14 @@
                                 <tr>
                                     <td>{{index}}</td>
                                     <td>
-                                        <p><strong>Element location(s)</strong></p>
+                                        <p><strong>Element location</strong></p>
                                         <pre><code class="css">{{targetNodes}}</code></pre>
                                         <p><strong>Element source</strong></p>
                                         <pre><code class="html">{{html}}</code></pre>
-                                        <p>
-                                            <strong>
-                                                To solve this violation, you need to...
-                                            </strong>
-                                        </p>
+                                    </td>
+                                    <td>
                                         {{#fixSummaries}}
-                                        <div class="fix-summary-list">
+                                        <div class="wrapBreakWord">
                                             <p>{{highlight}}</p>
                                             <ul class="text-muted">
                                                 {{#list}}
@@ -184,11 +182,9 @@
                                                 {{/list}}
                                             </ul>
                                         </div>
-                                        {{/fixSummaries}}
-                                        {{#relatedNodesAny.length}}
-                                        <p><strong>Related node(s):</strong></p>
-                                        {{/relatedNodesAny.length}}
-                                        {{#relatedNodesAny}}
+                                        {{/fixSummaries}} {{#relatedNodesAny.length}}
+                                        <p><strong>Related node:</strong></p>
+                                        {{/relatedNodesAny.length}} {{#relatedNodesAny}}
                                         <pre><code class="css">{{.}}</code></pre>
                                         {{/relatedNodesAny}}
                                     </td>
