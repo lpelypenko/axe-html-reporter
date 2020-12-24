@@ -85,16 +85,15 @@
             <h3>
                 AXE Accessibility Results{{#projectKey}} for {{projectKey}} project{{/projectKey}}
             </h3>
-            {{#url}}
             <div class="summarySection">
+                {{#url}}
                 <div class="summary">
                     Page URL:
                     <a href="{{url}}" target="_blank" class="card-link">{{url}}</a>
                     <br />
                 </div>
-                {{/url}} {{#customSummary}}
-                <div class="summary">{{{customSummary}}}</div>
-                {{/customSummary}}
+                {{/url}}
+                {{#customSummary}}<div class="summary">{{{customSummary}}}</div>{{/customSummary}}
             </div>
             <h5>{{{violationsSummary}}}</h5>
             {{#violationDetails.length}}
@@ -113,7 +112,7 @@
                 <tbody>
                     {{#violations}}
                     <tr>
-                        <th scope="row"><a href="#{{index}}">{{index}}</a></th>
+                        <th scope="row"><a href="#{{index}}" class="card-link">{{index}}</a></th>
                         <td>{{help}}</td>
                         <td>{{id}}</td>
                         <td>{{wcag}}</td>
