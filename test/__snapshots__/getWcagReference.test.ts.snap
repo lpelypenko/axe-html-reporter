@@ -1,0 +1,228 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Successful tests Tags for all C 1`] = `
+Array [
+  Object {
+    "id": "label-content-name-mismatch",
+    "tags": Array [
+      "wcag21a",
+      "wcag253",
+      "experimental",
+    ],
+    "wcag": "WCAG 2.1 Level A, WCAG 2.5.3",
+  },
+  Object {
+    "id": "duplicate-id-aria",
+    "tags": Array [
+      "cat.parsing",
+      "wcag2a",
+      "wcag411",
+    ],
+    "wcag": "WCAG 2 Level A, WCAG 4.1.1",
+  },
+  Object {
+    "id": "svg-img-alt",
+    "tags": Array [
+      "cat.text-alternatives",
+      "wcag2a",
+      "wcag111",
+      "section508",
+      "section508.22.a",
+    ],
+    "wcag": "WCAG 2 Level A, WCAG 1.1.1",
+  },
+  Object {
+    "id": "aria-required-children",
+    "tags": Array [
+      "cat.aria",
+      "wcag2a",
+      "wcag131",
+    ],
+    "wcag": "WCAG 2 Level A, WCAG 1.3.1",
+  },
+  Object {
+    "id": "aria-required-parent",
+    "tags": Array [
+      "cat.aria",
+      "wcag2a",
+      "wcag131",
+    ],
+    "wcag": "WCAG 2 Level A, WCAG 1.3.1",
+  },
+]
+`;
+
+exports[`Successful tests Tags for all J 1`] = `
+Array [
+  Object {
+    "id": "label-content-name-mismatch",
+    "tags": Array [
+      "wcag21a",
+      "wcag253",
+      "experimental",
+    ],
+    "wcag": "WCAG 2.1 Level A, WCAG 2.5.3",
+  },
+  Object {
+    "id": "duplicate-id-aria",
+    "tags": Array [
+      "cat.parsing",
+      "wcag2a",
+      "wcag411",
+    ],
+    "wcag": "WCAG 2 Level A, WCAG 4.1.1",
+  },
+  Object {
+    "id": "svg-img-alt",
+    "tags": Array [
+      "cat.text-alternatives",
+      "wcag2a",
+      "wcag111",
+      "section508",
+      "section508.22.a",
+    ],
+    "wcag": "WCAG 2 Level A, WCAG 1.1.1",
+  },
+]
+`;
+
+exports[`Successful tests Tags for general set of violations 1`] = `
+Array [
+  Object {
+    "id": "button-name",
+    "tags": Array [
+      "cat.name-role-value",
+      "wcag2a",
+      "wcag412",
+      "section508",
+      "section508.22.a",
+    ],
+    "wcag": "WCAG 2 Level A, WCAG 4.1.2",
+  },
+  Object {
+    "id": "color-contrast",
+    "tags": Array [
+      "cat.color",
+      "wcag2aa",
+      "wcag143",
+    ],
+    "wcag": "WCAG 2 Level AA, WCAG 1.4.3",
+  },
+  Object {
+    "id": "duplicate-id-active",
+    "tags": Array [
+      "cat.parsing",
+      "wcag2a",
+      "wcag411",
+    ],
+    "wcag": "WCAG 2 Level A, WCAG 4.1.1",
+  },
+  Object {
+    "id": "duplicate-id",
+    "tags": Array [
+      "cat.parsing",
+      "wcag2a",
+      "wcag411",
+    ],
+    "wcag": "WCAG 2 Level A, WCAG 4.1.1",
+  },
+  Object {
+    "id": "frame-title",
+    "tags": Array [
+      "cat.text-alternatives",
+      "wcag2a",
+      "wcag241",
+      "wcag412",
+      "section508",
+      "section508.22.i",
+    ],
+    "wcag": "WCAG 2 Level A, WCAG 2.4.1, WCAG 4.1.2",
+  },
+  Object {
+    "id": "html-has-lang",
+    "tags": Array [
+      "cat.language",
+      "wcag2a",
+      "wcag311",
+    ],
+    "wcag": "WCAG 2 Level A, WCAG 3.1.1",
+  },
+  Object {
+    "id": "image-alt",
+    "tags": Array [
+      "cat.text-alternatives",
+      "wcag2a",
+      "wcag111",
+      "section508",
+      "section508.22.a",
+    ],
+    "wcag": "WCAG 2 Level A, WCAG 1.1.1",
+  },
+  Object {
+    "id": "label",
+    "tags": Array [
+      "cat.forms",
+      "wcag2a",
+      "wcag412",
+      "wcag131",
+      "section508",
+      "section508.22.n",
+    ],
+    "wcag": "WCAG 2 Level A, WCAG 4.1.2, WCAG 1.3.1",
+  },
+  Object {
+    "id": "landmark-one-main",
+    "tags": Array [
+      "cat.semantics",
+      "best-practice",
+    ],
+    "wcag": "Best practice",
+  },
+  Object {
+    "id": "landmark-unique",
+    "tags": Array [
+      "cat.semantics",
+      "best-practice",
+    ],
+    "wcag": "Best practice",
+  },
+  Object {
+    "id": "link-in-text-block",
+    "tags": Array [
+      "cat.color",
+      "experimental",
+      "wcag2a",
+      "wcag141",
+    ],
+    "wcag": "WCAG 2 Level A, WCAG 1.4.1",
+  },
+  Object {
+    "id": "link-name",
+    "tags": Array [
+      "cat.name-role-value",
+      "wcag2a",
+      "wcag412",
+      "wcag244",
+      "section508",
+      "section508.22.a",
+    ],
+    "wcag": "WCAG 2 Level A, WCAG 4.1.2, WCAG 2.4.4",
+  },
+  Object {
+    "id": "region",
+    "tags": Array [
+      "cat.keyboard",
+      "best-practice",
+    ],
+    "wcag": "Best practice",
+  },
+  Object {
+    "id": "tabindex",
+    "tags": Array [
+      "cat.keyboard",
+      "best-practice",
+    ],
+    "wcag": "Best practice",
+  },
+]
+`;

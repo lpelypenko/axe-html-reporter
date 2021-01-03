@@ -10,6 +10,7 @@ function simplifyAxeResultForSummary(results: Result[]): Summary[] {
         id,
         help,
         wcag: getWcagReference(tags),
+        tags,
         impact: impact || 'n/a',
         nodes: nodes.length,
     }));
@@ -68,6 +69,7 @@ export function prepareReportData({
             return {
                 index: issueIndex + 1,
                 wcag: getWcagReference(tags),
+                tags,
                 id,
                 impact: impact || 'n/a',
                 description,

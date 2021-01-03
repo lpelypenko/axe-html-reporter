@@ -22,6 +22,7 @@ interface NodeResult {
 
 interface Details {
     wcag: string;
+    tags: string[];
     id: string;
     impact: string;
     description: string;

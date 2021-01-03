@@ -92,8 +92,9 @@
                     <a href="{{url}}" target="_blank" class="card-link">{{url}}</a>
                     <br />
                 </div>
-                {{/url}}
-                {{#customSummary}}<div class="summary">{{{customSummary}}}</div>{{/customSummary}}
+                {{/url}} {{#customSummary}}
+                <div class="summary">{{{customSummary}}}</div>
+                {{/customSummary}}
             </div>
             <h5>{{{violationsSummary}}}</h5>
             {{#violationDetails.length}}
@@ -103,8 +104,8 @@
                         <th style="width: 5%">#</th>
                         <th style="width: 45%">Description</th>
                         <th style="width: 15%">Axe rule ID</th>
-                        <th style="width: 15%">WCAG</th>
-                        <th style="width: 15%">Impact</th>
+                        <th style="width: 23%">WCAG</th>
+                        <th style="width: 7%">Impact</th>
                         <th style="width: 5%">Count</th>
                     </tr>
                 </thead>
@@ -148,6 +149,13 @@
                         <p class="card-text">{{description}}</p>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
                             {{impact}}
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: {{#tags}}
+                            <span class="badge bg-light text-dark"> {{.}} </span>
+                            {{/tags}}
                         </h6>
                     </div>
                     <div class="violationNode">
@@ -224,9 +232,9 @@
                                 <thead>
                                     <tr>
                                         <th style="width: 5%">#</th>
-                                        <th style="width: 50%">Description</th>
+                                        <th style="width: 40%">Description</th>
                                         <th style="width: 5%">Axe rule ID</th>
-                                        <th style="width: 5%">WCAG</th>
+                                        <th style="width: 15%">WCAG</th>
                                         <th style="width: 5%">Nodes passed check</th>
                                     </tr>
                                 </thead>
