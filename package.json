@@ -1,6 +1,6 @@
 {
     "name": "axe-html-reporter",
-    "version": "2.1.1",
+    "version": "2.2.0",
     "description": "The module that allows you to create HTML Report from raw accessibility aXe result object",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
