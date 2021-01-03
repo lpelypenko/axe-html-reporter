@@ -1,0 +1,486 @@
+[
+    {
+        "id": "label-content-name-mismatch",
+        "impact": "serious",
+        "tags": ["wcag21a", "wcag253", "experimental"],
+        "description": "Ensures that elements labelled through their content must have their visible text as part of their accessible name",
+        "help": "Elements must have their visible text as part of their accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.0/label-content-name-mismatch?application=axeAPI",
+        "nodes": [
+            {
+                "any": [
+                    {
+                        "id": "label-content-name-mismatch",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Text inside the element is not included in the accessible name"
+                    }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<button class=\"iclcom-ButtonSelect-Button ipl-ButtonSelect-Button icl-Button icl-Button--tertiary icl-Button--md\" id=\"button-select-button\" aria-labelledby=\"button-select-button button-select-list\" aria-haspopup=\"listbox\" aria-expanded=\"false\">",
+                "target": ["#button-select-button"],
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+                "any": [
+                    {
+                        "id": "label-content-name-mismatch",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Text inside the element is not included in the accessible name"
+                    }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<button class=\"iclcom-ButtonSelect-Button ipl-ButtonSelect-Button icl-Button icl-Button--tertiary icl-Button--md\" id=\"button-select-button\" aria-labelledby=\"button-select-button button-select-list\" aria-haspopup=\"listbox\" aria-expanded=\"false\">",
+                "target": [
+                    "div[data-tn-section=\"jobTitleFilter\"] > .perf-FixedButtonSelect > .perf-FilterMultiSelect.iclom-ButtonSelect--tertiary.ipl-ButtonSelect--tertiary > div > .iclcom-ButtonSelect-Button.ipl-ButtonSelect-Button[aria-haspopup=\"listbox\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+                "any": [
+                    {
+                        "id": "label-content-name-mismatch",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Text inside the element is not included in the accessible name"
+                    }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<button class=\"iclcom-ButtonSelect-Button ipl-ButtonSelect-Button icl-Button icl-Button--tertiary icl-Button--md\" id=\"button-select-button\" aria-labelledby=\"button-select-button button-select-list\" aria-haspopup=\"listbox\" aria-expanded=\"false\">",
+                "target": [
+                    "div[data-tn-section=\"countryFilter\"] > .perf-FixedButtonSelect > .perf-FilterMultiSelect.iclom-ButtonSelect--tertiary.ipl-ButtonSelect--tertiary > div > .iclcom-ButtonSelect-Button.ipl-ButtonSelect-Button[aria-haspopup=\"listbox\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+                "any": [
+                    {
+                        "id": "label-content-name-mismatch",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Text inside the element is not included in the accessible name"
+                    }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<button class=\"iclcom-ButtonSelect-Button ipl-ButtonSelect-Button icl-Button icl-Button--tertiary icl-Button--md\" id=\"button-select-button\" aria-labelledby=\"button-select-button button-select-list\" aria-haspopup=\"listbox\" aria-expanded=\"false\">",
+                "target": [
+                    "div[data-tn-section=\"stateFilter\"] > .perf-FixedButtonSelect > .perf-FilterMultiSelect.iclom-ButtonSelect--tertiary.ipl-ButtonSelect--tertiary > div > .iclcom-ButtonSelect-Button.ipl-ButtonSelect-Button[aria-haspopup=\"listbox\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+                "any": [
+                    {
+                        "id": "label-content-name-mismatch",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Text inside the element is not included in the accessible name"
+                    }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<button class=\"iclcom-ButtonSelect-Button ipl-ButtonSelect-Button icl-Button icl-Button--tertiary icl-Button--md\" id=\"button-select-button\" aria-labelledby=\"button-select-button button-select-list\" aria-haspopup=\"listbox\" aria-expanded=\"false\">",
+                "target": [
+                    "div[data-tn-section=\"cityFilter\"] > .perf-FixedButtonSelect > .perf-FilterMultiSelect.iclom-ButtonSelect--tertiary.ipl-ButtonSelect--tertiary > div > .iclcom-ButtonSelect-Button.ipl-ButtonSelect-Button[aria-haspopup=\"listbox\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+                "any": [
+                    {
+                        "id": "label-content-name-mismatch",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Text inside the element is not included in the accessible name"
+                    }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<button class=\"iclcom-ButtonSelect-Button ipl-ButtonSelect-Button icl-Button icl-Button--tertiary icl-Button--md\" id=\"button-select-button\" aria-labelledby=\"button-select-button button-select-list\" aria-haspopup=\"listbox\" aria-expanded=\"false\">",
+                "target": [
+                    "div[data-tn-element=\"performanceFilterTargetField\"] > .perf-FixedButtonSelect > .perf-BudgetPerformanceFilter-dropdown.iclom-ButtonSelect--tertiary.ipl-ButtonSelect--tertiary > div > .iclcom-ButtonSelect-Button.ipl-ButtonSelect-Button[aria-haspopup=\"listbox\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+        ]
+    },
+    {
+        "id": "duplicate-id-aria",
+        "impact": "critical",
+        "tags": ["cat.parsing", "wcag2a", "wcag411"],
+        "description": "Ensures every id attribute value used in ARIA and in labels is unique",
+        "help": "IDs used in ARIA and labels must be unique",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.0/duplicate-id-aria?application=axeAPI",
+        "nodes": [
+            {
+                "any": [
+                    {
+                        "id": "duplicate-id-aria",
+                        "data": "button-select-button",
+                        "relatedNodes": [
+                            {
+                                "html": "<button class=\"iclcom-ButtonSelect-Button ipl-ButtonSelect-Button icl-Button icl-Button--tertiary icl-Button--md\" id=\"button-select-button\" aria-labelledby=\"button-select-button button-select-list\" aria-haspopup=\"listbox\" aria-expanded=\"false\">",
+                                "target": [
+                                    "div[data-tn-section=\"jobTitleFilter\"] > .perf-FixedButtonSelect > .perf-FilterMultiSelect.iclom-ButtonSelect--tertiary.ipl-ButtonSelect--tertiary > div > .iclcom-ButtonSelect-Button.ipl-ButtonSelect-Button[aria-haspopup=\"listbox\"]"
+                                ]
+                            },
+                            {
+                                "html": "<button class=\"iclcom-ButtonSelect-Button ipl-ButtonSelect-Button icl-Button icl-Button--tertiary icl-Button--md\" id=\"button-select-button\" aria-labelledby=\"button-select-button button-select-list\" aria-haspopup=\"listbox\" aria-expanded=\"false\">",
+                                "target": [
+                                    "div[data-tn-section=\"countryFilter\"] > .perf-FixedButtonSelect > .perf-FilterMultiSelect.iclom-ButtonSelect--tertiary.ipl-ButtonSelect--tertiary > div > .iclcom-ButtonSelect-Button.ipl-ButtonSelect-Button[aria-haspopup=\"listbox\"]"
+                                ]
+                            },
+                            {
+                                "html": "<button class=\"iclcom-ButtonSelect-Button ipl-ButtonSelect-Button icl-Button icl-Button--tertiary icl-Button--md\" id=\"button-select-button\" aria-labelledby=\"button-select-button button-select-list\" aria-haspopup=\"listbox\" aria-expanded=\"false\">",
+                                "target": [
+                                    "div[data-tn-section=\"stateFilter\"] > .perf-FixedButtonSelect > .perf-FilterMultiSelect.iclom-ButtonSelect--tertiary.ipl-ButtonSelect--tertiary > div > .iclcom-ButtonSelect-Button.ipl-ButtonSelect-Button[aria-haspopup=\"listbox\"]"
+                                ]
+                            },
+                            {
+                                "html": "<button class=\"iclcom-ButtonSelect-Button ipl-ButtonSelect-Button icl-Button icl-Button--tertiary icl-Button--md\" id=\"button-select-button\" aria-labelledby=\"button-select-button button-select-list\" aria-haspopup=\"listbox\" aria-expanded=\"false\">",
+                                "target": [
+                                    "div[data-tn-section=\"cityFilter\"] > .perf-FixedButtonSelect > .perf-FilterMultiSelect.iclom-ButtonSelect--tertiary.ipl-ButtonSelect--tertiary > div > .iclcom-ButtonSelect-Button.ipl-ButtonSelect-Button[aria-haspopup=\"listbox\"]"
+                                ]
+                            },
+                            {
+                                "html": "<button class=\"iclcom-ButtonSelect-Button ipl-ButtonSelect-Button icl-Button icl-Button--tertiary icl-Button--md\" id=\"button-select-button\" aria-labelledby=\"button-select-button button-select-list\" aria-haspopup=\"listbox\" aria-expanded=\"false\">",
+                                "target": [
+                                    "div[data-tn-element=\"performanceFilterTargetField\"] > .perf-FixedButtonSelect > .perf-BudgetPerformanceFilter-dropdown.iclom-ButtonSelect--tertiary.ipl-ButtonSelect--tertiary > div > .iclcom-ButtonSelect-Button.ipl-ButtonSelect-Button[aria-haspopup=\"listbox\"]"
+                                ]
+                            },
+                            {
+                                "html": "<button class=\"iclcom-ButtonSelect-Button ipl-ButtonSelect-Button icl-Button icl-Button--tertiary icl-Button--md\" id=\"button-select-button\" aria-labelledby=\"button-select-button button-select-list\" aria-haspopup=\"listbox\" aria-expanded=\"false\">",
+                                "target": [
+                                    "div[data-tn-element=\"performanceFilterOperator\"] > .perf-FixedButtonSelect > .perf-BudgetPerformanceFilter-dropdown.iclom-ButtonSelect--tertiary.ipl-ButtonSelect--tertiary > div > .iclcom-ButtonSelect-Button.ipl-ButtonSelect-Button[aria-haspopup=\"listbox\"]"
+                                ]
+                            },
+                            {
+                                "html": "<button class=\"iclcom-ButtonSelect-Button ipl-ButtonSelect-Button icl-Button icl-Button--tertiary icl-Button--md\" id=\"button-select-button\" aria-labelledby=\"button-select-button button-select-list\" aria-haspopup=\"listbox\" aria-expanded=\"false\">",
+                                "target": [
+                                    ".iclom-ButtonSelect--secondary > div > .iclcom-ButtonSelect-Button.ipl-ButtonSelect-Button[aria-haspopup=\"listbox\"]"
+                                ]
+                            }
+                        ],
+                        "impact": "critical",
+                        "message": "Document has multiple elements referenced with ARIA with the same id attribute: button-select-button"
+                    }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "critical",
+                "html": "<button class=\"iclcom-ButtonSelect-Button ipl-ButtonSelect-Button icl-Button icl-Button--tertiary icl-Button--md\" id=\"button-select-button\" aria-labelledby=\"button-select-button button-select-list\" aria-haspopup=\"listbox\" aria-expanded=\"false\">",
+                "target": [
+                    "div[data-tn-section=\"companyFilter\"] > .perf-FixedButtonSelect > .perf-FilterMultiSelect.iclom-ButtonSelect--tertiary.ipl-ButtonSelect--tertiary > div > .iclcom-ButtonSelect-Button.ipl-ButtonSelect-Button[aria-haspopup=\"listbox\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: button-select-button"
+            }
+        ]
+    },
+    {
+        "id": "svg-img-alt",
+        "impact": "serious",
+        "tags": ["cat.text-alternatives", "wcag2a", "wcag111", "section508", "section508.22.a"],
+        "description": "Ensures svg elements with an img, graphics-document or graphics-symbol role have an accessible text",
+        "help": "svg elements with an img role have an alternative text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.0/svg-img-alt?application=axeAPI",
+        "nodes": [
+            {
+                "any": [
+                    {
+                        "id": "svg-non-empty-title",
+                        "data": { "messageKey": "noTitle" },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no child that is a title"
+                    },
+                    {
+                        "id": "aria-label",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-label attribute does not exist or is empty"
+                    },
+                    {
+                        "id": "aria-labelledby",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+                    },
+                    {
+                        "id": "non-empty-title",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no title attribute or the title attribute is empty"
+                    }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<svg role=\"img\" class=\"icl-Icon icl-Icon--black icl-Icon--md\" aria-label=\"\" focusable=\"false\" viewBox=\"0 0 24 24\"><g><path d=\"M7.41,8.59L12,13.17l4.59-4.58L18,10l-6,6L6,10Z\"></path></g></svg>",
+                "target": [
+                    "div[data-tn-section=\"companyFilter\"] > .perf-FixedButtonSelect > .perf-FilterMultiSelect.iclom-ButtonSelect--tertiary.ipl-ButtonSelect--tertiary > div > .iclcom-ButtonSelect-Button.ipl-ButtonSelect-Button[aria-haspopup=\"listbox\"] > .icl-Icon--black.icl-Icon--md[aria-label=\"\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element has no child that is a title\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute or the title attribute is empty"
+            },
+            {
+                "any": [
+                    {
+                        "id": "svg-non-empty-title",
+                        "data": { "messageKey": "noTitle" },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no child that is a title"
+                    },
+                    {
+                        "id": "aria-label",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-label attribute does not exist or is empty"
+                    },
+                    {
+                        "id": "aria-labelledby",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+                    },
+                    {
+                        "id": "non-empty-title",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no title attribute or the title attribute is empty"
+                    }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<svg role=\"img\" class=\"icl-Icon icl-Icon--black icl-Icon--md\" aria-label=\"\" focusable=\"false\" viewBox=\"0 0 24 24\"><g><path d=\"M7.41,8.59L12,13.17l4.59-4.58L18,10l-6,6L6,10Z\"></path></g></svg>",
+                "target": [
+                    "div[data-tn-section=\"jobTitleFilter\"] > .perf-FixedButtonSelect > .perf-FilterMultiSelect.iclom-ButtonSelect--tertiary.ipl-ButtonSelect--tertiary > div > .iclcom-ButtonSelect-Button.ipl-ButtonSelect-Button[aria-haspopup=\"listbox\"] > .icl-Icon--black.icl-Icon--md[aria-label=\"\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element has no child that is a title\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute or the title attribute is empty"
+            },
+            {
+                "any": [
+                    {
+                        "id": "svg-non-empty-title",
+                        "data": { "messageKey": "noTitle" },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no child that is a title"
+                    },
+                    {
+                        "id": "aria-label",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-label attribute does not exist or is empty"
+                    },
+                    {
+                        "id": "aria-labelledby",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+                    },
+                    {
+                        "id": "non-empty-title",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no title attribute or the title attribute is empty"
+                    }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<svg role=\"img\" class=\"icl-Icon icl-Icon--black icl-Icon--md\" aria-label=\"\" focusable=\"false\" viewBox=\"0 0 24 24\"><g><path d=\"M7.41,8.59L12,13.17l4.59-4.58L18,10l-6,6L6,10Z\"></path></g></svg>",
+                "target": [
+                    "div[data-tn-section=\"countryFilter\"] > .perf-FixedButtonSelect > .perf-FilterMultiSelect.iclom-ButtonSelect--tertiary.ipl-ButtonSelect--tertiary > div > .iclcom-ButtonSelect-Button.ipl-ButtonSelect-Button[aria-haspopup=\"listbox\"] > .icl-Icon--black.icl-Icon--md[aria-label=\"\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element has no child that is a title\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute or the title attribute is empty"
+            },
+            {
+                "any": [
+                    {
+                        "id": "svg-non-empty-title",
+                        "data": { "messageKey": "noTitle" },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no child that is a title"
+                    },
+                    {
+                        "id": "aria-label",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-label attribute does not exist or is empty"
+                    },
+                    {
+                        "id": "aria-labelledby",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+                    },
+                    {
+                        "id": "non-empty-title",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no title attribute or the title attribute is empty"
+                    }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<svg role=\"img\" class=\"icl-Icon icl-Icon--black icl-Icon--md\" aria-label=\"\" focusable=\"false\" viewBox=\"0 0 24 24\"><g><path d=\"M7.41,8.59L12,13.17l4.59-4.58L18,10l-6,6L6,10Z\"></path></g></svg>",
+                "target": [
+                    "div[data-tn-section=\"stateFilter\"] > .perf-FixedButtonSelect > .perf-FilterMultiSelect.iclom-ButtonSelect--tertiary.ipl-ButtonSelect--tertiary > div > .iclcom-ButtonSelect-Button.ipl-ButtonSelect-Button[aria-haspopup=\"listbox\"] > .icl-Icon--black.icl-Icon--md[aria-label=\"\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element has no child that is a title\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute or the title attribute is empty"
+            },
+            {
+                "any": [
+                    {
+                        "id": "svg-non-empty-title",
+                        "data": { "messageKey": "noTitle" },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no child that is a title"
+                    },
+                    {
+                        "id": "aria-label",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-label attribute does not exist or is empty"
+                    },
+                    {
+                        "id": "aria-labelledby",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+                    },
+                    {
+                        "id": "non-empty-title",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no title attribute or the title attribute is empty"
+                    }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<svg role=\"img\" class=\"icl-Icon icl-Icon--black icl-Icon--md\" aria-label=\"\" focusable=\"false\" viewBox=\"0 0 24 24\"><g><path d=\"M7.41,8.59L12,13.17l4.59-4.58L18,10l-6,6L6,10Z\"></path></g></svg>",
+                "target": [
+                    "div[data-tn-section=\"cityFilter\"] > .perf-FixedButtonSelect > .perf-FilterMultiSelect.iclom-ButtonSelect--tertiary.ipl-ButtonSelect--tertiary > div > .iclcom-ButtonSelect-Button.ipl-ButtonSelect-Button[aria-haspopup=\"listbox\"] > .icl-Icon--black.icl-Icon--md[aria-label=\"\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element has no child that is a title\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute or the title attribute is empty"
+            },
+            {
+                "any": [
+                    {
+                        "id": "svg-non-empty-title",
+                        "data": { "messageKey": "noTitle" },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no child that is a title"
+                    },
+                    {
+                        "id": "aria-label",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-label attribute does not exist or is empty"
+                    },
+                    {
+                        "id": "aria-labelledby",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+                    },
+                    {
+                        "id": "non-empty-title",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no title attribute or the title attribute is empty"
+                    }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<svg role=\"img\" class=\"icl-Icon icl-Icon--black icl-Icon--md\" aria-label=\"\" focusable=\"false\" viewBox=\"0 0 24 24\"><g><path d=\"M7.41,8.59L12,13.17l4.59-4.58L18,10l-6,6L6,10Z\"></path></g></svg>",
+                "target": [
+                    "div[data-tn-element=\"performanceFilterTargetField\"] > .perf-FixedButtonSelect > .perf-BudgetPerformanceFilter-dropdown.iclom-ButtonSelect--tertiary.ipl-ButtonSelect--tertiary > div > .iclcom-ButtonSelect-Button.ipl-ButtonSelect-Button[aria-haspopup=\"listbox\"] > .icl-Icon--black.icl-Icon--md[aria-label=\"\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element has no child that is a title\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute or the title attribute is empty"
+            },
+            {
+                "any": [
+                    {
+                        "id": "svg-non-empty-title",
+                        "data": { "messageKey": "noTitle" },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no child that is a title"
+                    },
+                    {
+                        "id": "aria-label",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-label attribute does not exist or is empty"
+                    },
+                    {
+                        "id": "aria-labelledby",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+                    },
+                    {
+                        "id": "non-empty-title",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no title attribute or the title attribute is empty"
+                    }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<svg role=\"img\" class=\"icl-Icon icl-Icon--black icl-Icon--md\" aria-label=\"\" focusable=\"false\" viewBox=\"0 0 24 24\"><g><path d=\"M7.41,8.59L12,13.17l4.59-4.58L18,10l-6,6L6,10Z\"></path></g></svg>",
+                "target": [
+                    "div[data-tn-element=\"performanceFilterOperator\"] > .perf-FixedButtonSelect > .perf-BudgetPerformanceFilter-dropdown.iclom-ButtonSelect--tertiary.ipl-ButtonSelect--tertiary > div > .iclcom-ButtonSelect-Button.ipl-ButtonSelect-Button[aria-haspopup=\"listbox\"] > .icl-Icon--black.icl-Icon--md[aria-label=\"\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element has no child that is a title\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute or the title attribute is empty"
+            }
+        ]
+    }
+]

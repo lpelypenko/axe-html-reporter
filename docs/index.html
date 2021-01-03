@@ -105,8 +105,8 @@
                         <th style="width: 5%">#</th>
                         <th style="width: 45%">Description</th>
                         <th style="width: 15%">Axe rule ID</th>
-                        <th style="width: 15%">WCAG</th>
-                        <th style="width: 15%">Impact</th>
+                        <th style="width: 23%">WCAG</th>
+                        <th style="width: 7%">Impact</th>
                         <th style="width: 5%">Count</th>
                     </tr>
                 </thead>
@@ -115,7 +115,7 @@
                         <th scope="row"><a href="#1" class="card-link">1</a></th>
                         <td>&lt;html&gt; element must have a lang attribute</td>
                         <td>html-has-lang</td>
-                        <td>WCAG 2.0 Level A</td>
+                        <td>WCAG 2 Level A, WCAG 3.1.1</td>
                         <td>serious</td>
                         <td>1</td>
                     </tr>
@@ -162,13 +162,23 @@
                     <div class="violationCardLine">
                         <h6 class="card-subtitle mb-2 text-muted">html-has-lang</h6>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
-                            WCAG 2.0 Level A
+                            WCAG 2 Level A, WCAG 3.1.1
                         </h6>
                     </div>
                     <div class="violationCardLine">
                         <p class="card-text">Ensures every HTML document has a lang attribute</p>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
                             serious
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.language </span>
+
+                            <span class="badge bg-light text-dark"> wcag2a </span>
+
+                            <span class="badge bg-light text-dark"> wcag311 </span>
                         </h6>
                     </div>
                     <div class="violationNode">
@@ -230,6 +240,14 @@
                             moderate
                         </h6>
                     </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.semantics </span>
+
+                            <span class="badge bg-light text-dark"> best-practice </span>
+                        </h6>
+                    </div>
                     <div class="violationNode">
                         <table class="table table-sm table-bordered">
                             <thead>
@@ -287,6 +305,14 @@
                         <p class="card-text">Ensures all page content is contained by landmarks</p>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
                             moderate
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.keyboard </span>
+
+                            <span class="badge bg-light text-dark"> best-practice </span>
                         </h6>
                     </div>
                     <div class="violationNode">
@@ -351,6 +377,14 @@
                         <p class="card-text">Ensures tabindex attribute values are not greater than 0</p>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
                             serious
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.keyboard </span>
+
+                            <span class="badge bg-light text-dark"> best-practice </span>
                         </h6>
                     </div>
                     <div class="violationNode">
@@ -449,9 +483,9 @@
                                 <thead>
                                     <tr>
                                         <th style="width: 5%">#</th>
-                                        <th style="width: 50%">Description</th>
+                                        <th style="width: 40%">Description</th>
                                         <th style="width: 5%">Axe rule ID</th>
-                                        <th style="width: 5%">WCAG</th>
+                                        <th style="width: 15%">WCAG</th>
                                         <th style="width: 5%">Nodes passed check</th>
                                     </tr>
                                 </thead>
@@ -460,7 +494,7 @@
                                         <th scope="row">1</th>
                                         <td>aria-hidden&#x3D;&#39;true&#39; must not be present on the document body</td>
                                         <td>aria-hidden-body</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                         <td>1</td>
                                     </tr>
                                 </tbody>
@@ -468,7 +502,7 @@
                                         <th scope="row">2</th>
                                         <td>Page must have means to bypass repeated blocks</td>
                                         <td>bypass</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 2.4.1</td>
                                         <td>1</td>
                                     </tr>
                                 </tbody>
@@ -476,7 +510,7 @@
                                         <th scope="row">3</th>
                                         <td>Elements must have sufficient color contrast</td>
                                         <td>color-contrast</td>
-                                        <td>WCAG 2.0 Level AA</td>
+                                        <td>WCAG 2 Level AA, WCAG 1.4.3</td>
                                         <td>3</td>
                                     </tr>
                                 </tbody>
@@ -484,7 +518,7 @@
                                         <th scope="row">4</th>
                                         <td>Documents must have &lt;title&gt; element to aid in navigation</td>
                                         <td>document-title</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 2.4.2</td>
                                         <td>1</td>
                                     </tr>
                                 </tbody>
@@ -516,7 +550,7 @@
                                         <th scope="row">8</th>
                                         <td>Links must have discernible text</td>
                                         <td>link-name</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2, WCAG 2.4.4</td>
                                         <td>1</td>
                                     </tr>
                                 </tbody>
@@ -653,14 +687,14 @@
                                         <th scope="row">2</th>
                                         <td>Active &lt;area&gt; elements must have alternate text</td>
                                         <td>area-alt</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.1.1, WCAG 2.4.4, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">3</th>
                                         <td>Elements must only use allowed ARIA attributes</td>
                                         <td>aria-allowed-attr</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
@@ -674,140 +708,140 @@
                                         <th scope="row">5</th>
                                         <td>ARIA hidden element must not contain focusable elements</td>
                                         <td>aria-hidden-focus</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2, WCAG 1.3.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">6</th>
                                         <td>ARIA input fields must have an accessible name</td>
                                         <td>aria-input-field-name</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">7</th>
                                         <td>Required ARIA attributes must be provided</td>
                                         <td>aria-required-attr</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">8</th>
                                         <td>Certain ARIA roles must contain particular children</td>
                                         <td>aria-required-children</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">9</th>
                                         <td>Certain ARIA roles must be contained by particular parents</td>
                                         <td>aria-required-parent</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">10</th>
                                         <td>Use aria-roledescription on elements with a semantic role</td>
                                         <td>aria-roledescription</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">11</th>
                                         <td>ARIA roles used must conform to valid values</td>
                                         <td>aria-roles</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">12</th>
                                         <td>ARIA toggle fields have an accessible name</td>
                                         <td>aria-toggle-field-name</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">13</th>
                                         <td>ARIA attributes must conform to valid values</td>
                                         <td>aria-valid-attr-value</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">14</th>
                                         <td>ARIA attributes must conform to valid names</td>
                                         <td>aria-valid-attr</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">15</th>
                                         <td>&lt;audio&gt; elements must have a captions track</td>
                                         <td>audio-caption</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.2.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">16</th>
                                         <td>autocomplete attribute must be used correctly</td>
                                         <td>autocomplete-valid</td>
-                                        <td>WCAG 2.1 Level AA</td>
+                                        <td>WCAG 2.1 Level AA, WCAG 1.3.5</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">17</th>
                                         <td>Inline text spacing must be adjustable with custom stylesheets</td>
                                         <td>avoid-inline-spacing</td>
-                                        <td>WCAG 2.1 Level AA</td>
+                                        <td>WCAG 2.1 Level AA, WCAG 1.4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">18</th>
                                         <td>&lt;blink&gt; elements are deprecated and must not be used</td>
                                         <td>blink</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 2.2.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">19</th>
                                         <td>Buttons must have discernible text</td>
                                         <td>button-name</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">20</th>
                                         <td>&lt;dl&gt; elements must only directly contain properly-ordered &lt;dt&gt; and &lt;dd&gt; groups, &lt;script&gt;, &lt;template&gt; or &lt;div&gt; elements</td>
                                         <td>definition-list</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">21</th>
                                         <td>&lt;dt&gt; and &lt;dd&gt; elements must be contained by a &lt;dl&gt;</td>
                                         <td>dlitem</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">22</th>
                                         <td>IDs of active elements must be unique</td>
                                         <td>duplicate-id-active</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">23</th>
                                         <td>IDs used in ARIA and labels must be unique</td>
                                         <td>duplicate-id-aria</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">24</th>
                                         <td>id attribute value must be unique</td>
                                         <td>duplicate-id</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
@@ -821,7 +855,7 @@
                                         <th scope="row">26</th>
                                         <td>Form field should not have multiple label elements</td>
                                         <td>form-field-multiple-labels</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 3.3.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
@@ -842,28 +876,28 @@
                                         <th scope="row">29</th>
                                         <td>Frames must have title attribute</td>
                                         <td>frame-title</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 2.4.1, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">30</th>
                                         <td>&lt;html&gt; element must have a valid value for the lang attribute</td>
                                         <td>html-lang-valid</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 3.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">31</th>
                                         <td>HTML elements with lang and xml:lang must have the same base language</td>
                                         <td>html-xml-lang-mismatch</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 3.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">32</th>
                                         <td>Images must have alternate text</td>
                                         <td>image-alt</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
@@ -877,21 +911,21 @@
                                         <th scope="row">34</th>
                                         <td>Input buttons must have discernible text</td>
                                         <td>input-button-name</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">35</th>
                                         <td>Image buttons must have alternate text</td>
                                         <td>input-image-alt</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">36</th>
                                         <td>Elements must have their visible text as part of their accessible name</td>
                                         <td>label-content-name-mismatch</td>
-                                        <td>WCAG 2.1 Level A</td>
+                                        <td>WCAG 2.1 Level A, WCAG 2.5.3</td>
                                     </tr>
                                 </tbody>
                                     <tr>
@@ -905,7 +939,7 @@
                                         <th scope="row">38</th>
                                         <td>Form elements must have labels</td>
                                         <td>label</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2, WCAG 1.3.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
@@ -968,56 +1002,56 @@
                                         <th scope="row">47</th>
                                         <td>Links must be distinguished from surrounding text in a way that does not rely on color</td>
                                         <td>link-in-text-block</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.4.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">48</th>
                                         <td>&lt;ul&gt; and &lt;ol&gt; must only directly contain &lt;li&gt;, &lt;script&gt; or &lt;template&gt; elements</td>
                                         <td>list</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">49</th>
                                         <td>&lt;li&gt; elements must be contained in a &lt;ul&gt; or &lt;ol&gt;</td>
                                         <td>listitem</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">50</th>
                                         <td>&lt;marquee&gt; elements are deprecated and must not be used</td>
                                         <td>marquee</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 2.2.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">51</th>
                                         <td>Timed refresh must not exist</td>
                                         <td>meta-refresh</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 2 Level AAA, WCAG 2.2.1, WCAG 2.2.4, WCAG 3.2.5</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">52</th>
                                         <td>&lt;object&gt; elements must have alternate text</td>
                                         <td>object-alt</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">53</th>
                                         <td>Bold, italic text and font-size are not used to style p elements as a heading</td>
                                         <td>p-as-heading</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">54</th>
                                         <td>[role&#x3D;&#39;img&#39;] elements have an alternative text</td>
                                         <td>role-img-alt</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
@@ -1031,14 +1065,14 @@
                                         <th scope="row">56</th>
                                         <td>Ensure that scrollable region has keyboard access</td>
                                         <td>scrollable-region-focusable</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 2.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">57</th>
                                         <td>Server-side image maps must not be used</td>
                                         <td>server-side-image-map</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 2.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
@@ -1052,7 +1086,7 @@
                                         <th scope="row">59</th>
                                         <td>svg elements with an img role have an alternative text</td>
                                         <td>svg-img-alt</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
@@ -1073,49 +1107,49 @@
                                         <th scope="row">62</th>
                                         <td>Data or header cells should not be used to give caption to a data table.</td>
                                         <td>table-fake-caption</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">63</th>
                                         <td>All non-empty td element in table larger than 3 by 3 must have an associated table header</td>
                                         <td>td-has-header</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">64</th>
                                         <td>All cells in a table element that use the headers attribute must only refer to other cells of that same table</td>
                                         <td>td-headers-attr</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">65</th>
                                         <td>All th elements and elements with role&#x3D;columnheader&#x2F;rowheader must have data cells they describe</td>
                                         <td>th-has-data-cells</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">66</th>
                                         <td>lang attribute must have a valid value</td>
                                         <td>valid-lang</td>
-                                        <td>WCAG 2.0 Level AA</td>
+                                        <td>WCAG 2 Level AA, WCAG 3.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">67</th>
                                         <td>&lt;video&gt; elements must have captions</td>
                                         <td>video-caption</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.2.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
                                         <th scope="row">68</th>
                                         <td>&lt;video&gt; or &lt;audio&gt; elements do not autoplay audio</td>
                                         <td>no-autoplay-audio</td>
-                                        <td>WCAG 2.0 Level A</td>
+                                        <td>WCAG 2 Level A, WCAG 1.4.2</td>
                                     </tr>
                                 </tbody>
                             </table>

@@ -91,7 +91,6 @@
                     <a href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;demo&#x2F;mars&#x2F;" target="_blank" class="card-link">https:&#x2F;&#x2F;dequeuniversity.com&#x2F;demo&#x2F;mars&#x2F;</a>
                     <br />
                 </div>
-                
             </div>
             <h5>axe-core found <span class="badge badge-warning">85</span> violations</h5>
             <table class="table table-striped table-bordered">
@@ -100,8 +99,8 @@
                         <th style="width: 5%">#</th>
                         <th style="width: 45%">Description</th>
                         <th style="width: 15%">Axe rule ID</th>
-                        <th style="width: 15%">WCAG</th>
-                        <th style="width: 15%">Impact</th>
+                        <th style="width: 23%">WCAG</th>
+                        <th style="width: 7%">Impact</th>
                         <th style="width: 5%">Count</th>
                     </tr>
                 </thead>
@@ -110,7 +109,7 @@
                         <th scope="row"><a href="#1" class="card-link">1</a></th>
                         <td>Buttons must have discernible text</td>
                         <td>button-name</td>
-                        <td>WCAG 2.0 Level A</td>
+                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
                         <td>critical</td>
                         <td>1</td>
                     </tr>
@@ -118,7 +117,7 @@
                         <th scope="row"><a href="#2" class="card-link">2</a></th>
                         <td>Elements must have sufficient color contrast</td>
                         <td>color-contrast</td>
-                        <td>WCAG 2.0 Level AA</td>
+                        <td>WCAG 2 Level AA, WCAG 1.4.3</td>
                         <td>serious</td>
                         <td>11</td>
                     </tr>
@@ -126,7 +125,7 @@
                         <th scope="row"><a href="#3" class="card-link">3</a></th>
                         <td>IDs of active elements must be unique</td>
                         <td>duplicate-id-active</td>
-                        <td>WCAG 2.0 Level A</td>
+                        <td>WCAG 2 Level A, WCAG 4.1.1</td>
                         <td>serious</td>
                         <td>1</td>
                     </tr>
@@ -134,7 +133,7 @@
                         <th scope="row"><a href="#4" class="card-link">4</a></th>
                         <td>id attribute value must be unique</td>
                         <td>duplicate-id</td>
-                        <td>WCAG 2.0 Level A</td>
+                        <td>WCAG 2 Level A, WCAG 4.1.1</td>
                         <td>minor</td>
                         <td>10</td>
                     </tr>
@@ -142,7 +141,7 @@
                         <th scope="row"><a href="#5" class="card-link">5</a></th>
                         <td>Frames must have title attribute</td>
                         <td>frame-title</td>
-                        <td>WCAG 2.0 Level A</td>
+                        <td>WCAG 2 Level A, WCAG 2.4.1, WCAG 4.1.2</td>
                         <td>serious</td>
                         <td>2</td>
                     </tr>
@@ -150,7 +149,7 @@
                         <th scope="row"><a href="#6" class="card-link">6</a></th>
                         <td>&lt;html&gt; element must have a lang attribute</td>
                         <td>html-has-lang</td>
-                        <td>WCAG 2.0 Level A</td>
+                        <td>WCAG 2 Level A, WCAG 3.1.1</td>
                         <td>serious</td>
                         <td>1</td>
                     </tr>
@@ -158,7 +157,7 @@
                         <th scope="row"><a href="#7" class="card-link">7</a></th>
                         <td>Images must have alternate text</td>
                         <td>image-alt</td>
-                        <td>WCAG 2.0 Level A</td>
+                        <td>WCAG 2 Level A, WCAG 1.1.1</td>
                         <td>critical</td>
                         <td>4</td>
                     </tr>
@@ -166,7 +165,7 @@
                         <th scope="row"><a href="#8" class="card-link">8</a></th>
                         <td>Form elements must have labels</td>
                         <td>label</td>
-                        <td>WCAG 2.0 Level A</td>
+                        <td>WCAG 2 Level A, WCAG 4.1.2, WCAG 1.3.1</td>
                         <td>critical</td>
                         <td>1</td>
                     </tr>
@@ -190,7 +189,7 @@
                         <th scope="row"><a href="#11" class="card-link">11</a></th>
                         <td>Links must be distinguished from surrounding text in a way that does not rely on color</td>
                         <td>link-in-text-block</td>
-                        <td>WCAG 2.0 Level A</td>
+                        <td>WCAG 2 Level A, WCAG 1.4.1</td>
                         <td>serious</td>
                         <td>1</td>
                     </tr>
@@ -198,7 +197,7 @@
                         <th scope="row"><a href="#12" class="card-link">12</a></th>
                         <td>Links must have discernible text</td>
                         <td>link-name</td>
-                        <td>WCAG 2.0 Level A</td>
+                        <td>WCAG 2 Level A, WCAG 4.1.2, WCAG 2.4.4</td>
                         <td>serious</td>
                         <td>8</td>
                     </tr>
@@ -237,13 +236,27 @@
                     <div class="violationCardLine">
                         <h6 class="card-subtitle mb-2 text-muted">button-name</h6>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
-                            WCAG 2.0 Level A
+                            WCAG 2 Level A, WCAG 4.1.2
                         </h6>
                     </div>
                     <div class="violationCardLine">
                         <p class="card-text">Ensures buttons have discernible text</p>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
                             critical
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.name-role-value </span>
+
+                            <span class="badge bg-light text-dark"> wcag2a </span>
+
+                            <span class="badge bg-light text-dark"> wcag412 </span>
+
+                            <span class="badge bg-light text-dark"> section508 </span>
+
+                            <span class="badge bg-light text-dark"> section508.22.a </span>
                         </h6>
                     </div>
                     <div class="violationNode">
@@ -303,13 +316,23 @@
                     <div class="violationCardLine">
                         <h6 class="card-subtitle mb-2 text-muted">color-contrast</h6>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
-                            WCAG 2.0 Level AA
+                            WCAG 2 Level AA, WCAG 1.4.3
                         </h6>
                     </div>
                     <div class="violationCardLine">
                         <p class="card-text">Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds</p>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
                             serious
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.color </span>
+
+                            <span class="badge bg-light text-dark"> wcag2aa </span>
+
+                            <span class="badge bg-light text-dark"> wcag143 </span>
                         </h6>
                     </div>
                     <div class="violationNode">
@@ -557,13 +580,23 @@
                     <div class="violationCardLine">
                         <h6 class="card-subtitle mb-2 text-muted">duplicate-id-active</h6>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
-                            WCAG 2.0 Level A
+                            WCAG 2 Level A, WCAG 4.1.1
                         </h6>
                     </div>
                     <div class="violationCardLine">
                         <p class="card-text">Ensures every id attribute value of active elements is unique</p>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
                             serious
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.parsing </span>
+
+                            <span class="badge bg-light text-dark"> wcag2a </span>
+
+                            <span class="badge bg-light text-dark"> wcag411 </span>
                         </h6>
                     </div>
                     <div class="violationNode">
@@ -619,13 +652,23 @@
                     <div class="violationCardLine">
                         <h6 class="card-subtitle mb-2 text-muted">duplicate-id</h6>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
-                            WCAG 2.0 Level A
+                            WCAG 2 Level A, WCAG 4.1.1
                         </h6>
                     </div>
                     <div class="violationCardLine">
                         <p class="card-text">Ensures every id attribute value is unique</p>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
                             minor
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.parsing </span>
+
+                            <span class="badge bg-light text-dark"> wcag2a </span>
+
+                            <span class="badge bg-light text-dark"> wcag411 </span>
                         </h6>
                     </div>
                     <div class="violationNode">
@@ -863,13 +906,29 @@
                     <div class="violationCardLine">
                         <h6 class="card-subtitle mb-2 text-muted">frame-title</h6>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
-                            WCAG 2.0 Level A
+                            WCAG 2 Level A, WCAG 2.4.1, WCAG 4.1.2
                         </h6>
                     </div>
                     <div class="violationCardLine">
                         <p class="card-text">Ensures &lt;iframe&gt; and &lt;frame&gt; elements contain a non-empty title attribute</p>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
                             serious
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.text-alternatives </span>
+
+                            <span class="badge bg-light text-dark"> wcag2a </span>
+
+                            <span class="badge bg-light text-dark"> wcag241 </span>
+
+                            <span class="badge bg-light text-dark"> wcag412 </span>
+
+                            <span class="badge bg-light text-dark"> section508 </span>
+
+                            <span class="badge bg-light text-dark"> section508.22.i </span>
                         </h6>
                     </div>
                     <div class="violationNode">
@@ -947,13 +1006,23 @@
                     <div class="violationCardLine">
                         <h6 class="card-subtitle mb-2 text-muted">html-has-lang</h6>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
-                            WCAG 2.0 Level A
+                            WCAG 2 Level A, WCAG 3.1.1
                         </h6>
                     </div>
                     <div class="violationCardLine">
                         <p class="card-text">Ensures every HTML document has a lang attribute</p>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
                             serious
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.language </span>
+
+                            <span class="badge bg-light text-dark"> wcag2a </span>
+
+                            <span class="badge bg-light text-dark"> wcag311 </span>
                         </h6>
                     </div>
                     <div class="violationNode">
@@ -1006,13 +1075,27 @@
                     <div class="violationCardLine">
                         <h6 class="card-subtitle mb-2 text-muted">image-alt</h6>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
-                            WCAG 2.0 Level A
+                            WCAG 2 Level A, WCAG 1.1.1
                         </h6>
                     </div>
                     <div class="violationCardLine">
                         <p class="card-text">Ensures &lt;img&gt; elements have alternate text or a role of none or presentation</p>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
                             critical
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.text-alternatives </span>
+
+                            <span class="badge bg-light text-dark"> wcag2a </span>
+
+                            <span class="badge bg-light text-dark"> wcag111 </span>
+
+                            <span class="badge bg-light text-dark"> section508 </span>
+
+                            <span class="badge bg-light text-dark"> section508.22.a </span>
                         </h6>
                     </div>
                     <div class="violationNode">
@@ -1136,13 +1219,29 @@
                     <div class="violationCardLine">
                         <h6 class="card-subtitle mb-2 text-muted">label</h6>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
-                            WCAG 2.0 Level A
+                            WCAG 2 Level A, WCAG 4.1.2, WCAG 1.3.1
                         </h6>
                     </div>
                     <div class="violationCardLine">
                         <p class="card-text">Ensures every form element has a label</p>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
                             critical
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.forms </span>
+
+                            <span class="badge bg-light text-dark"> wcag2a </span>
+
+                            <span class="badge bg-light text-dark"> wcag412 </span>
+
+                            <span class="badge bg-light text-dark"> wcag131 </span>
+
+                            <span class="badge bg-light text-dark"> section508 </span>
+
+                            <span class="badge bg-light text-dark"> section508.22.n </span>
                         </h6>
                     </div>
                     <div class="violationNode">
@@ -1206,6 +1305,14 @@
                         <p class="card-text">Ensures the document has a main landmark</p>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
                             moderate
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.semantics </span>
+
+                            <span class="badge bg-light text-dark"> best-practice </span>
                         </h6>
                     </div>
                     <div class="violationNode">
@@ -1321,6 +1428,14 @@ html</code></pre>
                             moderate
                         </h6>
                     </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.semantics </span>
+
+                            <span class="badge bg-light text-dark"> best-practice </span>
+                        </h6>
+                    </div>
                     <div class="violationNode">
                         <table class="table table-sm table-bordered">
                             <thead>
@@ -1382,13 +1497,25 @@ html</code></pre>
                     <div class="violationCardLine">
                         <h6 class="card-subtitle mb-2 text-muted">link-in-text-block</h6>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
-                            WCAG 2.0 Level A
+                            WCAG 2 Level A, WCAG 1.4.1
                         </h6>
                     </div>
                     <div class="violationCardLine">
                         <p class="card-text">Links can be distinguished without relying on color</p>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
                             serious
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.color </span>
+
+                            <span class="badge bg-light text-dark"> experimental </span>
+
+                            <span class="badge bg-light text-dark"> wcag2a </span>
+
+                            <span class="badge bg-light text-dark"> wcag141 </span>
                         </h6>
                     </div>
                     <div class="violationNode">
@@ -1441,13 +1568,29 @@ html</code></pre>
                     <div class="violationCardLine">
                         <h6 class="card-subtitle mb-2 text-muted">link-name</h6>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
-                            WCAG 2.0 Level A
+                            WCAG 2 Level A, WCAG 4.1.2, WCAG 2.4.4
                         </h6>
                     </div>
                     <div class="violationCardLine">
                         <p class="card-text">Ensures links have discernible text</p>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
                             serious
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.name-role-value </span>
+
+                            <span class="badge bg-light text-dark"> wcag2a </span>
+
+                            <span class="badge bg-light text-dark"> wcag412 </span>
+
+                            <span class="badge bg-light text-dark"> wcag244 </span>
+
+                            <span class="badge bg-light text-dark"> section508 </span>
+
+                            <span class="badge bg-light text-dark"> section508.22.a </span>
                         </h6>
                     </div>
                     <div class="violationNode">
@@ -1709,6 +1852,14 @@ html</code></pre>
                         <p class="card-text">Ensures all page content is contained by landmarks</p>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
                             moderate
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.keyboard </span>
+
+                            <span class="badge bg-light text-dark"> best-practice </span>
                         </h6>
                     </div>
                     <div class="violationNode">
@@ -2396,6 +2547,14 @@ img[src$&#x3D;&quot;jot&quot;]</code></pre>
                         <p class="card-text">Ensures tabindex attribute values are not greater than 0</p>
                         <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
                             serious
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.keyboard </span>
+
+                            <span class="badge bg-light text-dark"> best-practice </span>
                         </h6>
                     </div>
                     <div class="violationNode">
