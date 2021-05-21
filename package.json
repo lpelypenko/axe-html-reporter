@@ -31,7 +31,7 @@
     "homepage": "https://github.com/lpelypenko/axe-html-reporter",
     "scripts": {
         "prebuild": "rimraf dist build",
-        "copy": "cpx ./src/util/template/* ./dist/util/template/",
+        "copy": "cp -R ./src/util/template ./dist/util/template",
         "build": "tsc --project tsconfig.build.json && npm run copy",
         "test": "jest test",
         "test:watch": "jest test --watch"
