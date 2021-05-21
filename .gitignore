@@ -108,3 +108,6 @@ Temporary Items
 dist/
 build/
 .idea
+
+# test output
+artifacts/

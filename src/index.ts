@@ -10,6 +10,7 @@ export interface Options {
     outputDir?: string;
     projectKey?: string;
     customSummary?: string;
+    outputDirPath?: string
 }
 
 export interface CreateReport {
@@ -61,6 +62,7 @@ export function createHtmlReport({ results, options }: CreateReport): void {
             htmlContent,
             reportFileName: options?.reportFileName,
             outputDir: options?.outputDir,
+            outputDirPath: options?.outputDirPath
         });
     } catch (e) {
         console.warn(`HTML report was not created due to the error ${e.message}`);

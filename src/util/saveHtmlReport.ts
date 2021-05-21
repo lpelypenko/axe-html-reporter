@@ -6,6 +6,7 @@ interface SaveReportOptions {
     htmlContent: string;
     reportFileName?: string;
     outputDir?: string;
+    outputDirPath?: string;
 }
 /**
  * Saves the file with specified file name or with default file name index.thml
@@ -16,9 +17,10 @@ export function saveHtmlReport({
     htmlContent,
     reportFileName,
     outputDir,
+    outputDirPath = process.cwd()
 }: SaveReportOptions): void {
     try {
-        const reportDirectory = `${process.cwd()}/${outputDir || 'artifacts'}`;
+        const reportDirectory = `${outputDirPath}/${outputDir || 'artifacts'}`;
         if (!fs.existsSync(reportDirectory)) {
             fs.mkdirSync(reportDirectory, {
                 recursive: true,
