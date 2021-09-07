@@ -10,7 +10,8 @@ export interface Options {
     outputDir?: string;
     projectKey?: string;
     customSummary?: string;
-    outputDirPath?: string
+    outputDirPath?: string;
+    doNotCreateReportFile?: boolean;
 }
 
 export interface CreateReport {
@@ -25,7 +26,7 @@ export interface PreparedResults {
     inapplicable?: Result[];
 }
 
-export function createHtmlReport({ results, options }: CreateReport): void {
+export function createHtmlReport({ results, options }: CreateReport): string {
     if (!results.violations) {
         throw new Error(
             "'violations' is required for HTML accessibility report. Example: createHtmlReport({ results : { violations: Result[] } })"
@@ -58,13 +59,21 @@ export function createHtmlReport({ results, options }: CreateReport): void {
             hasAxeRawResults: Boolean(results?.timestamp),
             rules: prepareAxeRules(results?.toolOptions?.rules || {}),
         });
-        saveHtmlReport({
-            htmlContent,
-            reportFileName: options?.reportFileName,
-            outputDir: options?.outputDir,
-            outputDirPath: options?.outputDirPath
-        });
+        if (options?.doNotCreateReportFile === true) {
+            console.info('Report file will not be created because user passed options.doNotCreateReportFile = true. Use HTML output of the function to create report file');
+        } else {
+            saveHtmlReport({
+                htmlContent,
+                reportFileName: options?.reportFileName,
+                outputDir: options?.outputDir,
+                outputDirPath: options?.outputDirPath
+            });
+        }
+
+        return htmlContent;
     } catch (e) {
         console.warn(`HTML report was not created due to the error ${e.message}`);
+
+        return `Failed to create HTML report due to an error ${e.message}`;
     }
 }

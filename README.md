@@ -11,6 +11,30 @@ Notes:
 
 Please check [sample report output.](https://lpelypenko.github.io/axe-html-reporter/)
 
+`createHtmlReport` returns HTML content that can be additionally used for specific integrations.
+
+If only HTML content needed, user can pass `doNotCreateReportFile: true` to stop report file creation.
+
+Suggestion on how to use this library if you don't need a report file but need only HTML it produces: 
+
+```javascript
+const reportHTML = createHtmlReport({
+    results: rawAxeResults,
+    options: {
+        projectKey: 'I need only raw HTML',
+        doNotCreateReportFile: true,
+    },
+});
+console.log('reportHTML will have full content of HTML file.');
+// suggestion on how to create file by yourself
+if (!fs.existsSync('build/reports/saveReportHere.html')) {
+    fs.mkdirSync('build/reports', {
+        recursive: true,
+    });
+}
+fs.writeFileSync('build/reports/saveReportHere.html', reportHTML);
+```
+
 ## Install
 
 ```
