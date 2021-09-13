@@ -40,7 +40,7 @@ describe('Successful tests', () => {
                 violations: [],
             },
             options: {
-                reportFileName
+                reportFileName,
             },
         });
         expect(
@@ -239,5 +239,26 @@ describe('Successful tests', () => {
                 encoding: 'utf8',
             })
         ).toMatchSnapshot();
+    });
+    it('File will not be created and raw HTML result will be returned', async () => {
+        const customSummary = `Test Case: Full page analysis
+        <br>Steps:</br>
+        <ol style="margin: 0">
+        <li>Open https://dequeuniversity.com/demo/mars/</li>
+        <li>Analyze full page with all rules enabled</li>
+        </ol>`;
+
+        const reportHTML = createHtmlReport({
+            results: rawAxeResults,
+            options: {
+                projectKey: 'I need only raw HTML',
+                customSummary,
+                doNotCreateReportFile: true,
+                reportFileName: 'shouldNotBeSaved.html',
+            },
+        });
+        expect(reportHTML).toMatchSnapshot();
+        const isReportFileExist = fs.existsSync(getPathToCreatedReport('shouldNotBeSaved.html'));
+        expect(isReportFileExist).toBe(false);
     });
 });
