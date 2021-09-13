@@ -17,7 +17,11 @@ interface NodeResult {
     targetNodes: string;
     fixSummaries: FixSummary[];
     index: number;
-    relatedNodesAny: string[]
+    relatedNodesAny: string[];
+    /**
+     * image encoded in base64
+     */
+    screenshot?: string;
 }
 
 interface Details {

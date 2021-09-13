@@ -12,6 +12,14 @@ export interface Options {
     customSummary?: string;
     outputDirPath?: string;
     doNotCreateReportFile?: boolean;
+    /**
+     * A function to generate screenshot based on the selector
+     * @param selector
+     *  DOM selector
+     * @return
+     *  the generated screenshot image encoded in base64.
+     */
+    screenshotFunction?: (selector: string) => Promise<string>;
 }
 
 export interface CreateReport {
@@ -26,7 +34,7 @@ export interface PreparedResults {
     inapplicable?: Result[];
 }
 
-export function createHtmlReport({ results, options }: CreateReport): string {
+export async function createHtmlReport({ results, options }: CreateReport): Promise<string> {
     if (!results.violations) {
         throw new Error(
             "'violations' is required for HTML accessibility report. Example: createHtmlReport({ results : { violations: Result[] } })"
@@ -40,6 +48,15 @@ export function createHtmlReport({ results, options }: CreateReport): string {
             incomplete: results.incomplete,
             inapplicable: results.inapplicable,
         });
+        if (options?.screenshotFunction && preparedReportData.violationsDetails) {
+            for (let details of preparedReportData.violationsDetails) {
+                for (let node of details.nodes) {
+                    if (options.screenshotFunction) {
+                        node.screenshot = await options.screenshotFunction(node.targetNodes);
+                    }
+                }
+            }
+        }
         const htmlContent = mustache.render(template, {
             url: results.url,
             violationsSummary: preparedReportData.violationsSummary,
