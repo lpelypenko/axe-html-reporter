@@ -1,0 +1,350 @@
+<div style="padding: 2rem">
+            <h3>
+                AXE Accessibility Results{{#projectKey}} for {{projectKey}} project{{/projectKey}}
+            </h3>
+            <div class="summarySection">
+                {{#url}}
+                <div class="summary">
+                    Page URL:
+                    <a href="{{url}}" target="_blank" class="card-link">{{url}}</a>
+                    <br />
+                </div>
+                {{/url}} {{#customSummary}}
+                <div class="summary">{{{customSummary}}}</div>
+                {{/customSummary}}
+            </div>
+            <h5>{{{violationsSummary}}}</h5>
+            {{#violationDetails.length}}
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 5%">#</th>
+                        <th style="width: 45%">Description</th>
+                        <th style="width: 15%">Axe rule ID</th>
+                        <th style="width: 23%">WCAG</th>
+                        <th style="width: 7%">Impact</th>
+                        <th style="width: 5%">Count</th>
+                    </tr>
+                </thead>
+                {{/violationDetails.length}}
+                <tbody>
+                    {{#violations}}
+                    <tr>
+                        <th scope="row"><a href="#{{index}}" class="card-link">{{index}}</a></th>
+                        <td>{{help}}</td>
+                        <td>{{id}}</td>
+                        <td>{{wcag}}</td>
+                        <td>{{impact}}</td>
+                        <td>{{nodes}}</td>
+                    </tr>
+                    {{/violations}}
+                </tbody>
+            </table>
+            {{#violationDetails.length}}
+            <h3>Failed</h3>
+            {{/violationDetails.length}} {{#violationDetails}}
+            <div class="card violationCard">
+                <div class="card-body">
+                    <div class="violationCardLine">
+                        <h5 class="card-title violationCardTitleItem">
+                            <a id="{{index}}">{{index}}.</a> {{help}}
+                        </h5>
+                        <a
+                            href="{{helpUrl}}"
+                            target="_blank"
+                            class="card-link violationCardTitleItem learnMore"
+                            >Learn more</a
+                        >
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted">{{id}}</h6>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            {{wcag}}
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <p class="card-text">{{description}}</p>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            {{impact}}
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: {{#tags}}
+                            <span class="badge bg-light text-dark"> {{.}} </span>
+                            {{/tags}}
+                        </h6>
+                    </div>
+                    <div class="violationNode">
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#nodes}}
+                                <tr>
+                                    <td>{{index}}</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">{{targetNodes}}</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">{{html}}</code></pre>
+                                    </td>
+                                    <td>
+                                        {{#fixSummaries}}
+                                        <div class="wrapBreakWord">
+                                            <p>{{highlight}}</p>
+                                            <ul class="text-muted">
+                                                {{#list}}
+                                                <li>{{.}}</li>
+                                                {{/list}}
+                                            </ul>
+                                        </div>
+                                        {{/fixSummaries}} {{#relatedNodesAny.length}}
+                                        <p><strong>Related node:</strong></p>
+                                        {{/relatedNodesAny.length}} {{#relatedNodesAny}}
+                                        <pre><code class="css text-wrap">{{.}}</code></pre>
+                                        {{/relatedNodesAny}}
+                                    </td>
+                                </tr>
+                                {{/nodes}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            {{/violationDetails}} {{#hasPassed}}
+            <div id="accordionPasses">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button
+                                class="btn btn-link"
+                                data-toggle="collapse"
+                                data-target="#passes"
+                                aria-expanded="false"
+                                aria-controls="passes"
+                            >
+                                axe returned {{checksPassed.length}} passed axe
+                                checks{{#checksPassed.length}}. Expand details on
+                                click{{/checksPassed.length}}
+                            </button>
+                        </h5>
+                    </div>
+                    <div
+                        id="passes"
+                        class="collapse"
+                        aria-labelledby="headingOne"
+                        data-parent="#accordionPasses"
+                    >
+                        <div class="card-body">
+                            {{#checksPassed.length}}
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 5%">#</th>
+                                        <th style="width: 40%">Description</th>
+                                        <th style="width: 5%">Axe rule ID</th>
+                                        <th style="width: 15%">WCAG</th>
+                                        <th style="width: 5%">Nodes passed check</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#checksPassed}}
+                                    <tr>
+                                        <th scope="row">{{index}}</th>
+                                        <td>{{help}}</td>
+                                        <td>{{id}}</td>
+                                        <td>{{wcag}}</td>
+                                        <td>{{nodes}}</td>
+                                    </tr>
+                                </tbody>
+                                {{/checksPassed}}
+                            </table>
+                            {{/checksPassed.length}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/hasPassed}} {{#hasIncomplete}}
+            <div id="accordionIncomplete">
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button
+                                class="btn btn-link"
+                                data-toggle="collapse"
+                                data-target="#incomplete"
+                                aria-expanded="false"
+                                aria-controls="incomplete"
+                            >
+                                axe returned {{checksIncomplete.length}} incomplete checks. Expand
+                                details on click
+                            </button>
+                        </h5>
+                    </div>
+                    <div
+                        id="incomplete"
+                        class="collapse"
+                        aria-labelledby="headingTwo"
+                        data-parent="#accordionIncomplete"
+                    >
+                        <div class="card-body">
+                            <p><em>What 'incomplete' axe checks means?</em></p>
+                            <p>
+                                Incomplete results were aborted and require further testing. This
+                                can happen either because of technical restrictions to what the rule
+                                can test, or because a javascript error occurred.
+                            </p>
+                            <p>
+                                <a
+                                    href="https://www.deque.com/axe/core-documentation/api-documentation/#results-object"
+                                    >Visit axe API Documentation</a
+                                >
+                                to learn more.
+                            </p>
+                            {{#checksIncomplete.length}}
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 5%">#</th>
+                                        <th style="width: 50%">Description</th>
+                                        <th style="width: 20%">Axe rule ID</th>
+                                        <th style="width: 15%">WCAG</th>
+                                        <th style="width: 10%">Nodes with incomplete check</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#checksIncomplete}}
+                                    <tr>
+                                        <th scope="row">{{index}}</th>
+                                        <td>{{help}}</td>
+                                        <td>{{id}}</td>
+                                        <td>{{wcag}}</td>
+                                        <td>{{nodes}}</td>
+                                    </tr>
+                                </tbody>
+                                {{/checksIncomplete}}
+                            </table>
+                            {{/checksIncomplete.length}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/hasIncomplete}} {{#hasInapplicable}}
+            <div id="accordionInapplicable">
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button
+                                class="btn btn-link"
+                                data-toggle="collapse"
+                                data-target="#inapplicable"
+                                aria-expanded="false"
+                                aria-controls="inapplicable"
+                            >
+                                axe returned {{checksInapplicable.length}} inapplicable checks.
+                                Expand details on click
+                            </button>
+                        </h5>
+                    </div>
+                    <div
+                        id="inapplicable"
+                        class="collapse"
+                        aria-labelledby="headingThree"
+                        data-parent="#accordionInapplicable"
+                    >
+                        <div class="card-body">
+                            <p><em>What 'inapplicable' axe checks means?</em></p>
+                            <p>
+                                The inapplicable array lists all the rules for which no matching
+                                elements were found on the page.
+                            </p>
+                            <p>
+                                <a
+                                    href="https://www.deque.com/axe/core-documentation/api-documentation/#results-object"
+                                    >Visit axe API Documentation</a
+                                >
+                                to learn more.
+                            </p>
+                            {{#checksInapplicable.length}}
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 5%">#</th>
+                                        <th style="width: 50%">Description</th>
+                                        <th style="width: 20%">Axe rule ID</th>
+                                        <th style="width: 15%">WCAG</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#checksInapplicable}}
+                                    <tr>
+                                        <th scope="row">{{index}}</th>
+                                        <td>{{help}}</td>
+                                        <td>{{id}}</td>
+                                        <td>{{wcag}}</td>
+                                    </tr>
+                                </tbody>
+                                {{/checksInapplicable}}
+                            </table>
+                            {{/checksInapplicable.length}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/hasInapplicable}} {{#hasAxeRawResults}}
+            <div id="rulesSection">
+                <div class="card">
+                    <div class="card-header" id="ruleSection">
+                        <h5 class="mb-0">
+                            <button
+                                class="btn btn-link"
+                                data-toggle="collapse"
+                                data-target="#rules"
+                                aria-expanded="false"
+                                aria-controls="inapplicable"
+                            >
+                                axe was running with {{rules.length}} rules. Expand details on click
+                            </button>
+                        </h5>
+                    </div>
+                    <div
+                        id="rules"
+                        class="collapse"
+                        aria-labelledby="ruleSection"
+                        data-parent="#rules"
+                    >
+                        <div class="card-body">
+                            {{#rules.length}}
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 5%">#</th>
+                                        <th style="width: 50%">Rule ID</th>
+                                        <th style="width: 45%">Enabled</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#rules}}
+                                    <tr>
+                                        <th scope="row">{{index}}</th>
+                                        <td>{{rule}}</td>
+                                        <td>{{enabled}}</td>
+                                    </tr>
+                                </tbody>
+                                {{/rules}}
+                            </table>
+                            {{/rules.length}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/hasAxeRawResults}}
+        </div>

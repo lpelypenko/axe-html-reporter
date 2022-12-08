@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 
-export function loadTemplate(): string {
+export function loadTemplate(tpath:string=path.resolve(__dirname, 'template', 'pageTemplate.html')): string {
     try {
-        return fs.readFileSync(path.resolve(__dirname, 'template', 'pageTemplate.html'), {
+        return fs.readFileSync(tpath, {
             encoding: 'utf8',
         });
     } catch (err) {
