@@ -2,12 +2,13 @@
 
 Creates an HTML report from axe-core library AxeResults object listing violations, passes, incomplete and incompatible results.
 
-Allows specifying report creation options: `reportFileName`, `outputDir`, `outputDirPath`, `projectKey` and `customSummary`.
+Allows specifying report creation options: `templatePath`, `reportFileName`, `outputDir`, `outputDirPath`, `projectKey` and `customSummary`.
 
 Notes: 
 
 - `customSummary` allows having html parameters
 - `outputDirPath` allows specifying absolute path
+- `templatePath` allows specifying custom html template path 
 
 Please check [sample report output.](https://lpelypenko.github.io/axe-html-reporter/)
 

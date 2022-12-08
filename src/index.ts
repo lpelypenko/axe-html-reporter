@@ -6,6 +6,7 @@ import { prepareAxeRules } from './util/prepareAxeRules';
 import { saveHtmlReport } from './util/saveHtmlReport';
 
 export interface Options {
+    templatePath?: string;
     reportFileName?: string;
     outputDir?: string;
     projectKey?: string;
@@ -33,7 +34,7 @@ export function createHtmlReport({ results, options }: CreateReport): string {
         );
     }
     try {
-        const template = loadTemplate();
+        const template = loadTemplate(options?.templatePath);
         const preparedReportData = prepareReportData({
             violations: results.violations,
             passes: results.passes,
@@ -71,7 +72,7 @@ export function createHtmlReport({ results, options }: CreateReport): string {
         }
 
         return htmlContent;
-    } catch (e) {
+    } catch (e:any) {
         console.warn(`HTML report was not created due to the error ${e.message}`);
 
         return `Failed to create HTML report due to an error ${e.message}`;

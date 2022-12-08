@@ -261,4 +261,29 @@ describe('Successful tests', () => {
         const isReportFileExist = fs.existsSync(getPathToCreatedReport('shouldNotBeSaved.html'));
         expect(isReportFileExist).toBe(false);
     });
+
+    it('Raw AxeResults passed and generates report with custom template', async () => {
+        const customSummary = `Test Case: Full page analysis
+        <br>Steps:</br>
+        <ol style="margin: 0">
+        <li>Open https://dequeuniversity.com/demo/mars/</li>
+        <li>Analyze full page with all rules enabled</li>
+        <li>Custom template is used</li>
+        </ol>`;
+
+        const reportFileName = 'custom_index.html';
+        const templatePath = path.join(__dirname, 'pageTemplateOnlyBody.html');
+        const outputDir = 'docs';
+        createHtmlReport({
+            results: rawAxeResults,
+            options: { projectKey: 'DEQUE', 
+            customSummary, outputDir, reportFileName, templatePath },
+        });
+        expect(
+            fs.readFileSync(getPathToCreatedReport(reportFileName, outputDir), {
+                encoding: 'utf8',
+            })
+        ).toMatchSnapshot();
+    });
+
 });
