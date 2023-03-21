@@ -21,8 +21,6 @@
     "license": "MIT",
     "files": [
         "dist",
-        "src",
-        "test",
         "types"
     ],
     "bugs": {
