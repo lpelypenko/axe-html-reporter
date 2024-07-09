@@ -72,8 +72,10 @@ export function createHtmlReport({ results, options }: CreateReport): string {
 
         return htmlContent;
     } catch (e) {
+        // @ts-ignore
         console.warn(`HTML report was not created due to the error ${e.message}`);
 
+        // @ts-ignore
         return `Failed to create HTML report due to an error ${e.message}`;
     }
 }
