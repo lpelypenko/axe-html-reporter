@@ -111,3 +111,4 @@ build/
 
 # test output
 artifacts/
+package-lock.json
