@@ -38,7 +38,7 @@
     },
     "publishConfig": {
         "access": "public",
-        "registry": "http://registry.npmjs.org"
+        "registry": "https://registry.npmjs.org"
     },
     "peerDependencies": {
         "axe-core": ">=3"
