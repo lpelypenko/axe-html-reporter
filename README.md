@@ -1,6 +1,6 @@
 # axe-html-reporter
 
-Creates an HTML report from axe-core library AxeResults object listing violations, passes, incomplete and incompatible results.
+Creates an HTML report from Axe-core® library AxeResults object listing violations, passes, incomplete and incompatible results.
 
 Allows specifying report creation options: `reportFileName`, `outputDir`, `outputDirPath`, `projectKey` and `customSummary`.
 
@@ -45,7 +45,7 @@ npm i -D axe-html-reporter
 
 ### Example usage in TestCafe
 
-To run TestCafe tests with axe-core, install testcafe, axe-core and [@testcafe-community/axe](https://www.npmjs.com/package/@testcafe-community/axe):
+To run TestCafe tests with Axe-core®, install [testcafe](https://www.npmjs.com/package/testcafe), [axe-core](https://www.npmjs.com/package/axe-core) and [@testcafe-community/axe](https://www.npmjs.com/package/@testcafe-community/axe):
 
 ```shell script
 npm i -D axe-html-reporter testcafe axe-core @testcafe-community/axe
@@ -67,7 +67,7 @@ See full TestCafe test example is bellow:
 import { runAxe } from '@testcafe-community/axe';
 import { createHtmlReport } from 'axe-html-reporter';
 
-fixture('TestCafe tests with Axe').page('http://example.com');
+fixture('TestCafe tests with Axe-core®').page('http://example.com');
 
 test('Automated accessibility testing', async (t) => {
     const axeContext = { exclude: [['select']] };
@@ -98,7 +98,7 @@ npx testcafe
  Running tests in:
  - Chrome 85.0.4183.121 / Linux
 
- TestCafe tests with Axe
+ TestCafe tests with Axe-core®
 HTML report was saved into the following directory /Users/axe-demos/artifacts/accessibilityReport.html
  ✓ Automated accessibility testing
 
@@ -114,20 +114,20 @@ import { createHtmlReport } from 'axe-html-reporter';
 
 (() => {
     // creates html report with the default name `accessibilityReport.html` file
-    createHtmlReport({ results: 'AxeResults' }); // full AxeResults object
+    createHtmlReport({ results: 'AxeCoreResults' }); // full AxeResults object
     // creates html report with the default name `accessibilityReport.html` file and all supported AxeResults values
     createHtmlReport({ results: { violations: 'Result[]' } }); // passing only violations from axe.run output
     // creates html report with the default name `accessibilityReport.html` file and adds url and projectKey
     createHtmlReport({
-        results: 'AxeResults',
+        results: 'AxeCoreResults',
         options: { projectKey: 'JIRA_PROJECT_KEY' },
     });
     // creates html report with the name `exampleReport.html` in 'axe-reports' directory and adds projectKey to the header
     createHtmlReport({
-        results: 'AxeResults',
+        results: 'AxeCoreResults',
         options: {
             projectKey: 'JIRA_PROJECT_KEY',
-            outputDir: 'axe-reports',
+            outputDir: 'axe-core-reports',
             reportFileName: 'exampleReport.html',
         },
     });
