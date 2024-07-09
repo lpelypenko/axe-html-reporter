@@ -76,17 +76,12 @@ exports[`Successful tests All optional parameters present 1`] = `
             href=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css\\"
         />
         <script src=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js\\"></script>
-        <link
-            rel=\\"icon\\"
-            href=\\"https://www.deque.com/wp-content/uploads/2018/03/cropped-DQ_SecondaryLogo_HeroBlue_RGB-1-32x32.png\\"
-            sizes=\\"32x32\\"
-        />
-        <title>AXE Accessibility Results</title>
+        <title>Axe-core® Accessibility Results</title>
     </head>
     <body>
         <div style=\\"padding: 2rem\\">
             <h3>
-                AXE Accessibility Results for DEQUE project
+                Axe-core® Accessibility Results for DEQUE project
             </h3>
             <div class=\\"summarySection\\">
                 <div class=\\"summary\\">
@@ -3399,17 +3394,12 @@ exports[`Successful tests Custom Summary present 1`] = `
             href=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css\\"
         />
         <script src=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js\\"></script>
-        <link
-            rel=\\"icon\\"
-            href=\\"https://www.deque.com/wp-content/uploads/2018/03/cropped-DQ_SecondaryLogo_HeroBlue_RGB-1-32x32.png\\"
-            sizes=\\"32x32\\"
-        />
-        <title>AXE Accessibility Results</title>
+        <title>Axe-core® Accessibility Results</title>
     </head>
     <body>
         <div style=\\"padding: 2rem\\">
             <h3>
-                AXE Accessibility Results
+                Axe-core® Accessibility Results
             </h3>
             <div class=\\"summarySection\\">
                 <div class=\\"summary\\">
@@ -6043,17 +6033,12 @@ exports[`Successful tests Empty all: violation, passes, incomplete, inapplicable
             href=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css\\"
         />
         <script src=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js\\"></script>
-        <link
-            rel=\\"icon\\"
-            href=\\"https://www.deque.com/wp-content/uploads/2018/03/cropped-DQ_SecondaryLogo_HeroBlue_RGB-1-32x32.png\\"
-            sizes=\\"32x32\\"
-        />
-        <title>AXE Accessibility Results</title>
+        <title>Axe-core® Accessibility Results</title>
     </head>
     <body>
         <div style=\\"padding: 2rem\\">
             <h3>
-                AXE Accessibility Results
+                Axe-core® Accessibility Results
             </h3>
             <div class=\\"summarySection\\">
                 <div class=\\"summary\\">
@@ -6258,17 +6243,12 @@ exports[`Successful tests Empty violations 1`] = `
             href=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css\\"
         />
         <script src=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js\\"></script>
-        <link
-            rel=\\"icon\\"
-            href=\\"https://www.deque.com/wp-content/uploads/2018/03/cropped-DQ_SecondaryLogo_HeroBlue_RGB-1-32x32.png\\"
-            sizes=\\"32x32\\"
-        />
-        <title>AXE Accessibility Results</title>
+        <title>Axe-core® Accessibility Results</title>
     </head>
     <body>
         <div style=\\"padding: 2rem\\">
             <h3>
-                AXE Accessibility Results
+                Axe-core® Accessibility Results
             </h3>
             <div class=\\"summarySection\\">
             </div>
@@ -6362,17 +6342,12 @@ exports[`Successful tests File will not be created and raw HTML result will be r
             href=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css\\"
         />
         <script src=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js\\"></script>
-        <link
-            rel=\\"icon\\"
-            href=\\"https://www.deque.com/wp-content/uploads/2018/03/cropped-DQ_SecondaryLogo_HeroBlue_RGB-1-32x32.png\\"
-            sizes=\\"32x32\\"
-        />
-        <title>AXE Accessibility Results</title>
+        <title>Axe-core® Accessibility Results</title>
     </head>
     <body>
         <div style=\\"padding: 2rem\\">
             <h3>
-                AXE Accessibility Results for I need only raw HTML project
+                Axe-core® Accessibility Results for I need only raw HTML project
             </h3>
             <div class=\\"summarySection\\">
                 <div class=\\"summary\\">
@@ -8072,17 +8047,12 @@ exports[`Successful tests Inapplicable present 1`] = `
             href=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css\\"
         />
         <script src=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js\\"></script>
-        <link
-            rel=\\"icon\\"
-            href=\\"https://www.deque.com/wp-content/uploads/2018/03/cropped-DQ_SecondaryLogo_HeroBlue_RGB-1-32x32.png\\"
-            sizes=\\"32x32\\"
-        />
-        <title>AXE Accessibility Results</title>
+        <title>Axe-core® Accessibility Results</title>
     </head>
     <body>
         <div style=\\"padding: 2rem\\">
             <h3>
-                AXE Accessibility Results
+                Axe-core® Accessibility Results
             </h3>
             <div class=\\"summarySection\\">
                 <div class=\\"summary\\">
@@ -11433,17 +11403,12 @@ exports[`Successful tests No violations found, passes, incomplete, url + reportF
             href=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css\\"
         />
         <script src=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js\\"></script>
-        <link
-            rel=\\"icon\\"
-            href=\\"https://www.deque.com/wp-content/uploads/2018/03/cropped-DQ_SecondaryLogo_HeroBlue_RGB-1-32x32.png\\"
-            sizes=\\"32x32\\"
-        />
-        <title>AXE Accessibility Results</title>
+        <title>Axe-core® Accessibility Results</title>
     </head>
     <body>
         <div style=\\"padding: 2rem\\">
             <h3>
-                AXE Accessibility Results for DEQUE project
+                Axe-core® Accessibility Results for DEQUE project
             </h3>
             <div class=\\"summarySection\\">
                 <div class=\\"summary\\">
@@ -11970,17 +11935,12 @@ exports[`Successful tests Raw AxeResults passed and all optional params 1`] = `
             href=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css\\"
         />
         <script src=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js\\"></script>
-        <link
-            rel=\\"icon\\"
-            href=\\"https://www.deque.com/wp-content/uploads/2018/03/cropped-DQ_SecondaryLogo_HeroBlue_RGB-1-32x32.png\\"
-            sizes=\\"32x32\\"
-        />
-        <title>AXE Accessibility Results</title>
+        <title>Axe-core® Accessibility Results</title>
     </head>
     <body>
         <div style=\\"padding: 2rem\\">
             <h3>
-                AXE Accessibility Results for DEQUE project
+                Axe-core® Accessibility Results for TEST project
             </h3>
             <div class=\\"summarySection\\">
                 <div class=\\"summary\\">
@@ -13680,17 +13640,12 @@ exports[`Successful tests Violations 1`] = `
             href=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css\\"
         />
         <script src=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js\\"></script>
-        <link
-            rel=\\"icon\\"
-            href=\\"https://www.deque.com/wp-content/uploads/2018/03/cropped-DQ_SecondaryLogo_HeroBlue_RGB-1-32x32.png\\"
-            sizes=\\"32x32\\"
-        />
-        <title>AXE Accessibility Results</title>
+        <title>Axe-core® Accessibility Results</title>
     </head>
     <body>
         <div style=\\"padding: 2rem\\">
             <h3>
-                AXE Accessibility Results
+                Axe-core® Accessibility Results
             </h3>
             <div class=\\"summarySection\\">
             </div>
@@ -16313,17 +16268,12 @@ exports[`Successful tests Violations and URL with default report file name 1`] =
             href=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css\\"
         />
         <script src=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js\\"></script>
-        <link
-            rel=\\"icon\\"
-            href=\\"https://www.deque.com/wp-content/uploads/2018/03/cropped-DQ_SecondaryLogo_HeroBlue_RGB-1-32x32.png\\"
-            sizes=\\"32x32\\"
-        />
-        <title>AXE Accessibility Results</title>
+        <title>Axe-core® Accessibility Results</title>
     </head>
     <body>
         <div style=\\"padding: 2rem\\">
             <h3>
-                AXE Accessibility Results
+                Axe-core® Accessibility Results
             </h3>
             <div class=\\"summarySection\\">
                 <div class=\\"summary\\">
@@ -18951,17 +18901,12 @@ exports[`Successful tests Violations, passes and url 1`] = `
             href=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css\\"
         />
         <script src=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js\\"></script>
-        <link
-            rel=\\"icon\\"
-            href=\\"https://www.deque.com/wp-content/uploads/2018/03/cropped-DQ_SecondaryLogo_HeroBlue_RGB-1-32x32.png\\"
-            sizes=\\"32x32\\"
-        />
-        <title>AXE Accessibility Results</title>
+        <title>Axe-core® Accessibility Results</title>
     </head>
     <body>
         <div style=\\"padding: 2rem\\">
             <h3>
-                AXE Accessibility Results
+                Axe-core® Accessibility Results
             </h3>
             <div class=\\"summarySection\\">
                 <div class=\\"summary\\">
@@ -21933,17 +21878,12 @@ exports[`Successful tests Violations, passes, incomplete, url with reportFileNam
             href=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css\\"
         />
         <script src=\\"//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js\\"></script>
-        <link
-            rel=\\"icon\\"
-            href=\\"https://www.deque.com/wp-content/uploads/2018/03/cropped-DQ_SecondaryLogo_HeroBlue_RGB-1-32x32.png\\"
-            sizes=\\"32x32\\"
-        />
-        <title>AXE Accessibility Results</title>
+        <title>Axe-core® Accessibility Results</title>
     </head>
     <body>
         <div style=\\"padding: 2rem\\">
             <h3>
-                AXE Accessibility Results
+                Axe-core® Accessibility Results
             </h3>
             <div class=\\"summarySection\\">
                 <div class=\\"summary\\">

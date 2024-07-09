@@ -232,7 +232,7 @@ describe('Successful tests', () => {
         const outputDir = 'docs';
         createHtmlReport({
             results: rawAxeResults,
-            options: { projectKey: 'DEQUE', customSummary, outputDir, reportFileName },
+            options: { projectKey: 'TEST', customSummary, outputDir, reportFileName },
         });
         expect(
             fs.readFileSync(getPathToCreatedReport(reportFileName, outputDir), {
