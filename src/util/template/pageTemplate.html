@@ -5,6 +5,9 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <style>
+            .card-header .btn-link {
+                color: #2557a7;
+            }
             .violationCard {
                 width: 100%;
                 margin-bottom: 1rem;
@@ -243,7 +246,6 @@
                                         <td>{{nodes}}</td>
                                     </tr>
                                 </tbody>
-                                {{/checksPassed}}
                             </table>
                             {{/checksPassed.length}}
                         </div>
@@ -307,8 +309,9 @@
                                         <td>{{wcag}}</td>
                                         <td>{{nodes}}</td>
                                     </tr>
+                                    {{/checksPassed}}
+                                    {{/checksIncomplete}}
                                 </tbody>
-                                {{/checksIncomplete}}
                             </table>
                             {{/checksIncomplete.length}}
                         </div>
@@ -369,8 +372,8 @@
                                         <td>{{id}}</td>
                                         <td>{{wcag}}</td>
                                     </tr>
+                                    {{/checksInapplicable}}
                                 </tbody>
-                                {{/checksInapplicable}}
                             </table>
                             {{/checksInapplicable.length}}
                         </div>
@@ -416,8 +419,8 @@
                                         <td>{{rule}}</td>
                                         <td>{{enabled}}</td>
                                     </tr>
+                                    {{/rules}}
                                 </tbody>
-                                {{/rules}}
                             </table>
                             {{/rules.length}}
                         </div>
