@@ -30,7 +30,7 @@
     },
     "homepage": "https://github.com/lpelypenko/axe-html-reporter",
     "scripts": {
-        "prebuild": "rimraf dist build",
+        "prebuild": "rm -rf dist build",
         "copy": "cp -R ./src/util/template ./dist/util/template",
         "build": "tsc --project tsconfig.build.json && npm run copy",
         "test": "jest test",
@@ -44,16 +44,15 @@
         "axe-core": ">=3"
     },
     "devDependencies": {
-        "@types/jest": "^25.2.3",
+        "@types/jest": "^29.5.12",
         "@types/mustache": "^4.0.1",
         "@types/node": "^14.11.8",
-        "jest": "^26.5.3",
+        "jest": "^29.7.0",
         "prettier": "^2.1.2",
-        "ts-jest": "^26.4.1",
+        "ts-jest": "^29.2.4",
         "typescript": "^4.0.3"
     },
     "dependencies": {
-        "mustache": "^4.0.1",
-        "rimraf": "^3.0.2"
+        "mustache": "^4.0.1"
     }
 }
