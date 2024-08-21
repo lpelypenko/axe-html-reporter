@@ -13,6 +13,19 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: start;
+                font-weight: 500;
+                line-height: 1.2;
+            }
+            .card-title {
+                font-size: 1.25rem;
+            }
+            .violationCardTitleItem {
+                font-size: 1rem;
+                font-weight: 500;
+            }
+            .card-text {
+                font-size: 0.95rem;
+                font-weight: 300;
             }
             .learnMore {
                 margin-bottom: 0.75rem;
@@ -23,7 +36,7 @@
                 color: #2557a7;
             }
             .violationNode {
-                font-size: 0.75rem;
+                font-size: 0.85rem;
             }
             .wrapBreakWord {
                 word-break: break-word;
@@ -75,14 +88,14 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <title>Axe-core® Accessibility Results</title>
     </head>
-    <body>
+    <main role="main">
         <div style="padding: 2rem">
-            <h3>
+            <h1>
                 Axe-core® Accessibility Results
-            </h3>
+            </h1>
             <div class="summarySection">
             </div>
-            <h5>axe-core found <span class="badge badge-success">0</span> violations</h5>
+            <h2>axe-core found <span class="badge badge-success">0</span> violations</h2>
                 <tbody>
                 </tbody>
             </table>
@@ -91,5 +104,5 @@
         <script>
             hljs.initHighlightingOnLoad();
         </script>
-    </body>
+    </main>
 </html>

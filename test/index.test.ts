@@ -261,4 +261,25 @@ describe('Successful tests', () => {
         const isReportFileExist = fs.existsSync(getPathToCreatedReport('shouldNotBeSaved.html'));
         expect(isReportFileExist).toBe(false);
     });
+    // Verifies report with all optional parameters
+    it('Test github pages', async () => {
+        const reportFileName = 'githubPages.html';
+        const customSummary = "Test own github pages and report accessibility";
+
+        createHtmlReport({
+            results: {
+                violations: axeRawViolations,
+                passes: axeRawPassed,
+                incomplete: [],
+                inapplicable: axeRawInapplicable,
+                url: 'https://lpelypenko.github.io/axe-html-reporter/',
+            },
+            options: { projectKey: 'DEQUE', customSummary, reportFileName },
+        });
+        expect(
+            fs.readFileSync(getPathToCreatedReport(reportFileName), {
+                encoding: 'utf8',
+            })
+        ).toMatchSnapshot();
+    });
 });
