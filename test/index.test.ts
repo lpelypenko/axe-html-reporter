@@ -35,6 +35,9 @@ describe('Successful tests', () => {
     // Verifies report with empty violations
     it('Empty violations', async () => {
         const reportFileName = 'tcAllPassedOnlyViolations.html';
+        fs.rmSync(getPathToCreatedReport(reportFileName), {
+            force: true,
+        });
         createHtmlReport({
             results: {
                 violations: [],
@@ -53,6 +56,9 @@ describe('Successful tests', () => {
     // Verifies report is created with default name in default directory with violations(passes and incomplete are not provided).
     // Creates html report file with name 'accessibilityReport.html' in default directory 'artifacts'
     it('Violations and URL with default report file name', async () => {
+        fs.rmSync(getPathToCreatedReport(), {
+            force: true,
+        });
         createHtmlReport({
             results: {
                 violations: axeRawViolations,
@@ -65,6 +71,9 @@ describe('Successful tests', () => {
     // Verifies report with if violations are not empty
     it('Violations', async () => {
         const reportFileName = 'urlIsNotPassed.html';
+        fs.rmSync(getPathToCreatedReport(reportFileName), {
+            force: true,
+        });
         createHtmlReport({
             results: {
                 violations: axeRawViolations,
@@ -79,6 +88,9 @@ describe('Successful tests', () => {
     // Verifies report is created with violations and passes
     it('Violations, passes and url', async () => {
         const reportFileName = 'tcPassesAndViolations.html';
+        fs.rmSync(getPathToCreatedReport(reportFileName), {
+            force: true,
+        });
         createHtmlReport({
             results: {
                 violations: axeRawViolations,
@@ -95,6 +107,9 @@ describe('Successful tests', () => {
     // Verifies report is created with violations, passes and incomplete with optional reportFileName and outputDir params
     it('Violations, passes, incomplete, url with reportFileName & outputDir', async () => {
         const reportFileName = 'tcPassesViolationsIncomplete.html';
+        fs.rmSync(getPathToCreatedReport(reportFileName), {
+            force: true,
+        });
         const outputDir = 'temp';
         createHtmlReport({
             results: {
@@ -119,6 +134,9 @@ describe('Successful tests', () => {
     // reportFileName and projectKey
     it('No violations found, passes, incomplete, url + reportFileName & projectKey', async () => {
         const reportFileName = 'tcWithTheKey.html';
+        fs.rmSync(getPathToCreatedReport(reportFileName), {
+            force: true,
+        });
         createHtmlReport({
             results: {
                 violations: [],
@@ -139,6 +157,9 @@ describe('Successful tests', () => {
     // Verifies report with inapplicable present in 'results'
     it('Inapplicable present', async () => {
         const reportFileName = 'tcInapplicablePresent.html';
+        fs.rmSync(getPathToCreatedReport(reportFileName), {
+            force: true,
+        });
         createHtmlReport({
             results: {
                 violations: axeRawViolations,
@@ -157,6 +178,9 @@ describe('Successful tests', () => {
     // Verifies report with empty violations, empty passes, empty incomplete, empty inapplicable
     it('Empty all: violation, passes, incomplete, inapplicable', async () => {
         const reportFileName = 'tcOnlyPasses.html';
+        fs.rmSync(getPathToCreatedReport(reportFileName), {
+            force: true,
+        });
         createHtmlReport({
             results: {
                 violations: [],
@@ -175,6 +199,9 @@ describe('Successful tests', () => {
     // Verify report is created with violations and custom summary
     it('Custom Summary present', async () => {
         const reportFileName = 'tcIncludingCustomSummary.html';
+        fs.rmSync(getPathToCreatedReport(reportFileName), {
+            force: true,
+        });
         const customSummary = `Test Case: Full page analysis
         <br>Steps:</br>
         <ol style="margin: 0">
@@ -196,6 +223,9 @@ describe('Successful tests', () => {
     // Verifies report with all optional parameters
     it('All optional parameters present', async () => {
         const reportFileName = 'tsAllOptionalParametersPresent.html';
+        fs.rmSync(getPathToCreatedReport(reportFileName), {
+            force: true,
+        });
         const customSummary = `Test Case: Full page analysis
         <br>Steps:</br>
         <ol style="margin: 0">
@@ -229,6 +259,9 @@ describe('Successful tests', () => {
         </ol>`;
 
         const reportFileName = 'index.html';
+        fs.rmSync(getPathToCreatedReport(reportFileName), {
+            force: true,
+        });
         const outputDir = 'docs';
         createHtmlReport({
             results: rawAxeResults,
@@ -264,6 +297,9 @@ describe('Successful tests', () => {
     // Verifies report with all optional parameters
     it('Test github pages', async () => {
         const reportFileName = 'githubPages.html';
+        fs.rmSync(getPathToCreatedReport(reportFileName), {
+            force: true,
+        });
         const customSummary = "Test own github pages and report accessibility";
 
         createHtmlReport({
