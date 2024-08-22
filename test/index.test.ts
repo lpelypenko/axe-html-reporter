@@ -280,7 +280,10 @@ describe('Successful tests', () => {
         <li>Open https://dequeuniversity.com/demo/mars/</li>
         <li>Analyze full page with all rules enabled</li>
         </ol>`;
-
+        const reportFileName = 'shouldNotBeSaved.html';
+        fs.rmSync(getPathToCreatedReport(reportFileName), {
+            force: true,
+        });
         const reportHTML = createHtmlReport({
             results: rawAxeResults,
             options: {

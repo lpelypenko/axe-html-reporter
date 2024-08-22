@@ -59,9 +59,7 @@ export function createHtmlReport({ results, options }: CreateReport): string {
             hasAxeRawResults: Boolean(results?.timestamp),
             rules: prepareAxeRules(results?.toolOptions?.rules || {}),
         });
-        if (options?.doNotCreateReportFile === true) {
-            console.info('Report file will not be created because user passed options.doNotCreateReportFile = true. Use HTML output of the function to create report file');
-        } else {
+        if (!options || options.doNotCreateReportFile === undefined || !options.doNotCreateReportFile) {
             saveHtmlReport({
                 htmlContent,
                 reportFileName: options?.reportFileName,
