@@ -89,9 +89,9 @@ exports[`Successful tests All optional parameters present 1`] = `
         ></script>
         <link
             rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
         />
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <title>Axe-core® Accessibility Results</title>
     </head>
     <main role="main">
@@ -3352,9 +3352,9 @@ exports[`Successful tests Custom Summary present 1`] = `
         ></script>
         <link
             rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
         />
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <title>Axe-core® Accessibility Results</title>
     </head>
     <main role="main">
@@ -6007,9 +6007,9 @@ exports[`Successful tests Empty all: violation, passes, incomplete, inapplicable
         ></script>
         <link
             rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
         />
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <title>Axe-core® Accessibility Results</title>
     </head>
     <main role="main">
@@ -6233,9 +6233,9 @@ exports[`Successful tests Empty violations 1`] = `
         ></script>
         <link
             rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
         />
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <title>Axe-core® Accessibility Results</title>
     </head>
     <main role="main">
@@ -6348,9 +6348,9 @@ exports[`Successful tests File will not be created and raw HTML result will be r
         ></script>
         <link
             rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
         />
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <title>Axe-core® Accessibility Results</title>
     </head>
     <main role="main">
@@ -7908,9 +7908,9 @@ exports[`Successful tests Inapplicable present 1`] = `
         ></script>
         <link
             rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
         />
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <title>Axe-core® Accessibility Results</title>
     </head>
     <main role="main">
@@ -11206,9 +11206,9 @@ exports[`Successful tests No violations found, passes, incomplete, url + reportF
         ></script>
         <link
             rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
         />
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <title>Axe-core® Accessibility Results</title>
     </head>
     <main role="main">
@@ -11714,9 +11714,9 @@ exports[`Successful tests Raw AxeResults passed and all optional params 1`] = `
         ></script>
         <link
             rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
         />
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <title>Axe-core® Accessibility Results</title>
     </head>
     <main role="main">
@@ -13274,9 +13274,9 @@ exports[`Successful tests Test github pages 1`] = `
         ></script>
         <link
             rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
         />
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <title>Axe-core® Accessibility Results</title>
     </head>
     <main role="main">
@@ -16532,9 +16532,9 @@ exports[`Successful tests Violations 1`] = `
         ></script>
         <link
             rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
         />
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <title>Axe-core® Accessibility Results</title>
     </head>
     <main role="main">
@@ -19176,9 +19176,9 @@ exports[`Successful tests Violations and URL with default report file name 1`] =
         ></script>
         <link
             rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
         />
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <title>Axe-core® Accessibility Results</title>
     </head>
     <main role="main">
@@ -21825,9 +21825,9 @@ exports[`Successful tests Violations, passes and url 1`] = `
         ></script>
         <link
             rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
         />
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <title>Axe-core® Accessibility Results</title>
     </head>
     <main role="main">
@@ -24781,9 +24781,9 @@ exports[`Successful tests Violations, passes, incomplete, url with reportFileNam
         ></script>
         <link
             rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
         />
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <title>Axe-core® Accessibility Results</title>
     </head>
     <main role="main">
