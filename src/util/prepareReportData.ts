@@ -4,11 +4,12 @@ import { PreparedResults } from '../index';
 import { Result } from 'axe-core';
 
 function simplifyAxeResultForSummary(results: Result[]): Summary[] {
-    return results.map(({ nodes, description, help, id, tags, impact }, resultIndex) => ({
+    return results.map(({ nodes, description, help, helpUrl, id, tags, impact }, resultIndex) => ({
         index: resultIndex + 1,
         description,
         id,
         help,
+        helpUrl,
         wcag: getWcagReference(tags),
         tags,
         impact: impact || 'n/a',
