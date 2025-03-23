@@ -1,4 +1,6 @@
 import fs from 'fs';
+import { scripts, styleSheets } from '../resources';
+import downloadAndVerifyResource from './downloadAndVerifyResources';
 
 export const defaultReportFileName = 'accessibilityReport.html';
 
@@ -7,18 +9,20 @@ interface SaveReportOptions {
     reportFileName?: string;
     outputDir?: string;
     outputDirPath?: string;
+    serveResources?: boolean;
 }
 /**
  * Saves the file with specified file name or with default file name index.thml
  * @param htmlContent
  * @param fileName
  */
-export function saveHtmlReport({
+export async function saveHtmlReport({
     htmlContent,
     reportFileName,
     outputDir,
-    outputDirPath = process.cwd()
-}: SaveReportOptions): void {
+    outputDirPath = process.cwd(),
+    serveResources
+}: SaveReportOptions): Promise<void> {
     try {
         const reportDirectory = `${outputDirPath}/${outputDir || 'artifacts'}`;
         if (!fs.existsSync(reportDirectory)) {
@@ -26,6 +30,14 @@ export function saveHtmlReport({
                 recursive: true,
             });
         }
+
+        if (serveResources) {
+            const resources = [...styleSheets, ...scripts];
+            for (var resource of resources) {
+                await downloadAndVerifyResource(resource, reportDirectory);
+            }
+        }
+
         const reportFilePath = `${reportDirectory}/${reportFileName || defaultReportFileName}`;
         fs.writeFileSync(reportFilePath, htmlContent);
         console.info(`HTML report was saved into the following directory ${reportFilePath}`);

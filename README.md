@@ -18,7 +18,7 @@ If only HTML content needed, user can pass `doNotCreateReportFile: true` to stop
 Suggestion on how to use this library if you don't need a report file but need only HTML it produces: 
 
 ```javascript
-const reportHTML = createHtmlReport({
+const reportHTML = await createHtmlReport({
     results: rawAxeResults,
     options: {
         projectKey: 'I need only raw HTML',
@@ -34,6 +34,14 @@ if (!fs.existsSync('build/reports/saveReportHere.html')) {
 }
 fs.writeFileSync('build/reports/saveReportHere.html', reportHTML);
 ```
+
+If you want to serve the external HTML resources (i.e. css, JS) yourself, you can:
+
+```javascript
+await createHtmlReport({ results: 'AxeCoreResults', options: { serveResources: true } }); 
+```
+
+The `serveResources` option will download the required assets if they do not already exist in the output directory, in addition to ensuring the report points to the local version of these resources.
 
 ## Install
 

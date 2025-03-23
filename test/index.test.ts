@@ -1,4 +1,6 @@
 import { createHtmlReport } from '../src';
+import { scripts, styleSheets } from '../src/resources';
+import { prepareResources } from '../src/util/prepareResources';
 import { defaultReportFileName } from '../src/util/saveHtmlReport';
 import fs from 'fs';
 import path from 'path';
@@ -10,22 +12,28 @@ const rawAxeResults = require('./rawAxeResults.json');
 
 function getPathToCreatedReport(customFileName?: string, customOutputDir?: string) {
     return path.resolve(
-        process.cwd(),
-        customOutputDir ? customOutputDir : 'artifacts',
+        getPathToReportFolder(customOutputDir),
         customFileName ? customFileName : defaultReportFileName
+    );
+}
+
+function getPathToReportFolder(customOutputDir?: string) {
+    return path.resolve(
+        process.cwd(),
+        customOutputDir ? customOutputDir : 'artifacts'
     );
 }
 
 describe('Error handling', () => {
     it('Verify throwing an error if required parameters are not passed', async () => {
-        expect(() => {
-            createHtmlReport({
+        expect(async () => {
+            await createHtmlReport({
                 // @ts-ignore
                 results: {
                     passes: [],
                 },
             });
-        }).toThrow(
+        }).rejects.toEqual(
             "'violations' is required for HTML accessibility report. Example: createHtmlReport({ results : { violations: Result[] } })"
         );
     });
@@ -250,6 +258,44 @@ describe('Successful tests', () => {
         ).toMatchSnapshot();
     });
 
+    it('All optional parameters present, serving resources', async () => {
+        const reportFileName = 'tcServingResources.html';
+        fs.rmSync(getPathToCreatedReport(reportFileName), {
+            force: true,
+        });
+
+        const resources = [...styleSheets, ...scripts];
+        const reportDirectory = getPathToReportFolder();
+        for (var resource of prepareResources(resources, true)) {
+            fs.rmSync(`${reportDirectory}/${resource.path}`, {
+                force: true,
+            });
+        }
+
+        const customSummary = `Test Case: Full page analysis
+        <br>Steps:</br>
+        <ol style="margin: 0">
+        <li>Open https://dequeuniversity.com/demo/mars/</li>
+        <li>Analyze full page with all rules enabled</li>
+        </ol>`;
+
+        await createHtmlReport({
+            results: {
+                violations: axeRawViolations,
+                passes: axeRawPassed,
+                incomplete: [],
+                inapplicable: axeRawInapplicable,
+                url: 'https://dequeuniversity.com/demo/mars/',
+            },
+            options: { projectKey: 'DEQUE', customSummary, reportFileName, serveResources: true },
+        });
+        expect(
+            fs.readFileSync(getPathToCreatedReport(reportFileName), {
+                encoding: 'utf8',
+            })
+        ).toMatchSnapshot();
+    });
+
     it('Raw AxeResults passed and all optional params', async () => {
         const customSummary = `Test Case: Full page analysis
         <br>Steps:</br>
@@ -284,7 +330,7 @@ describe('Successful tests', () => {
         fs.rmSync(getPathToCreatedReport(reportFileName), {
             force: true,
         });
-        const reportHTML = createHtmlReport({
+        const reportHTML = await createHtmlReport({
             results: rawAxeResults,
             options: {
                 projectKey: 'I need only raw HTML',

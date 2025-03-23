@@ -4,6 +4,8 @@ import { loadTemplate } from './util/loadTemplate';
 import { prepareReportData } from './util/prepareReportData';
 import { prepareAxeRules } from './util/prepareAxeRules';
 import { saveHtmlReport } from './util/saveHtmlReport';
+import { prepareResources } from './util/prepareResources';
+import { scripts, styleSheets } from './resources';
 
 export interface Options {
     reportFileName?: string;
@@ -12,6 +14,7 @@ export interface Options {
     customSummary?: string;
     outputDirPath?: string;
     doNotCreateReportFile?: boolean;
+    serveResources?: boolean;
 }
 
 export interface CreateReport {
@@ -26,9 +29,9 @@ export interface PreparedResults {
     inapplicable?: Result[];
 }
 
-export function createHtmlReport({ results, options }: CreateReport): string {
+export async function createHtmlReport({ results, options }: CreateReport): Promise<string> {
     if (!results.violations) {
-        throw new Error(
+        return Promise.reject(
             "'violations' is required for HTML accessibility report. Example: createHtmlReport({ results : { violations: Result[] } })"
         );
     }
@@ -38,7 +41,7 @@ export function createHtmlReport({ results, options }: CreateReport): string {
             violations: results.violations,
             passes: results.passes,
             incomplete: results.incomplete,
-            inapplicable: results.inapplicable,
+            inapplicable: results.inapplicable
         });
         const htmlContent = mustache.render(template, {
             url: results.url,
@@ -58,13 +61,16 @@ export function createHtmlReport({ results, options }: CreateReport): string {
             customSummary: options?.customSummary,
             hasAxeRawResults: Boolean(results?.timestamp),
             rules: prepareAxeRules(results?.toolOptions?.rules || {}),
+            scripts: prepareResources(scripts, options?.serveResources),
+            styleSheets: prepareResources(styleSheets, options?.serveResources)
         });
         if (!options || options.doNotCreateReportFile === undefined || !options.doNotCreateReportFile) {
-            saveHtmlReport({
+            await saveHtmlReport({
                 htmlContent,
                 reportFileName: options?.reportFileName,
                 outputDir: options?.outputDir,
-                outputDirPath: options?.outputDirPath
+                outputDirPath: options?.outputDirPath,
+                serveResources: options?.serveResources
             });
         }
 
