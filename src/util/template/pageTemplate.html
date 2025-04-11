@@ -186,9 +186,9 @@
                                     <td>{{index}}</td>
                                     <td>
                                         <p><strong>Element location</strong></p>
-                                        <pre><code class="css text-wrap">{{targetNodes}}</code></pre>
+                                        <pre><code class="css text-wrap text-break">{{targetNodes}}</code></pre>
                                         <p><strong>Element source</strong></p>
-                                        <pre><code class="html text-wrap">{{html}}</code></pre>
+                                        <pre><code class="html text-wrap text-break">{{html}}</code></pre>
                                     </td>
                                     <td>
                                         {{#fixSummaries}}
@@ -203,7 +203,7 @@
                                         {{/fixSummaries}} {{#relatedNodesAny.length}}
                                         <p><strong>Related node:</strong></p>
                                         {{/relatedNodesAny.length}} {{#relatedNodesAny}}
-                                        <pre><code class="css text-wrap">{{.}}</code></pre>
+                                        <pre><code class="css text-wrap text-break">{{.}}</code></pre>
                                         {{/relatedNodesAny}}
                                     </td>
                                 </tr>
