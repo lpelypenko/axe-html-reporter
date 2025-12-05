@@ -4,6 +4,8 @@ import { loadTemplate } from './util/loadTemplate';
 import { prepareReportData } from './util/prepareReportData';
 import { prepareAxeRules } from './util/prepareAxeRules';
 import { saveHtmlReport } from './util/saveHtmlReport';
+import fs from 'fs';
+import path from 'path';
 
 export interface Options {
     reportFileName?: string;
@@ -40,6 +42,10 @@ export function createHtmlReport({ results, options }: CreateReport): string {
             incomplete: results.incomplete,
             inapplicable: results.inapplicable,
         });
+        const highlightJsStyle = fs.readFileSync(
+            require.resolve('highlight.js/styles/stackoverflow-light.min.css'),
+            'utf8'
+        );
         const htmlContent = mustache.render(template, {
             url: results.url,
             violationsSummary: preparedReportData.violationsSummary,
@@ -58,6 +64,7 @@ export function createHtmlReport({ results, options }: CreateReport): string {
             customSummary: options?.customSummary,
             hasAxeRawResults: Boolean(results?.timestamp),
             rules: prepareAxeRules(results?.toolOptions?.rules || {}),
+            highlightJsStyle,
         });
         if (!options || options.doNotCreateReportFile === undefined || !options.doNotCreateReportFile) {
             saveHtmlReport({

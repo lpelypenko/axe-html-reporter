@@ -2,6 +2,12 @@ import { AxeReport, FixSummary, Summary } from './AxeReport';
 import { getWcagReference } from './getWcagReference';
 import { PreparedResults } from '../index';
 import { Result } from 'axe-core';
+import hljs from 'highlight.js/lib/core';
+import xml from 'highlight.js/lib/languages/xml';
+import css from 'highlight.js/lib/languages/css';
+
+hljs.registerLanguage('xml', xml);
+hljs.registerLanguage('css', css);
 
 function simplifyAxeResultForSummary(results: Result[]): Summary[] {
     return results.map(({ nodes, description, help, id, tags, impact }, resultIndex) => ({
@@ -76,7 +82,8 @@ export function prepareReportData({
                 help,
                 helpUrl,
                 nodes: nodes.map(({ target, html, failureSummary, any }, nodeIndex) => {
-                    const targetNodes = target.join('\n');
+                    const targetNodes = hljs.highlight(target.join('\n'), { language: 'css' }).value;
+                    const htmlContent = hljs.highlight(html, { language: 'xml' }).value;
                     const defaultHighlight = {
                         highlight: 'Recommendation with the fix was not provided by axe result',
                     };
@@ -88,7 +95,10 @@ export function prepareReportData({
                         if (checkResult.relatedNodes && checkResult.relatedNodes.length > 0) {
                             checkResult.relatedNodes.forEach((node) => {
                                 if (node.target.length > 0) {
-                                    relatedNodesAny.push(node.target.join('\n'));
+                                    relatedNodesAny.push(
+                                        hljs.highlight(node.target.join('\n'), { language: 'css' })
+                                            .value
+                                    );
                                 }
                             });
                         }
@@ -96,7 +106,7 @@ export function prepareReportData({
 
                     return {
                         targetNodes,
-                        html,
+                        html: htmlContent,
                         fixSummaries,
                         relatedNodesAny,
                         index: nodeIndex + 1,
